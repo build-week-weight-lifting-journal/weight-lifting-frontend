@@ -3,7 +3,6 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 export const IS_SIGNING_UP = "IS_SIGNING_UP";
 export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
 export const SIGNUP_ERROR = "SIGNUP_ERROR";
-export const SIGNUP_OVER = "SIGNUP_OVER";
 
 /*user should be of object type 
 {
