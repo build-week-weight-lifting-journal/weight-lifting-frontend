@@ -67,14 +67,14 @@ const FormikForm = withFormik({
         password: Yup.string().required("password is required")
     }),
 
-    handleSubmit(values, {setStatus}) {
-        axios.post('https://reqres.in/api/users', values)
-        .then(response =>{
-            setStatus(response.data);
-            console.log(response.data);
-            console.log(setStatus);
-        })
-    }
+    // handleSubmit(values, {setStatus}) {
+    //     axios.post('https://reqres.in/api/users', values)
+    //     .then(response =>{
+    //         setStatus(response.data);
+    //         console.log(response.data);
+    //         console.log(setStatus);
+    //     })
+    // }
 
 }) (SignUpForm);
 
