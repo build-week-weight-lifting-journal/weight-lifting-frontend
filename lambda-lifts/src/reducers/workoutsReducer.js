@@ -34,5 +34,7 @@ export const workoutsReducer = (state = initialState, action) => {
                 workoutsError: action.payload
             }
         }
+        default: 
+            return state
     }
 }
