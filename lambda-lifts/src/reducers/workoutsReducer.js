@@ -1,3 +1,9 @@
+import {
+    FETCH_WORKOUTS_DATA_START,
+    FETCH_WORKOUTS_DATA_SUCCESS,
+    FETCH_WORKOUTS_DATA_FAILURE, 
+} from '../actions/index.js';
+
 const initialState = {
     workouts: [], 
     workoutsIsLoading: false, 
@@ -6,14 +12,14 @@ const initialState = {
 
 export const workoutsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_WORKOUTS_START: {
+        case FETCH_WORKOUTS_DATA_START: {
             return {
                 ...state, 
                 workoutsIsLoading: true, 
                 workoutsError: ''
             }
         }
-        case FETCH_WORKOUTS_SUCCESS: {
+        case FETCH_WORKOUTS_DATA_SUCCESS: {
             return {
                 ...state,
                 workouts: [...state.workouts, action.payload],
@@ -21,7 +27,7 @@ export const workoutsReducer = (state = initialState, action) => {
                 workoutsError: ''
             }
         }
-        case FETCH_WORKOUTS_FAILURE: {
+        case FETCH_WORKOUTS_DATA_FAILURE: {
             return {
                 ...state, 
                 workoutsIsLoading: false, 
