@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from "./serviceWorker";
 
 // redux imports 
@@ -11,6 +12,7 @@ import thunk from 'redux-thunk';
 
 // reducer 
 import { reducer } from './reducers/index.js';
+// import { BrowserRouterasRouter } from 'react-router-dom';
 
 // use google extension 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -20,7 +22,9 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <Provider store={store}>
+  <Router>
     <App />
+    </Router>
   </Provider>,
   document.getElementById("root")
 );
