@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Field, withFormik } from "formik";
+import { Button } from 'semantic-ui-react';
 import * as Yup from "yup";
 
 
@@ -29,7 +30,11 @@ console.log(errors);
                 {touched.password && errors.password && (
                     <p className="error">{errors.password}</p>
                 )}
-                <button type="submit" >LOGIN RIGHT HERE</button>
+                <Button type="submit" >LOGIN RIGHT HERE</Button>
+                <div className="other-buttons">
+                <Button >Create Account</Button>
+                <Button >Forgot Password</Button>
+                </div>
             </Form>
             
             {login.map(getIt => (
