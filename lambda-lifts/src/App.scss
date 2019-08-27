@@ -41,3 +41,23 @@
     width: 90%;
     display: block;
 }
+
+.navbar {
+    // background:lightgrey;
+    border-top:3px silver outset;
+    margin: 0px 50px;
+    display:flex;
+    justify-content: space-between;
+    
+    .logocircle{
+        background:lightgrey;
+        border-radius:50%;
+        box-sizing:border-box;
+ 
+        .image{
+            margin:5px;
+            align-items:center;
+            justify-content: center;
+        }//closes image
+    }//closes logocircle
+}//closes navbar

@@ -1,9 +1,12 @@
 import React from "react";
 import LoginForm from './components/LoginForm.js'
 import {Route} from 'react-router-dom';
-import "./App.css";
+import "./App.scss";
 import SignUpForm from  "./components/SignUpForm.js";
 import Dashboard from './components/Dashboard.js';
+import ErrorPage from './ErrorPages/ErrorPage.js';
+import ErrorPage2 from './ErrorPages/ErrorPage2.js';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -23,8 +26,18 @@ function App() {
       path="/Dashboard"
       component={Dashboard}
       />
+      <Route
+      exact path="/ErrorPage"
+      component={ErrorPage}
+      />
+      <Route 
+      exact path="/ErrorPage2"
+      component={ErrorPage2}
+      />
 
     </header>
+
+    <NavBar />
   </div>
   );
 }
