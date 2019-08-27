@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import {Image} from 'semantic-ui-react';
+import {Image, Button} from 'semantic-ui-react';
 import HomeLogo from '../images/Home.png';
 import ProfileLogo from '../images/Profile.png';
 import SettingsLogo from '../images/Settings.png'
@@ -16,7 +16,6 @@ export default function NavBar() {
                 </div>
                 <h4>Home</h4>
             </div>
-            
             {/* closes home */}
 
             <div>
@@ -46,5 +45,6 @@ export default function NavBar() {
             </div>
             {/* closes more */}
         </div>
+
     )
 };
