@@ -98,6 +98,10 @@
     color: white;
     margin-bottom: 30px;
   }
+  .bottomlogin {
+    display: flex;
+    justify-content: center;
+  }
 } //closes login-form
 .error-page {
   width: 80%;
@@ -106,12 +110,16 @@
   background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
   color: white;
 } //closes error-page
+
 .navbar {
   // background:lightgrey;
   border-top: 3px silver outset;
   margin: 0px 50px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  bottom: 0;
+
   .logocircle {
     display: flex;
     background: lightgrey;
@@ -129,3 +137,59 @@
     } //closes image
   } //closes logocircle
 } //closes navbar
+
+.signupform {
+  width: 100%;
+  height: 100vh;
+  .image-div {
+    overflow: hidden;
+    height: 35vh;
+    padding: 20px;
+    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+  } //closes image div
+  .input {
+    margin: 0 auto;
+    width: 60vw;
+    border-bottom: 2px solid #35373b;
+    margin-bottom: 40px;
+
+    .fieldinput {
+      font-size: 1.2rem;
+      width: 80%;
+      height: 50px;
+      display: inline-block;
+      // margin-bottom: 20px;
+      margin-top: 20px;
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+    } //closes field input
+  } //closes input
+  button {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #f3be70, #ff5b7b);
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+  } //closes button
+  .goback {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #f3be70, #ff5b7b);
+    border-radius: 30px;
+    width: 100px;
+    height: 25px;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
+} //closes signupform

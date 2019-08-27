@@ -18,14 +18,12 @@ function App() {
         <Route exact path="/" component={LoginForm} />
         <Route path="/Dashboard" component={Dashboard} />
         <Route exact path="/SignUpForm" component={SignUpForm} />
-        <Route path="/Dashboard" component={Dashboard} />
+
         <Route exact path="/ErrorPage" component={ErrorPage} />
         <Route exact path="/ErrorPage2" component={ErrorPage2} />
       </header>
 
-      <NavBar />
-      <NameWorkout />
-      <WorkoutList />
+      {/* <NavBar /> */}
     </div>
   );
 }
