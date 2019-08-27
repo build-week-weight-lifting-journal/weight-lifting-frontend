@@ -36,9 +36,8 @@
     width: 90%;
 }
 
-.login-logo {
+login-logo {
     height: 45%vh;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
 }
 
 .error-page {
@@ -57,7 +56,7 @@
 }
 
 .navbar {
-    // background:lightgrey;
+    <<<<<<< HEAD // background:lightgrey;
     border-top: 3px silver outset;
     margin: 0px 50px;
     display: flex;
@@ -73,3 +72,21 @@
         } //closes image
     } //closes logocircle
 } //closes navbar
+======= // background:lightgrey;
+border-top: 3px silver outset;
+margin: 0px 50px;
+display: flex;
+justify-content: space-between;
+.logocircle {
+    background: lightgrey;
+    border-radius: 50%;
+    box-sizing: border-box;
+    .image {
+        margin: 5px;
+        align-items: center;
+        justify-content: center;
+    } //closes image
+} //closes logocircle
+
+} //closes navbar
+>>>>>>>1377a418287ef81585f574f0ff060301d61dc5d0
