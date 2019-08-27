@@ -63,9 +63,15 @@ login-logo {
   justify-content: space-between;
 
   .logocircle {
+    display: flex;
     background: lightgrey;
-    border-radius: 50%;
-    box-sizing: border-box;
+    border-radius: 40%;
+    // box-sizing:border-box;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
 
     .image {
       margin: 5px;

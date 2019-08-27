@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import X from "../images/X.png";
 
 const NameWorkout = () => {
   const [workoutName, setWorkoutName] = useState("");
+  //need to push the workoutName to workout object in API
 
   const inputHandler = e => {
     setWorkoutName(e.target.value);
@@ -10,7 +12,7 @@ const NameWorkout = () => {
 
   return (
     <div className="name-workout-card">
-      <div>X</div>
+      <img src={X} />
       <h1>Name your workout</h1>
       <input
         type="text"
