@@ -49,7 +49,7 @@ const [login, setLogin] = useState([]);
                     <Grid.Column>
                 <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
                 </Grid.Column>
-                                <Divider vertical>Or</Divider>
+                <Divider vertical className="divider">|</Divider>
 
                 <Grid.Column>
                 <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
