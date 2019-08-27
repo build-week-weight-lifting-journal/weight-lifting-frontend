@@ -1,11 +1,9 @@
 import { IS_SIGNING_UP, SIGNUP_SUCCESS, SIGNUP_ERROR } from "../actions";
 
 const initialState = {
-  signUp: {
-    isSignUpLoading: false,
-    isSignedUp: false,
-    error: ""
-  }
+  isSignUpLoading: false,
+  isSignedUp: false,
+  error: ""
 };
 
 export const signUpReducer = (state = initialState, action) => {
@@ -14,8 +12,7 @@ export const signUpReducer = (state = initialState, action) => {
     case IS_SIGNING_UP:
       return {
         ...state,
-        isSignUpLoading: true,
-        error: ""
+        isSignUpLoading: true
       };
     case SIGNUP_SUCCESS:
       return {
