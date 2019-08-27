@@ -32,51 +32,100 @@
     }
 }
 
+#circle1 {
+    width: 300px;
+    height: 300px;
+    background: #ff5b7b;
+    border-radius: 50%;
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    opacity: .8;
+}
+
+#circle2 {
+    width: 300px;
+    height: 300px;
+    background: #f3be70;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+    left: -150px;
+    opacity: .8;
+}
+
 .login-form {
-    width: 90%;
-}
-
-login-logo {
-    height: 45%vh;
-}
-
+    width: 100%;
+    height: 100vh;
+    .image-div {
+        overflow: hidden;
+        height: 45vh;
+        padding: 20px;
+        background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+    } //closes image-div
+    .login-logo {
+        height: 60%;
+        margin: 50px;
+    } //login-logo
+    .email-input,
+    .password-input {
+        margin: 0 auto;
+        width: 60vw;
+        border-bottom: 2px solid #35373b;
+        margin-bottom: 40px;
+    }
+    .field-input {
+        font-size: 1.2rem;
+        width: 80%;
+        height: 50px;
+        display: inline-block;
+        // margin-bottom: 20px;
+        margin-top: 20px;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+    } //closes field-input
+    .login-button {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top right, #f3be70, #ff5b7b);
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 30px;
+    }
+} //closes login-form
 .error-page {
     width: 80%;
     height: 80vh;
     margin: 0 auto;
     background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
     color: white;
-}
-
-.field-input {
-    margin: 0 auto;
-    width: 60vw;
-    height: 20px;
-    display: inline-block;
-}
-
+} //closes error-page
 .navbar {
-     // background:lightgrey;
+    // background:lightgrey;
     border-top: 3px silver outset;
     margin: 0px 50px;
     display: flex;
     justify-content: space-between;
-    
-    .logocircle{
-        display:flex;
-        background:lightgrey;
-        border-radius:40%;
+    .logocircle {
+        display: flex;
+        background: lightgrey;
+        border-radius: 40%;
         // box-sizing:border-box;
         align-items: center;
         justify-content: center;
-        width:3rem;
-        height:3rem;
-        margin:auto;
-        
-        .image{
-            margin:5px;
-            align-items:center;
+        width: 3rem;
+        height: 3rem;
+        margin: auto;
+        .image {
+            margin: 5px;
+            align-items: center;
             justify-content: center;
-        }//closes image
-    }//closes logocircle
-}//closes navbar
+        } //closes image
+    } //closes logocircle
+} //closes navbar
