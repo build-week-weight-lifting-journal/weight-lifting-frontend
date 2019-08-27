@@ -28,10 +28,7 @@ function App() {
       exact path="/SignUpForm"
       component={SignUpForm}
       />
-<<<<<<< HEAD
-=======
       
->>>>>>> 60f2a69d10741a7c5fce14139722075a9cc36376
       <Route
       exact path="/ErrorPage"
       component={ErrorPage}

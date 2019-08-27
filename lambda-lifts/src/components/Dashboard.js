@@ -10,7 +10,6 @@ import logoMain from '../images/Logo.png';
 import NavBar from '../components/NavBar';
 
 
-import NavBar from './NavBar';
 
 export default function Dashboard (){
 
