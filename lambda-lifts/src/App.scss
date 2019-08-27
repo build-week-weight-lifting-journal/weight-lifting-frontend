@@ -36,26 +36,28 @@
     width: 90%;
 }
 
-.error-page {
-    width: 80%;
-    height: 80vh;
-    margin: 0 auto;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-    color: white;
-}
-
 .field-input {
     margin: 0 auto;
     width: 90%;
     display: block;
 }
 
-.error-button {
-    height: 40px;
-    border-radius: 20%;
-    border: whitesmoke 3px outset;
-}
-
-.other-buttons {
-    position: relative;
-}
+.navbar {
+    // background:lightgrey;
+    border-top:3px silver outset;
+    margin: 0px 50px;
+    display:flex;
+    justify-content: space-between;
+    
+    .logocircle{
+        background:lightgrey;
+        border-radius:50%;
+        box-sizing:border-box;
+ 
+        .image{
+            margin:5px;
+            align-items:center;
+            justify-content: center;
+        }//closes image
+    }//closes logocircle
+}//closes navbar

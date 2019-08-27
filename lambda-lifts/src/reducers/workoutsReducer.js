@@ -19,6 +19,9 @@ export const workoutsReducer = (state = initialState, action) => {
         workoutsError: ""
       };
     }
+<<<<<<< HEAD
+}
+=======
     case FETCH_WORKOUTS_DATA_SUCCESS: {
       return {
         ...state,
@@ -38,3 +41,4 @@ export const workoutsReducer = (state = initialState, action) => {
       return state;
   }
 };
+>>>>>>> dbf7b8be2c57b752570059857cb46447f453766e
