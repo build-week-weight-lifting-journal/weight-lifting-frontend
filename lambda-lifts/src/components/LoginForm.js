@@ -45,16 +45,15 @@ const [login, setLogin] = useState([]);
                 </div>
                 <Button className="login-button" type="submit" >LOGIN</Button>
                 <Segment>
-                    <Grid columns={2} realxed='very'>
-                    <Grid.Column>
-                <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
-                </Grid.Column>
-                <Divider vertical className="divider">|</Divider>
-
-                <Grid.Column>
-                <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
-                </Grid.Column>
-                </Grid>
+                    <Grid className="bottomlogin" columns={2} realxed='very'>
+                        <Grid.Column>
+                            <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
+                        </Grid.Column>
+                            <Divider vertical className="divider">|</Divider>
+                        <Grid.Column>
+                            <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
+                        </Grid.Column>
+                    </Grid>
                 </Segment>
             </Form>
                 
