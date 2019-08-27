@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Field, withFormik } from "formik";
 import { Button } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import * as Yup from "yup";
 
 
@@ -9,7 +10,7 @@ const LoginForm = ({ errors, touched, values, status })  =>{
 
 const [login, setLogin] = useState([]);
 
-console.log(errors);
+// console.log(errors);
 
 // useEffect(() => {
 //     if(status) {
@@ -32,19 +33,19 @@ console.log(errors);
                 )}
                 <Button type="submit" >LOGIN RIGHT HERE</Button>
                 <div className="other-buttons">
-                <Button >Create Account</Button>
-                <Button >Forgot Password</Button>
+                <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
+                <NavLink >Forgot Password</NavLink>
                 </div>
             </Form>
             
-            {login.map(getIt => (
+            {/* {login.map(getIt => (
                 <div className="title-container">
                 <ul key={getIt.id}>
                 <h2>Welcome</h2>
                 <li>Email: {getIt.email}</li>
                 </ul>
                 </div>
-            ))}
+            ))} */}
             
         </div>
     );

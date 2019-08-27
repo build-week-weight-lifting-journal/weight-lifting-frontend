@@ -11,16 +11,16 @@ const SignUpForm = ({errors, touched, values, status}) => {
     // }, [status])
 
     return(
-        <div>
+        <div className="form">
             <Form>
-                <Field type="text" name="firstname" placeholder="firstname"/>
+                <Field className="field-input" type="text" name="firstname" placeholder="firstname"/>
                 {
                     touched.firstname && errors.firstname &&(
                         <p>{errors.firstname}</p>
                     )
                 }
 
-                <Field type="text" name="lastname" placeholder="lastname"/>
+                <Field className="field-input" type="text" name="lastname" placeholder="lastname"/>
                 {
                     touched.lastname && errors.lastname &&(
                         <p>{errors.lastname}</p>
@@ -28,14 +28,14 @@ const SignUpForm = ({errors, touched, values, status}) => {
                 }
             
 
-                <Field type="text" name="email" placeholder="email"/>
+                <Field className="field-input" type="text" name="email" placeholder="email"/>
                 {
                     touched.email && errors.email &&(
                         <p>{errors.email}</p>
                     )
                 }
 
-                <Field type="text" name="password" placeholder="password"/>
+                <Field className="field-input" type="text" name="password" placeholder="password"/>
                 {
                     touched.password && errors.password &&(
                         <p>{errors.password}</p>
