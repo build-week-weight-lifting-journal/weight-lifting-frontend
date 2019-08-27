@@ -14,10 +14,14 @@ export const SIGNUP_ERROR = "SIGNUP_ERROR";
 */
 
 export const signUp = user => {
+  console.log(user);
   return dispatch => {
     dispatch({ type: IS_SIGNING_UP });
     axiosWithAuth()
-      .post("", user)
+      .post(
+        "https://backend-buildweek-wlj-mack.herokuapp.com/api/auth/register",
+        user
+      )
       .then(res => {
         dispatch({ type: SIGNUP_SUCCESS });
       })
