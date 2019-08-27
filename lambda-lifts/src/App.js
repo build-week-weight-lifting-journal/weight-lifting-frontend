@@ -18,6 +18,10 @@ function App() {
       exact path="/"
       component={LoginForm}
       />
+      <Route 
+      path ="/Dashboard"
+      component={Dashboard}
+      />
       <Route
       exact path="/SignUpForm"
       component={SignUpForm}

@@ -27,10 +27,12 @@ const [login, setLogin] = useState([]);
         <div className="login-form">
             <Form>
                 <div className="image-div">
+                <div id="circle1"></div>
                 <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
+                <div id="circle2"></div>
                 </div>
                 <div className="email-input"><Image src={logoEmail} alt="email envelope"/>
-                <Field className="field-input" name="email" type="text" placeholder="Email" />
+                <Field className="field-input" name="email" type="text" placeholder="E-mail" />
                 {touched.email && <errors className="email"></errors> && (
                     <p className="error">{errors.email}</p>
                 )}
@@ -41,7 +43,7 @@ const [login, setLogin] = useState([]);
                     <p className="error">{errors.password}</p>
                 )}
                 </div>
-                <Button type="submit" >LOGIN RIGHT HERE</Button>
+                <Button className="login-button" type="submit" >LOGIN</Button>
                 <Segment>
                     <Grid columns={2} realxed='very'>
                     <Grid.Column>
