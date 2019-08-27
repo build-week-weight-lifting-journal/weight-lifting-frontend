@@ -7,6 +7,6 @@ import { signUpReducer } from "./signUpReducer";
 
 // combineReducers creates one state object using multiple reducers
 export const reducer = combineReducers({
-  workouts: workoutsReducer,
-  signup: signUpReducer
+    workouts: workoutsReducer,
+    signup: signUpReducer
 });

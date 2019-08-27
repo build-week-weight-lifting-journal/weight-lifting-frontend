@@ -4,7 +4,9 @@ import { Form, Field, withFormik } from "formik";
 import { Button, Image, Grid, Divider, Segment } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import * as Yup from "yup";
-import logo from '../images/Logo2.png';
+import logo from '../images/Logo.png';
+import logoPassword from '../images/password2.png';
+import logoEmail from '../images/Email2.png';
 
 
 const LoginForm = ({ errors, touched, values, status })  =>{
@@ -25,14 +27,18 @@ const [login, setLogin] = useState([]);
         <div className="login-form">
             <Form>
                 <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
+                <div className="email-input"><Image src={logoEmail} alt="email envelope"/>
                 <Field className="field-input" name="email" type="text" placeholder="Email" />
                 {touched.email && <errors className="email"></errors> && (
                     <p className="error">{errors.email}</p>
                 )}
+                </div>
+                <div className="password-input"><Image src={logoPassword} alt="password lock"/>
                 <Field className="field-input" name="password" type="password" placeholder="Password"  />
                 {touched.password && errors.password && (
                     <p className="error">{errors.password}</p>
                 )}
+                </div>
                 <Button type="submit" >LOGIN RIGHT HERE</Button>
                 <Segment>
                     <Grid columns={2} realxed='very'>

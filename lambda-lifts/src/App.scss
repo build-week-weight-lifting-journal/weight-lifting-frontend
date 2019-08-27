@@ -36,6 +36,10 @@
     width: 90%;
 }
 
+login-logo {
+    height: 45%vh;
+}
+
 .error-page {
     width: 80%;
     height: 80vh;
@@ -46,8 +50,9 @@
 
 .field-input {
     margin: 0 auto;
-    width: 90%;
-    display: block;
+    width: 60vw;
+    height: 20px;
+    display: inline-block;
 }
 
 .error-button {
