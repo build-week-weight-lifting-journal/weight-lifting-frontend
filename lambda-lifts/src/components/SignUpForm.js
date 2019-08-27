@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Form, Field, withFormik } from "formik";
 import { connect } from "react-redux";
 import { signUp } from "../actions";
