@@ -44,6 +44,7 @@ const [login, setLogin] = useState([]);
                 )}
                 </div>
                 <Button className="login-button" type="submit" >LOGIN</Button>
+<<<<<<< HEAD
                 <Segment className="link-container">
                     <Grid className="bottomlogin" columns={2} relaxed='very'>
                     <Grid.Column>
@@ -55,6 +56,18 @@ const [login, setLogin] = useState([]);
                 <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
                 </Grid.Column>
                 </Grid>
+=======
+                <Segment>
+                    <Grid className="bottomlogin" columns={2} realxed='very'>
+                        <Grid.Column>
+                            <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
+                        </Grid.Column>
+                            <Divider vertical className="divider">|</Divider>
+                        <Grid.Column>
+                            <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
+                        </Grid.Column>
+                    </Grid>
+>>>>>>> 60f2a69d10741a7c5fce14139722075a9cc36376
                 </Segment>
             </Form>
                 

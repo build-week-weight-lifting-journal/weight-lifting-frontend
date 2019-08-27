@@ -7,6 +7,7 @@ import logoShape from '../images/Shape.png';
 import logoWorkout from '../images/Workout.png';
 import logoTutorial from '../images/Tutorial.png';
 import logoMain from '../images/Logo.png';
+import NavBar from '../components/NavBar';
 
 
 import NavBar from './NavBar';
