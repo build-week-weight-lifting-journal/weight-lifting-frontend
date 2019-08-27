@@ -17,7 +17,7 @@ export const getWorkoutsData = () => dispatch => {
         .then(response => {
             // successful 
             console.log("response data", response)
-            
+
             // dispatch({ type: FETCH_WORKOUTS_DATA_SUCCESS, payload: response.data });
         })
         .catch(error => {
