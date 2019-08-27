@@ -6,6 +6,7 @@ import SignUpForm from  "./components/SignUpForm.js";
 import Dashboard from './components/Dashboard.js';
 import ErrorPage from './ErrorPages/ErrorPage.js';
 import ErrorPage2 from './ErrorPages/ErrorPage2.js';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -35,6 +36,8 @@ function App() {
       />
 
     </header>
+
+    <NavBar />
   </div>
   );
 }
