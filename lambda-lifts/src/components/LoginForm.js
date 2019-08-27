@@ -25,7 +25,7 @@ const [login, setLogin] = useState([]);
 
     return(
         <div className="login-form">
-            <Form>
+            <Form className="form-container">
                 <div className="image-div">
                 <div id="circle1"></div>
                 <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
