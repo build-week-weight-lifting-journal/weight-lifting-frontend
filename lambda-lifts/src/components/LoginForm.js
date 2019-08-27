@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Field, withFormik } from "formik";
-import { Button } from 'semantic-ui-react';
+import { Button, Image, Grid, Divider, Segment } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import * as Yup from "yup";
+import logo from '../images/Logo2.png';
 
 
 const LoginForm = ({ errors, touched, values, status })  =>{
@@ -23,6 +24,7 @@ const [login, setLogin] = useState([]);
     return(
         <div className="login-form">
             <Form>
+                <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
                 <Field className="field-input" name="email" type="text" placeholder="Email" />
                 {touched.email && <errors className="email"></errors> && (
                     <p className="error">{errors.email}</p>
@@ -32,21 +34,20 @@ const [login, setLogin] = useState([]);
                     <p className="error">{errors.password}</p>
                 )}
                 <Button type="submit" >LOGIN RIGHT HERE</Button>
-                <div className="other-buttons">
+                <Segment>
+                    <Grid columns={2} realxed='very'>
+                    <Grid.Column>
                 <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
-                <NavLink >Forgot Password</NavLink>
-                </div>
+                </Grid.Column>
+                                <Divider vertical>Or</Divider>
+
+                <Grid.Column>
+                <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
+                </Grid.Column>
+                </Grid>
+                </Segment>
             </Form>
-            
-            {/* {login.map(getIt => (
-                <div className="title-container">
-                <ul key={getIt.id}>
-                <h2>Welcome</h2>
-                <li>Email: {getIt.email}</li>
-                </ul>
-                </div>
-            ))} */}
-            
+                
         </div>
     );
 };
