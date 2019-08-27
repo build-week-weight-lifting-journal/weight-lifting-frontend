@@ -11,7 +11,7 @@ const ExerciseList = (props) => {
       <div className="bodyNav">
         <Link to="/Dashboard"><p>Cancel</p></Link>
         <p>Add Exercises</p>
-        <Link to="/MyWorkouts"><p>Save</p></Link>
+        <Link to="/"><p>Save</p></Link>
       </div>
 
       {props.getExerciseData}
