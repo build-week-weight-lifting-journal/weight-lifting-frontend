@@ -2,26 +2,44 @@ import React from "react";
 import { Form, Field, withFormik } from "formik";
 import { connect } from "react-redux";
 import { signUp } from "../actions";
+import { Button, Image } from 'semantic-ui-react';
+import {NavLink} from 'react-router-dom';
 import * as Yup from "yup";
+import logo from '../images/Logo.png'
+import LoginForm from './LoginForm'
 
 const SignUpForm = ({ errors, touched }) => {
   return (
-    <div>
+    <div className="signupform">
+      <div className='image-div'>
+        <Image src={logo} />
+      </div>
       <Form>
-        <Field type="text" name="firstName" placeholder="First Name" />
-        {touched.firstName && errors.firstName && <p>{errors.firstName}</p>}
+        <div className="input">
+          <Field className="fieldinput" type="text" name="firstName" placeholder="First Name" />
+          {touched.firstName && errors.firstName && <p>{errors.firstName}</p>}
+        </div> 
 
-        <Field type="text" name="lastName" placeholder="Last Name" />
-        {touched.lastName && errors.lastName && <p>{errors.lastName}</p>}
+        <div className="input">
+          <Field className="fieldinput" type="text" name="lastName" placeholder="Last Name" />
+          {touched.lastName && errors.lastName && <p>{errors.lastName}</p>}
+        </div>
 
-        <Field type="email" name="email" placeholder="Email" />
-        {touched.email && errors.email && <p>{errors.email}</p>}
+        <div className="input">
+          <Field className="fieldinput" type="email" name="email" placeholder="Email" />
+          {touched.email && errors.email && <p>{errors.email}</p>}
+        </div>
 
-        <Field type="password" name="password" placeholder="Password" />
+        <div className="input">
+        <Field className="fieldinput" type="password" name="password" placeholder="Password" />
         {touched.password && errors.password && <p>{errors.password}</p>}
+        </div>
 
         <button type="submit"> Sign Up! </button>
       </Form>
+      <NavLink exact to={`/`}>
+        <button to="/"className="goback" type="submit"> Login </button>
+      </NavLink>
     </div>
   );
 };
