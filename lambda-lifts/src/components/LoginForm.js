@@ -22,9 +22,9 @@ console.log(errors);
     return(
         <div className="login-form">
             <Form>
-                <Field className="field-input" name="username" type="text" placeholder="Username" />
-                {touched.username && <errors className="username"></errors> && (
-                    <p className="error">{errors.username}</p>
+                <Field className="field-input" name="email" type="text" placeholder="Email" />
+                {touched.email && <errors className="email"></errors> && (
+                    <p className="error">{errors.email}</p>
                 )}
                 <Field className="field-input" name="password" type="password" placeholder="Password"  />
                 {touched.password && errors.password && (
@@ -41,7 +41,7 @@ console.log(errors);
                 <div className="title-container">
                 <ul key={getIt.id}>
                 <h2>Welcome</h2>
-                <li>Username: {getIt.username}</li>
+                <li>Email: {getIt.email}</li>
                 </ul>
                 </div>
             ))}
@@ -52,17 +52,17 @@ console.log(errors);
 
 const FormikLoginForm = withFormik({
     mapsPropsToValues({ 
-        username,
+        email,
         password
     }) {
         return{ 
-            username: username || "",
+            email: email || "",
             password: password || "",
         };
     },
     validationSchema: Yup.object().shape({
-        username: Yup.string().required("Make a username that is unique"),
-        password: Yup.string().required("A password is required for the privacy of your acccount"),
+        email: Yup.string().required("Your email is required for an account"),
+        password: Yup.string().required("A password is required for the privacy of your acccount, and a different password different from your email account is recommended"),
     }),
     handleSubmit(values, {setStatus}) {
         axios.post("https://reqres.in/api/users/", values)
