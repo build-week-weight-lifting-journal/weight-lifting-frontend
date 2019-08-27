@@ -25,7 +25,7 @@ const [login, setLogin] = useState([]);
 
     return(
         <div className="login-form">
-            <Form>
+            <Form className="form-container">
                 <div className="image-div">
                 <div id="circle1"></div>
                 <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
@@ -44,14 +44,14 @@ const [login, setLogin] = useState([]);
                 )}
                 </div>
                 <Button className="login-button" type="submit" >LOGIN</Button>
-                <Segment>
-                    <Grid columns={2} realxed='very'>
+                <Segment className="link-container">
+                    <Grid className="bottomlogin" columns={2} relaxed='very'>
                     <Grid.Column>
                 <NavLink exact to={`/SignUpForm`}>Create Account</NavLink>
                 </Grid.Column>
-                <Divider vertical className="divider">|</Divider>
+                <Divider vertical className="link-divider">  |  </Divider>
 
-                <Grid.Column>
+                <Grid.Column className="error-link">
                 <NavLink exact to={`/ErrorPage`} >Forgot Password</NavLink>
                 </Grid.Column>
                 </Grid>

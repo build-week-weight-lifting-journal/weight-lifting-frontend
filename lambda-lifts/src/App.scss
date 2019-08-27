@@ -49,9 +49,23 @@
     background: #f3be70;
     border-radius: 50%;
     position: relative;
-    bottom: -50px;
+    bottom: 50px;
     left: -150px;
     opacity: .8;
+}
+
+.top-section {
+    .image-div {
+        overflow: hidden;
+        height: 45vh;
+        padding: 20px;
+        background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+    } //closes image-div
+    .dashboard-logo {
+        height: 60%;
+        margin: 50px;
+        background-repeat: none;
+    } //login-logo
 }
 
 .login-form {
@@ -81,9 +95,7 @@
         display: inline-block;
         // margin-bottom: 20px;
         margin-top: 20px;
-        border-top-style: hidden;
-        border-right-style: hidden;
-        border-left-style: hidden;
+        border: hidden;
     } //closes field-input
     .login-button {
         margin: 0 auto;
@@ -97,6 +109,10 @@
         font-size: 1.2rem;
         color: white;
         margin-bottom: 30px;
+    } //closes login-button
+    .bottomlogin {
+        display: flex;
+        justify-content: center;
     }
 } //closes login-form
 .error-page {
