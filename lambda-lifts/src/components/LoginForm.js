@@ -26,7 +26,9 @@ const [login, setLogin] = useState([]);
     return(
         <div className="login-form">
             <Form>
+                <div className="image-div">
                 <Image className="login-logo" src={logo} alt="Lambda Lift logo" wraped/>
+                </div>
                 <div className="email-input"><Image src={logoEmail} alt="email envelope"/>
                 <Field className="field-input" name="email" type="text" placeholder="Email" />
                 {touched.email && <errors className="email"></errors> && (
