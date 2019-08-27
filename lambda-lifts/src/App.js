@@ -4,6 +4,8 @@ import {Route} from 'react-router-dom';
 import "./App.css";
 import SignUpForm from  "./components/SignUpForm.js";
 import Dashboard from './components/Dashboard.js';
+import ErrorPage from './ErrorPages/ErrorPage.js';
+import ErrorPage2 from './ErrorPages/ErrorPage2.js';
 
 function App() {
 
@@ -22,6 +24,14 @@ function App() {
       <Route
       path="/Dashboard"
       component={Dashboard}
+      />
+      <Route
+      exact path="/ErrorPage"
+      component={ErrorPage}
+      />
+      <Route 
+      exact path="/ErrorPage2"
+      component={ErrorPage2}
       />
 
     </header>
