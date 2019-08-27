@@ -14,7 +14,6 @@ export const SIGNUP_ERROR = "SIGNUP_ERROR";
 */
 
 export const signUp = user => {
-  console.log(user);
   return dispatch => {
     dispatch({ type: IS_SIGNING_UP });
     axiosWithAuth()

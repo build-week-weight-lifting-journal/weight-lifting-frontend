@@ -16,6 +16,7 @@ function App() {
       <header>
         {/* <h1>APP</h1> */}
         <Route exact path="/" component={LoginForm} />
+        <Route path="/Dashboard" component={Dashboard} />
         <Route exact path="/SignUpForm" component={SignUpForm} />
         <Route path="/Dashboard" component={Dashboard} />
         <Route exact path="/ErrorPage" component={ErrorPage} />

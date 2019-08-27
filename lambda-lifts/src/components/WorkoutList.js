@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WorkoutCard from "./WorkoutCard";
 
+//dummy data
 const workoutstate = [
   { id: 1, name: "leg workout", date: "03/25/2018" },
   { id: 2, name: "back workout", date: "02/20/2019" },
