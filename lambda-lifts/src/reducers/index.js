@@ -8,7 +8,7 @@ import { bodyCategoryReducer } from "./bodyCategoryReducer";
 
 // combineReducers creates one state object using multiple reducers
 export const reducer = combineReducers({
-  workouts: workoutsReducer,
-  signup: signUpReducer,
-  categories: bodyCategoryReducer
+    workouts: workoutsReducer,
+    signup: signUpReducer,
+    categories: bodyCategoryReducer
 });

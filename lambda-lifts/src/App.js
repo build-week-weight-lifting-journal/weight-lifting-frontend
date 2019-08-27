@@ -13,7 +13,7 @@ function App() {
   return (
   <div className="App">
     <header>
-      <h1>APP</h1>
+      {/* <h1>APP</h1> */}
       <Route 
       exact path="/"
       component={LoginForm}

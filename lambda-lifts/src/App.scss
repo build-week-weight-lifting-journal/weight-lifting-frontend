@@ -36,10 +36,26 @@
     width: 90%;
 }
 
+<<<<<<< HEAD:lambda-lifts/src/App.scss
+login-logo {
+    height: 45%vh;
+}
+
+.error-page {
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+    color: white;
+}
+
+=======
+>>>>>>> 195cef449d5bef46d7474c36733ae2d6f21b290a:lambda-lifts/src/App.css
 .field-input {
     margin: 0 auto;
-    width: 90%;
-    display: block;
+    width: 60vw;
+    height: 20px;
+    display: inline-block;
 }
 
 .navbar {

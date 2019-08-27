@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
-import logo from '../images/Logo2.png';
+import logo from '../images/Logo.png';
 import styled from 'styled-components';
 
 
@@ -11,7 +11,6 @@ export default function ErrorPage() {
     const Image = styled.img`
     box-sizing: border-box;
     color: white;
-    background:white;
     border-radius:15%;
     padding:30px;
     `
