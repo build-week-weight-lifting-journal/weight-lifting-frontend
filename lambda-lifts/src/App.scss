@@ -56,7 +56,7 @@ login-logo {
 }
 
 .navbar {
-    <<<<<<< HEAD // background:lightgrey;
+    // background:lightgrey;
     border-top: 3px silver outset;
     margin: 0px 50px;
     display: flex;
@@ -72,21 +72,3 @@ login-logo {
         } //closes image
     } //closes logocircle
 } //closes navbar
-======= // background:lightgrey;
-border-top: 3px silver outset;
-margin: 0px 50px;
-display: flex;
-justify-content: space-between;
-.logocircle {
-    background: lightgrey;
-    border-radius: 50%;
-    box-sizing: border-box;
-    .image {
-        margin: 5px;
-        align-items: center;
-        justify-content: center;
-    } //closes image
-} //closes logocircle
-
-} //closes navbar
->>>>>>>1377a418287ef81585f574f0ff060301d61dc5d0
