@@ -26,10 +26,7 @@ function App() {
       exact path="/SignUpForm"
       component={SignUpForm}
       />
-      <Route
-      path="/Dashboard"
-      component={Dashboard}
-      />
+      
       <Route
       exact path="/ErrorPage"
       component={ErrorPage}
@@ -41,7 +38,7 @@ function App() {
 
     </header>
 
-    <NavBar />
+    {/* <NavBar /> */}
   </div>
   );
 }
