@@ -36,9 +36,9 @@
     width: 90%;
 }
 
-<<<<<<< HEAD:lambda-lifts/src/App.scss
-login-logo {
+.login-logo {
     height: 45%vh;
+    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
 }
 
 .error-page {
@@ -49,8 +49,6 @@ login-logo {
     color: white;
 }
 
-=======
->>>>>>> 195cef449d5bef46d7474c36733ae2d6f21b290a:lambda-lifts/src/App.css
 .field-input {
     margin: 0 auto;
     width: 60vw;
@@ -60,20 +58,18 @@ login-logo {
 
 .navbar {
     // background:lightgrey;
-    border-top:3px silver outset;
+    border-top: 3px silver outset;
     margin: 0px 50px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    
-    .logocircle{
-        background:lightgrey;
-        border-radius:50%;
-        box-sizing:border-box;
- 
-        .image{
-            margin:5px;
-            align-items:center;
+    .logocircle {
+        background: lightgrey;
+        border-radius: 50%;
+        box-sizing: border-box;
+        .image {
+            margin: 5px;
+            align-items: center;
             justify-content: center;
-        }//closes image
-    }//closes logocircle
-}//closes navbar
+        } //closes image
+    } //closes logocircle
+} //closes navbar
