@@ -21,7 +21,7 @@ export const makeWorkout = workout => {
         workout
       )
       .then(res => {
-        dispatch({ type: WORKOUT_MADE_SUCCESS });
+        dispatch({ type: WORKOUT_MADE_SUCCESS, payload: res.data.id });
         console.log(res);
       })
       .catch(err => {

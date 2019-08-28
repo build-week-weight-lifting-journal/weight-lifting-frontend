@@ -7,16 +7,13 @@ import * as Yup from "yup";
 import logo from "../images/Logo.png";
 import logoPassword from "../images/password2.png";
 import logoEmail from "../images/Email2.png";
-
 // use redux
 import { connect } from "react-redux";
-
 // axios post action
 import { postLoginData } from "../actions/index.js";
-
-const LoginForm = ({ errors, touched, status, history }) => {
+import Dashboard from "./Dashboard";
+const LoginForm = ({ errors, touched, status }) => {
   const [login, setLogin] = useState({});
-
   useEffect(() => {
     if (status) {
       setLogin(user => ({ ...login, user }));
@@ -36,7 +33,6 @@ const LoginForm = ({ errors, touched, status, history }) => {
           />
           <div id="circle2"></div>
         </div>
-
         <div className="email-input">
           <Image src={logoEmail} alt="email envelope" />
           <Field
@@ -49,7 +45,6 @@ const LoginForm = ({ errors, touched, status, history }) => {
             <p className="error">{errors.email}</p>
           )}
         </div>
-
         <div className="password-input">
           <Image src={logoPassword} alt="password lock" />
           <Field
@@ -62,15 +57,9 @@ const LoginForm = ({ errors, touched, status, history }) => {
             <p className="error">{errors.password}</p>
           )}
         </div>
-
-        <Button
-          className="login-button"
-          type="submit"
-          onClick={() => history.push("/Dashboard")}
-        >
+        <Button className="login-button" type="submit">
           LOGIN
         </Button>
-
         <Segment>
           <Grid className="bottomlogin" columns={2} realxed="very">
             <Grid.Column>
@@ -92,7 +81,6 @@ const LoginForm = ({ errors, touched, status, history }) => {
     </div>
   );
 };
-
 const FormikLoginForm = withFormik({
   mapPropsToValues({ email, password }) {
     return {
@@ -100,7 +88,6 @@ const FormikLoginForm = withFormik({
       email: email || ""
     };
   },
-
   validationSchema: Yup.object().shape({
     email: Yup.string().required(
       "Now a User Name; Got to have this to be a user"
@@ -110,26 +97,23 @@ const FormikLoginForm = withFormik({
     )
   }),
 
-  handleSubmit(values, { props }) {
+  handleSubmit(values, { props, setStatus, resetForm }) {
     // axios.post("https://reqres.in/api/users/", values)
     // .then(res => {
-    //     console.log(res);
-    //     setStatus(res.data);
+    //   console.log(res);
+    //   setStatus(res.data);
     // })
     // .catch(err => {
-    //     console.log(err);
+    //   console.log(err);
     // });
-
     console.log("props", props);
     console.log("values", values);
-
     // using login action to make the above axios call
     props.postLoginData(values);
+    props.history.push("/Dashboard");
   }
 })(LoginForm);
-
 const mapStateToProps = state => {
-  console.log("state LoginForm", state);
   return {
     loginIsLoading: state.login.loginIsLoading,
     isLoggedIn: state.login.isLoggedIn,
@@ -141,5 +125,4 @@ export default connect(
   mapStateToProps,
   { postLoginData }
 )(FormikLoginForm);
-
 // export default FormikLoginForm;

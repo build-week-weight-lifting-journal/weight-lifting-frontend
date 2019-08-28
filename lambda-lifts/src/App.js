@@ -23,10 +23,11 @@ function App() {
       <Route exact path="/ErrorPage2" component={ErrorPage2} />
       <Route exact path="/CreateWorkout" component={NameWorkout} />
       <PrivateRoute exact path="/ExerciseList" component={ExerciseList} />
-      <PrivateRoute path="/Workouts" component={WorkoutList} />
+      <PrivateRoute path="/WorkoutList" component={WorkoutList} />
       <PrivateRoute path="/RepSets" component={RepSets} />
       <PrivateRoute path="/NameWorkout" component={NameWorkout} />
-      <PrivateRoute path="/" component={NavBar} />
+      <PrivateRoute path="/Dashboard" component={NavBar} />
+      <PrivateRoute path="/WorkoutList" component={NavBar} />
     </div>
   );
 }
