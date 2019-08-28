@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 
 // axios post action 
 import { postLoginData } from '../actions/index.js';
+import Dashboard from './Dashboard';
 
 
 const LoginForm = ({ errors, touched, values, handleSubmit, status, props})  =>{
