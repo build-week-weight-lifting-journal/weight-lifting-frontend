@@ -13,6 +13,7 @@ import { connect } from 'react-redux';
 
 // axios post action 
 import { postLoginData } from '../actions/index.js';
+import Dashboard from './Dashboard';
 
 
 const LoginForm = ({ errors, touched, values, handleSubmit, status, props})  =>{
@@ -56,7 +57,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props})  =>{
                     )}
                 </div>
 
-                <Button className="login-button" type="submit" >LOGIN</Button>
+                <Button className="login-button" type="submit" ><NavLink to="/Dashboard">LOGIN</NavLink></Button>
 
                 <Segment>
                     <Grid className="bottomlogin" columns={2} realxed='very'>
