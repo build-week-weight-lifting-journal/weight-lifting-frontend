@@ -62,7 +62,7 @@ const [login, setLogin] = useState([]);
 };
 
 const FormikLoginForm = withFormik({
-    mapsPropsToValues({ 
+    mapPropsToValues({ 
         email,
         password
     }) {

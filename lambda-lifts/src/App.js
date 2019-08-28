@@ -10,6 +10,7 @@ import NavBar from "./components/NavBar";
 // import NameWorkout from "./components/NameWorkout";
 import WorkoutList from "./components/WorkoutList";
 // import ExerciseList from "./components/ExerciseList.js";
+import PrivateRoute from './utils/PrivateRoute';
 
 function App() {
   return (
@@ -30,9 +31,13 @@ function App() {
       exact path="/MyWorkouts"
       component={WorkoutList}/> */}
       </header>
+      {/* <PrivateRoute  
+      path="/Workoutlist"
+      component={WorkoutList}
+      /> */}
 
       {/* <NavBar /> */}
-      <WorkoutList />
+      {/* <WorkoutList /> */}
     </div>
   );
 }
