@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { PulseSpinner } from "react-spinners-kit";
 import { getExerciseData } from "../actions/index";
-
+import "../ExerciseList.scss";
 
 const ExerciseList = (props) => {
 
+  useEffect(() => {
+    props.getExerciseData()
+  }, [])
+  
+  // const exerciseObject = {
+  //   weight: "", 
+  //   reps: 0, 
+  //   sets: 0,
+  //   journalId: props.journalId,
+  //   exerciseId: 0,
+  // }
+
+  // console.log(exerciseObject)
+
   return (
+<<<<<<< HEAD
     <div>
       <div className="bodyNav">
         <Link to="/WorkoutList"><p>Cancel</p></Link>
+=======
+    <div className="exercise-container">
+      <div className="exercise-nav">
+        <Link to="/Dashboard"><p>Cancel</p></Link>
+>>>>>>> e15fa0fcd59551bf6700325048bc56dab1184f97
         <p>Add Exercises</p>
         <Link to="/"><p>Save</p></Link>
       </div>
-      
-      <div className="friends-btn" onClick={props.getExerciseData}>
-        {props.exerciseIsLoading ? (
-          <button><PulseSpinner size={30}
-          color="#686769"
-          loading={props.exerciseIsLoading}
-          /></button>
-        ) : (
-          <button>Get Exercises</button>
-        )}
-      </div>
 
-      <div>
-        {props.exercises && props.exercises.map((exercise, index) => <button key={index}>{exercise.name}</button>)}
+      <div className="exercise-list-container">
+        {props.exercises && props.exercises.map((exercise, index) => <button className="exercises" key={index} onClick={() => console.log(exercise)}>{exercise.name}</button>
+        )}
       </div>
 
     </div>
@@ -38,12 +47,13 @@ const mapStateToProps = state => {
   return {
       exercises: state.exercise.exercises, 
       exerciseIsLoading: state.exercise.exerciseIsLoading,
-      exerciseId: state.exercise.exerciseId,
-      userId: state.login.userId
-      };
-  };
+      exerciseObj: state.exercise.exerciseObj,
+      userId: state.login.userId,
+      // journalId: state.nameWorkout.journalId
+    };
+};
   
-  export default connect(
-      mapStateToProps,
-      { getExerciseData }
+export default connect(
+  mapStateToProps,
+    { getExerciseData }
 )(ExerciseList);
