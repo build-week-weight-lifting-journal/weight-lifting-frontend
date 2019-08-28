@@ -5,42 +5,60 @@ import Check from '../images/Check.png';
 
 const RepWeight = props => {
 
-    const [form, setForm] = useState({Reps: "", Weight: ""})
+    const [form, setForm] = useState({Sets: "", Reps: "", Weight: ""})
 
     const changehandler = event => {
-        setForm({...form, [event.target.Reps]: event.target.value})
+        setForm({...form, [event.target.name]: event.target.value})
     }
 
     const submitForm = event =>{
         event.preventDefault();
-        const newForm={
-            ...form,
-            id:Date.now()
-        }
-        props.addNewForm(newForm);
-        setForm({Reps: "", Weight: ""})
+        console.log(form);
     }
 
     return(
+        <div className="container">
+            <div className="nav">
+                <NavLink className="navlink"> Cancel </NavLink>
+                <h2> Add Exercises </h2>
+                <NavLink className="navlink"> Save </NavLink>
+            </div>
+        <div className="workoutname">
+            <h1>ADD Workout Name Functionality</h1>
+        </div>
+
         <form className="repweight" onSubmit={submitForm}>
-            <label htmlFor="reps"> <h2>Reps</h2> </label>
+            <label htmlFor="Sets"> <h2>Sets:</h2> </label>
             <input
             className="input"
-            name="reps"
+            name="Sets"
             type="text"
-            value={form.reps}
+            value={form.Sets}
             onChange={changehandler}
             />
-            <label htmlFor="weight"> <h2>Weight</h2> </label>
+
+            <label htmlFor="Reps"> <h2>Reps:</h2> </label>
             <input
             className="input"
-            name="weight"
+            name="Reps"
             type="text"
-            value={form.weight}
+            value={form.Reps}
             onChange={changehandler}
             />
-            <button type="submit"> <img src={Check} /> </button>
+            <label htmlFor="Weight"> <h2>Weight:</h2> </label>
+            <input
+            className="input"
+            name="Weight"
+            type="text"
+            value={form.Weight}
+            onChange={changehandler}
+            />
+            
         </form>
+        <div className="navlinkcheck">
+        <NavLink> <img src={Check}/> </NavLink>
+        </div>
+        </div>
     )
 }
 

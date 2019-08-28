@@ -13,7 +13,7 @@ import X from "../images/X.png";
 
 const NameWorkout = props => {
   const [workout, setWorkout] = useState({
-    userId: 1,
+    userId: props.userId,
     name: "",
     date: moment(Date.now()).format("l")
   });
@@ -48,7 +48,13 @@ const NameWorkout = props => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    userId: state.login.userId
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   { makeWorkout }
 )(NameWorkout);
