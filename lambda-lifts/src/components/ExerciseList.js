@@ -21,9 +21,9 @@ const ExerciseList = (props) => {
   // console.log(exerciseObject)
 
   return (
-    <div className="exercise-container">
-      <div className="exercise-nav">
-        <Link to="/Dashboard"><p>Cancel</p></Link>
+    <div>
+      <div className="bodyNav">
+        <Link to="/WorkoutList"><p>Cancel</p></Link>
         <p>Add Exercises</p>
         <Link to="/"><p>Save</p></Link>
       </div>
