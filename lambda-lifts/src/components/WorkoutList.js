@@ -49,7 +49,7 @@ const WorkoutList = () => {
               <WorkoutCard key={workout.id} workout={workout} />
             ))}
       </div>
-            <div className="add-workout-card-button"><NavLink exact to="/NameWorkout"><Image src={logoAdd}/></NavLink></div>
+            <div className="add-workout-card-button"><NavLink className="plus-button"  exact to="/NameWorkout"><Image src={logoAdd}/></NavLink></div>
     </div>
   );
 };
