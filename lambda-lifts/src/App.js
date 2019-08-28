@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard.js';
 import ErrorPage from './ErrorPages/ErrorPage.js';
 import ErrorPage2 from './ErrorPages/ErrorPage2.js';
 import NavBar from './components/NavBar';
+import RepWeight from './components/RepSets';
 
 function App() {
 
@@ -34,6 +35,9 @@ function App() {
       <Route 
       exact path="/ErrorPage2"
       component={ErrorPage2}
+      />
+      <Route exact path="/RepWeight"
+      component={RepWeight}
       />
 
     </header>

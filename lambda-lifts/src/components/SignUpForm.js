@@ -6,7 +6,6 @@ import { Button, Image } from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
 import * as Yup from "yup";
 import logo from '../images/Logo.png'
-import LoginForm from './LoginForm'
 
 const SignUpForm = ({ errors, touched }) => {
   return (
