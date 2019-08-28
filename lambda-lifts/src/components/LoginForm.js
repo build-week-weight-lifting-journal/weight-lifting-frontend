@@ -13,16 +13,8 @@ import { connect } from "react-redux";
 
 // axios post action
 import { postLoginData } from "../actions/index.js";
-import Dashboard from "./Dashboard";
 
-const LoginForm = ({
-  errors,
-  touched,
-  values,
-  handleSubmit,
-  status,
-  history
-}) => {
+const LoginForm = ({ errors, touched, status, history }) => {
   const [login, setLogin] = useState({});
 
   useEffect(() => {
@@ -118,7 +110,7 @@ const FormikLoginForm = withFormik({
     )
   }),
 
-  handleSubmit(values, { props, setStatus, resetForm }) {
+  handleSubmit(values, { props }) {
     // axios.post("https://reqres.in/api/users/", values)
     // .then(res => {
     //     console.log(res);

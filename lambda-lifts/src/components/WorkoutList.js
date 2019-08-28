@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import { Image } from 'semantic-ui-react';
 import WorkoutCard from "./WorkoutCard";
 import "../WorkoutList.scss";
+import logoAdd from '../images/Add.png';
 
 //dummy data
 const workoutstate = [
@@ -21,7 +24,7 @@ const WorkoutList = () => {
   return (
     <div className="workout-list">
       <div className="workout-gradient">
-        <span class="dot"></span>
+        {/* <span class="dot"></span> */}
         <h1>My Workouts</h1>
         <form className="search-bar">
           <input
@@ -30,6 +33,7 @@ const WorkoutList = () => {
             onChange={searchHandler}
             placeholder="Search Date"
           />
+
         </form>
       </div>
       {/* logic for the api - remember need to format dates*/}
@@ -45,6 +49,7 @@ const WorkoutList = () => {
               <WorkoutCard key={workout.id} workout={workout} />
             ))}
       </div>
+            <div className="add-workout-card-button"><NavLink exact to="/NameWorkout"><Image src={logoAdd}/></NavLink></div>
     </div>
   );
 };
