@@ -8,14 +8,13 @@ import ErrorPage from './ErrorPages/ErrorPage.js';
 import ErrorPage2 from './ErrorPages/ErrorPage2.js';
 import NavBar from './components/NavBar';
 // import ExerciseList from "./components/ExerciseList.js";
-// import WorkoutList from './components/WorkoutList.js'
+import WorkoutList from './components/WorkoutList.js'
 
 function App() {
 
   return (
   <div className="App">
     <header>
-      {/* <h1>APP</h1> */}
       <Route 
       exact path="/"
       component={LoginForm}
@@ -41,9 +40,9 @@ function App() {
       exact path="/ExerciseList"
       component={ExerciseList}
       /> */}
-      {/* <Route 
-      exact path="/MyWorkouts"
-      component={WorkoutList}/> */}
+      <Route 
+      exact path="/WorkoutList"
+      component={WorkoutList}/>
     </header>
 
     {/* <NavBar /> */}

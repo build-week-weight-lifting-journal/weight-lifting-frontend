@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, Card } from 'semantic-ui-react'
+import {NavLink} from 'react-router-dom';
 import logonumbers from '../images/123.png';
 import logoApple from '../images/Apple.png';
 import logoGraph from '../images/Graph.png';
@@ -13,7 +14,6 @@ import NavBar from '../components/NavBar';
 
 export default function Dashboard (){
 
-
     return(
         <div className="dashboard-container">
             <div className="top-section">
@@ -24,44 +24,44 @@ export default function Dashboard (){
                 </div>
             </div>
             <div className="botton-section">
-                <Card.Group>
-                    <Card>
-                        <Card.Content>
-                            <Image src={logoWorkout} alt="button to my workouts" />
-
-                        </Card.Content>
+                <Card.Group className="the-card-buttons-container">
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/WorkoutList">
+                            <Image src={logoWorkout} />
+                            <Card.Header> My Workouts  </Card.Header>
+                    </NavLink>
                     </Card>
-                    <Card>
-                        <Card.Content>
+
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/ErrorPage2">
                             <Image src={logonumbers} />
-                            <Card.Header>   </Card.Header>
-                        </Card.Content>
+                            <Card.Header> Calorie Count  </Card.Header>
+                    </NavLink>
                     </Card>
-                    <Card>
-                        <Card.Content>
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/ErrorPage2">
                             <Image src={logoShape} />
-                        </Card.Content>
-                        <Card.Header>   </Card.Header>
+                            <Card.Header> Progress Pictures  </Card.Header>
+                    </NavLink>
                     </Card>
-                    <Card>
-                        <Card.Content>
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/ErrorPage2">
                             <Image src={logoGraph} />
-                        </Card.Content>
-                        <Card.Header>   </Card.Header>
+                            <Card.Header> Weight Graph  </Card.Header>
+                    </NavLink>
                     </Card>
-                    <Card>
-                        <Card.Content>
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/ErrorPage2">
                             <Image src={logoApple} />
-                        </Card.Content>
-                        <Card.Header>   </Card.Header>
+                            <Card.Header> Healthy Meals  </Card.Header>
+                    </NavLink>
                     </Card>
-                    <Card>
-                        <Card.Content>
+                    <Card className="card">
+                    <NavLink className="the-navlink" exact to="/ErrorPage2">
                             <Image src={logoTutorial} />
-                            <Card.Header>  </Card.Header>
-                        </Card.Content>
+                            <Card.Header> Workout Tutorials  </Card.Header>
+                    </NavLink>
                     </Card>
-
                 </Card.Group>
 
             </div>
