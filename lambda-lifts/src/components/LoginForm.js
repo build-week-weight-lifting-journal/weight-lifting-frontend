@@ -109,7 +109,7 @@ const FormikLoginForm = withFormik({
 })(LoginForm);
 
 const mapStateToProps = state => {
-    console.log("state LoginForm", state)
+    
     return {
         loginIsLoading: state.login.loginIsLoading,
         isLoggedIn: state.login.isLoggedIn,
