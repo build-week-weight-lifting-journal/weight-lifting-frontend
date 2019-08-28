@@ -9,8 +9,9 @@ import ErrorPage2 from "./ErrorPages/ErrorPage2.js";
 import RepWeight from "./components/RepSets";
 import NameWorkout from "./components/NameWorkout";
 import WorkoutList from "./components/WorkoutList";
-// import ExerciseList from "./components/ExerciseList.js";
+import ExerciseList from "./components/ExerciseList.js";
 import PrivateRoute from "./utils/PrivateRoute";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
@@ -18,15 +19,18 @@ function App() {
       <header>
         {/* <h1>APP</h1> */}
         <Route exact path="/" component={LoginForm} />
-        <Route path="/Dashboard" component={Dashboard} />
+        <PrivateRoute path="/Dashboard" component={Dashboard} />
         <Route exact path="/SignUpForm" component={SignUpForm} />
 
         <Route exact path="/ErrorPage" component={ErrorPage} />
         <Route exact path="/ErrorPage2" component={ErrorPage2} />
         <Route exact path="/RepWeight" component={RepWeight} />
         <Route exact path="/CreateWorkout" component={NameWorkout} />
-        <Route exact path="/Workouts" component={WorkoutList} />
+        <PrivateRoute exact path="/ExerciseList" component={ExerciseList} />
+        <PrivateRoute path="/Workouts" component={WorkoutList} />
       </header>
+
+      <PrivateRoute path="/" component={NavBar} />
     </div>
   );
 }
