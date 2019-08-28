@@ -7,7 +7,6 @@ import Dashboard from './components/Dashboard.js';
 import ErrorPage from './ErrorPages/ErrorPage.js';
 import ErrorPage2 from './ErrorPages/ErrorPage2.js';
 import RepWeight from './components/RepSets';
-import SignUpForm from "./components/SignUpForm.js";
 // import NameWorkout from "./components/NameWorkout";
 import WorkoutList from "./components/WorkoutList";
 // import ExerciseList from "./components/ExerciseList.js";
