@@ -260,6 +260,62 @@
     }
 }//closes signupform
 
+//RepSetsWeight page
+.container{
+    width:100%;
+    height:100vh;
+    background: rgb(245, 238, 238);
+}//closes container
+
+.nav{
+    background: linear-gradient(to bottom, #f3be70,  #ff5b7b);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    .navlink{
+        margin: 0px 10%;
+        text-decoration: none;
+        color:white;
+    }
+}
+
+.workoutname{
+    margin:20px 0px;
+    width:100%;
+    padding:10px;
+    background:white;
+    box-shadow: 2px 2px silver;
+}//closes workoutname
+
+.repweight{
+    background:white;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    box-shadow: 2px 2px silver;
+
+    h2{
+        color: #ff5b7b;
+    }//closes h2
+
+    .input{
+        margin: 0px 10px;
+        text-align: center;
+        font-size:1.2rem;
+    }//closes input
+
+   
+}//closes repweight form
+.navlinkcheck{
+       background:white;
+   }
+//DONE WITH REP SETS WEIGHT PAGE
+
+
+
+
+
 
 
 
