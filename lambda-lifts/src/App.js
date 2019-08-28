@@ -18,8 +18,6 @@ import RepSets from './components/RepSets.js';
 function App() {
   return (
     <div className="App">
-      <header>
-        {/* <h1>APP</h1> */}
         <Route exact path="/" component={LoginForm} />
         <PrivateRoute path="/Dashboard" component={Dashboard} />
         <Route exact path="/SignUpForm" component={SignUpForm} />
@@ -34,7 +32,6 @@ function App() {
       path="/Workoutlist"
       component={WorkoutList}
       />
-      </header>
 
       <PrivateRoute  
       path="/RepSets" 
