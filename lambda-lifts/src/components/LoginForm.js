@@ -57,7 +57,7 @@ const LoginForm = ({ errors, touched, values, handleSubmit, status, props})  =>{
                     )}
                 </div>
 
-                <Button className="login-button" type="submit"><NavLink to="/Dashboard">LOGIN</NavLink></Button>
+                <Button className="login-button" type="submit">LOGIN</Button>
 
                 <Segment>
                     <Grid className="bottomlogin" columns={2} realxed='very'>
@@ -99,7 +99,7 @@ const FormikLoginForm = withFormik({
         //     console.log(err);
         // });
 
-        // console.log("props", props);
+        console.log("props", props);
         console.log("values", values)
 
         // using login action to make the above axios call 
@@ -109,9 +109,11 @@ const FormikLoginForm = withFormik({
 })(LoginForm);
 
 const mapStateToProps = state => {
+    console.log("state LoginForm", state)
     return {
-        loginIsLoading: state.loginIsLoading,
-        isLoggedIn: state.isLoggedIn,
+        loginIsLoading: state.login.loginIsLoading,
+        isLoggedIn: state.login.isLoggedIn,
+        userId: state.login.userId,
         };
     };
     

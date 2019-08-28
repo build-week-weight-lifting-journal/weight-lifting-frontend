@@ -1,16 +1,17 @@
 import {
    LOGIN_START,
-   LOGIN_ERROR,
+   LOGIN_FAILURE,
    LOGIN_SUCCESS
 } from "../actions/index.js";
 
 const initialState = {
   loginIsLoading: false,
   isLoggedIn: false,
-  loginError: ""
+  loginError: "",
+  userId: 0 
 };
 
-export const logInReducer = (state = initialState, action) => {
+export const loginReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOGIN_START:
             return {
@@ -21,9 +22,10 @@ export const logInReducer = (state = initialState, action) => {
             return {
                 ...state,
                 loginIsLoading: false,
-                isLoggedIn: true
+                isLoggedIn: true,
+                userId: action.payload
             };
-        case LOGIN_ERROR:
+        case LOGIN_FAILURE:
             return {
                 ...state,
                 loginIsLoading: false,

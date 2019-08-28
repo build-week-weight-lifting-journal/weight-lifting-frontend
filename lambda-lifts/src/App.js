@@ -17,7 +17,6 @@ import NavBar from './components/NavBar';
 function App() {
   return (
     <div className="App">
-      {/* <ExerciseList /> */}
       <header>
         {/* <h1>APP</h1> */}
         <Route exact path="/" component={LoginForm} />

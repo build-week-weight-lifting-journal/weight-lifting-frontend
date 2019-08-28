@@ -2,15 +2,13 @@ import {
   FETCH_EXERCISE_CATEGORY_START,
   FETCH_EXERCISE_CATEGORY_SUCCESS,
   FETCH_EXERCISE_CATEGORY_FAILURE,
-  CLEAR_EXERCISE_CATEGORY,
-  ADD_EXERCISE_CATEGORY
 } from "../actions/index.js";
 
 const initialState = {
   exercises: [],
   exerciseIsLoading: false,
   exerciseError: "",
-  selectedExercises: []
+  exerciseId: 0, 
 };
 
 export const exerciseReducer = (state = initialState, action) => {
@@ -25,7 +23,7 @@ export const exerciseReducer = (state = initialState, action) => {
     case FETCH_EXERCISE_CATEGORY_SUCCESS: {
       return {
         ...state,
-        exercises: [...state.exercises, action.payload],
+        exercises: [...state.exercises, ...action.payload],
         exerciseIsLoading: false,
         exerciseError: ""
       };
@@ -35,18 +33,6 @@ export const exerciseReducer = (state = initialState, action) => {
         ...state,
         exerciseIsLoading: false,
         exerciseError: action.payload
-      };
-    }
-    case CLEAR_EXERCISE_CATEGORY: {
-      return {
-        ...state,
-        selectedExercises: []
-      };
-    }
-    case ADD_EXERCISE_CATEGORY: {
-      return {
-        ...state,
-        selectedExercises: [...state.selectedExercises, action.payload]
       };
     }
     default:
