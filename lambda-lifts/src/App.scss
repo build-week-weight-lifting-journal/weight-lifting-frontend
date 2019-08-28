@@ -1,32 +1,42 @@
 .App {
+    width: 100vw;
     text-align: center;
     margin: 0 auto;
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-.the-card-buttons-container {
+// .App-header {
+//     background-color: #282c34;
+//     min-height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     font-size: calc(10px + 2vmin);
+//     color: white;
+// }
+// .App-link {
+//     color: #61dafb;
+// }
+.bottom-section {
     background: rgb(245, 238, 238);
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
     width: 100vw;
     margin: 0 auto;
+}
+
+.the-card-buttons-container {
+    // background: rgb(245, 238, 238);
+    // border-top-right-radius: 40px;
+    // border-top-left-radius: 40px;
+    width: 100vw;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 100px;
+    position: relative;
+    top: -50px;
     .card {
         display: flex;
         flex-direction: column;
@@ -179,15 +189,16 @@
     color: white;
 } //closes error-page
 .navbar {
-    width: 100vw;
+    width: 100%;
     background: rgb(252, 252, 252);
     border-top: 3px silver outset;
-    margin: 0px auto;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    padding-top: 15px;
-    position: relative;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    position: fixed;
     bottom: 0;
+    border-radius: 15px;
     .logocircle {
         display: flex;
         background: lightgrey;
@@ -258,97 +269,75 @@
         margin-bottom: 30px;
         text-decoration: none;
     }
-}//closes signupform
-
+} //closes signupform
 //RepSetsWeight page
-.container{
-    width:100%;
-    height:100vh;
+.container {
+    width: 100%;
+    height: 100vh;
     background: rgb(245, 238, 238);
-}//closes container
-
-.nav{
-    background: linear-gradient(to bottom, #f3be70,  #ff5b7b);
-    display:flex;
+} //closes container
+.nav {
+    background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    color:white;
-    .navlink{
+    color: white;
+    .navlink {
         margin: 0px 10%;
         text-decoration: none;
-        color:white;
+        color: white;
     }
 }
 
-.workoutname{
-    margin:20px 0px;
-    width:100%;
-    padding:10px;
-    background:white;
+.workoutname {
+    margin: 20px 0px;
+    width: 100%;
+    padding: 10px;
+    background: white;
     box-shadow: 2px 2px silver;
-}//closes workoutname
-
-.repweight{
-    background:white;
-    display:flex;
-    flex-direction:row;
+} //closes workoutname
+.repweight {
+    background: white;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     box-shadow: 2px 2px silver;
-
-    h2{
+    h2 {
         color: #ff5b7b;
-    }//closes h2
-
-    .input{
-        width:5%;
+    } //closes h2
+    .input {
+        width: 5%;
         margin: 0px 10px;
         text-align: center;
-        font-size:1.2rem;
+        font-size: 1.2rem;
         border-bottom: 2px solid #35373b;
         border-top-style: hidden;
         border-right-style: hidden;
         border-left-style: hidden;
-    }//closes input
+    } //closes input
+} //closes repweight form
+.navlinkcheck {
+    background: white;
+    padding: 20px 0px;
+}
 
-   
-}//closes repweight form
-.navlinkcheck{
-       background:white;
-       padding:20px 0px;
-   }
 //DONE WITH REP SETS WEIGHT PAGE
-
-
-
-
-
-
-
-
-
-
-
-
 // .repweight{
 //     width:100%;
 //     height:100vh;
 //     display:flex;
 //     flex-direction:row;
 //     justify-content: center;
-
 //     .bothinputs{
 //         display:flex;
-
 //         .input{
 //             margin: 0px 25px;
 //             width: 10vw;
 //             border-bottom: 2px solid #35373b;
 //             margin-bottom: 40px;
-
 //             h2{
 //                 color:#ff5b7b;
 //             }
-    
 //             .fieldinput{
 //                 text-align:center;
 //                 margin: 0 auto;

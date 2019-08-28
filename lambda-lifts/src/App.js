@@ -6,12 +6,13 @@ import SignUpForm from  "./components/SignUpForm.js";
 import Dashboard from './components/Dashboard.js';
 import ErrorPage from './ErrorPages/ErrorPage.js';
 import ErrorPage2 from './ErrorPages/ErrorPage2.js';
-import RepWeight from './components/RepSets';
-// import NameWorkout from "./components/NameWorkout";
-import WorkoutList from "./components/WorkoutList";
+import NameWorkout from "./components/NameWorkout";
+import WorkoutList from "./components/WorkoutList.js";
 import ExerciseList from "./components/ExerciseList.js";
-import PrivateRoute from './utils/PrivateRoute';
-import NavBar from './components/NavBar';
+import PrivateRoute from './utils/PrivateRoute.js';
+import NavBar from './components/NavBar.js';
+import RepSets from './components/RepSets.js';
+
 
 
 function App() {
@@ -35,10 +36,18 @@ function App() {
       />
       </header>
 
+      <PrivateRoute  
+      path="/RepSets" 
+      component={RepSets} />
+      <PrivateRoute
+      path="/NameWorkout"
+      component={NameWorkout}
+      />
       <PrivateRoute 
       path="/"
       component={NavBar} 
       />
+
     </div>
   );
 }

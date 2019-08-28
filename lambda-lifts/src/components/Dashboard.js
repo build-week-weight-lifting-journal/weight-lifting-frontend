@@ -24,7 +24,7 @@ export default function Dashboard (){
                 <div id="circle2"></div>
                 </div>
             </div>
-            <div className="botton-section">
+            <div className="bottom-section">
                 <Card.Group className="the-card-buttons-container">
                     <Card className="card">
                     <NavLink className="the-navlink" exact to="/WorkoutList">
