@@ -20,7 +20,7 @@ const WorkoutList = () => {
   const searchHandler = e => {
     setSearch(e.target.value);
   };
-  console.log("search", search);
+
   return (
     <div className="workout-list">
       <div className="workout-gradient">
