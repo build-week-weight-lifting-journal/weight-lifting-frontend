@@ -11,6 +11,7 @@ import RepWeight from './components/RepSets';
 import WorkoutList from "./components/WorkoutList";
 import ExerciseList from "./components/ExerciseList.js";
 import PrivateRoute from './utils/PrivateRoute';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
