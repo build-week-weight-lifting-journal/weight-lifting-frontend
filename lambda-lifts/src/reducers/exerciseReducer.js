@@ -2,7 +2,7 @@ import {
   FETCH_EXERCISE_CATEGORY_START,
   FETCH_EXERCISE_CATEGORY_SUCCESS,
   FETCH_EXERCISE_CATEGORY_FAILURE,
-  CLEAR_EXERCISE_CATEGORY, 
+  CLEAR_EXERCISE_CATEGORY,
   ADD_EXERCISE_CATEGORY
 } from "../actions/index.js";
 
@@ -45,9 +45,9 @@ export const exerciseReducer = (state = initialState, action) => {
     }
     case ADD_EXERCISE_CATEGORY: {
       return {
-        ...state, 
+        ...state,
         selectedExercises: [...state.selectedExercises, action.payload]
-      }
+      };
     }
     default:
       return state;
