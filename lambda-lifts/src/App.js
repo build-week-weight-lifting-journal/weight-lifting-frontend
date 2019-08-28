@@ -11,9 +11,11 @@ import NavBar from "./components/NavBar";
 import WorkoutList from "./components/WorkoutList";
 // import ExerciseList from "./components/ExerciseList.js";
 
+
 function App() {
   return (
     <div className="App">
+      {/* <ExerciseList /> */}
       <header>
         {/* <h1>APP</h1> */}
         <Route exact path="/" component={LoginForm} />

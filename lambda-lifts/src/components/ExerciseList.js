@@ -17,9 +17,9 @@ const ExerciseList = (props) => {
       <button onClick={props.getExerciseData}>Click me!</button>
       
       {console.log(props.exercises)}
-{/* 
+
       <div>
-        {props.exerciseIsLoading ? (
+        {/* {props.exerciseIsLoading ? (
           <div className="body-loading">
             <PulseSpinner size={30}
             color="#686769"
@@ -30,8 +30,8 @@ const ExerciseList = (props) => {
           <div className="body-categories-container">
            {props.exercises.map((category, index)=> <button key={index} onClick={props.addSelectedExercises(category)}>{category}</button>)}
           </div>
-        )}
-      </div> */}
+        )} */}
+      </div>
 
     </div>
   );
