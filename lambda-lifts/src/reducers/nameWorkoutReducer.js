@@ -10,8 +10,8 @@ const initialState = {
   error: ""
 };
 
-export const nameWorkOutReducer = (state = initialState, action) => {
-  console.log(action.type);
+export const nameWorkoutReducer = (state = initialState, action) => {
+  console.log("nameWorkoutReducer", action.type);
   switch (action.type) {
     case IS_MAKING_WORKOUT:
       return {

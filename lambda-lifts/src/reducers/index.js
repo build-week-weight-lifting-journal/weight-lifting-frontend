@@ -5,12 +5,12 @@ import { combineReducers } from "redux";
 import { workoutsReducer } from "./workoutsReducer";
 import { signUpReducer } from "./signUpReducer";
 import { exerciseReducer } from "./exerciseReducer";
-import { nameWorkOutReducer } from "./nameWorkoutReducer";
+import { nameWorkoutReducer } from "./nameWorkoutReducer";
 
 // combineReducers creates one state object using multiple reducers
 export const reducer = combineReducers({
   workouts: workoutsReducer,
   signup: signUpReducer,
   exercise: exerciseReducer,
-  nameWorkout: nameWorkOutReducer
+  nameWorkout: nameWorkoutReducer
 });

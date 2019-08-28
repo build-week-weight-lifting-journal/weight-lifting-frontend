@@ -12,7 +12,7 @@ export const WORKOUT_MADE_FAILURE = "WORKOUT_MADE_FAILURE";
 */
 
 export const makeWorkout = workout => {
-  console.log("hit workout action");
+  console.log("hit workout action", workout);
   return dispatch => {
     dispatch({ type: IS_MAKING_WORKOUT });
     axiosWithAuth()
@@ -22,6 +22,7 @@ export const makeWorkout = workout => {
       )
       .then(res => {
         dispatch({ type: WORKOUT_MADE_SUCCESS });
+        console.log(res);
       })
       .catch(err => {
         dispatch({ type: WORKOUT_MADE_FAILURE, payload: err.response });

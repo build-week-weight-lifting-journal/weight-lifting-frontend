@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import moment from "moment";
 import { makeWorkout } from "../actions";
 import X from "../images/X.png";
 
+// Journal shape
 // {
 //   userId: int,
 //   name: "",
@@ -11,7 +13,7 @@ import X from "../images/X.png";
 
 const NameWorkout = props => {
   const [workout, setWorkout] = useState({
-    userId: "",
+    userId: 1,
     name: "",
     date: moment(Date.now()).format("l")
   });
@@ -36,8 +38,8 @@ const NameWorkout = props => {
       <button
         className="next-btn"
         onClick={() => {
-          makeWorkout(workout);
-          props.history.push("/Workouts");
+          props.makeWorkout(workout);
+          props.history.push("/ExerciseList");
         }}
       >
         Next
@@ -46,4 +48,7 @@ const NameWorkout = props => {
   );
 };
 
-export default NameWorkout;
+export default connect(
+  null,
+  { makeWorkout }
+)(NameWorkout);
