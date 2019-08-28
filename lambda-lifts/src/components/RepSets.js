@@ -19,7 +19,7 @@ const RepWeight = props => {
     return(
         <div className="container">
             <div className="nav">
-                <NavLink className="navlink"> Cancel </NavLink>
+                <NavLink to="/WorkoutList" className="navlink"> Cancel </NavLink>
                 <h2> Add Exercises </h2>
                 <NavLink className="navlink"> Save </NavLink>
             </div>
