@@ -1,97 +1,65 @@
 .App {
-<<<<<<< HEAD
     text-align: center;
-    margin: 0 auto;
-=======
-  text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
->>>>>>> c73adc7c2677db1862a6ade26afe9dc32e0cc33f
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
-<<<<<<< HEAD
-.the-card-buttons-container {
-    background: rgb(245, 238, 238);
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        background: white;
-        // display: block;
-        margin: 10px auto;
-        height: 120px;
-        width: 45%;
-        border: 1px solid silver;
-        border-radius: 15px;
-        box-shadow: 3px 3px silver;
-        .the-navlink {
-            text-decoration: none;
-            color: #35373b;
-            font-size: 1.2rem;
-        }
-    } //closes card
-} //closes the-card-buttons
-// #circle1 {
-//     width: 300px;
-//     height: 300px;
-//     background: #ff5b7b;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: -150px;
-//     right: -150px;
-//     opacity: .8;
-//     // display: inline-block;
-// }
-// #circle2 {
-//     width: 300px;
-//     height: 300px;
-//     background: #f3be70;
-//     border-radius: 50%;
-//     position: relative;
-//     bottom: 50px;
-//     left: -150px;
-//     opacity: .8;
-// }
-.dashboard-container {
-    background-image: url("./images/Background.png");
-    width: 100vw;
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#circle1 {
+    width: 300px;
+    height: 300px;
+    background: #ff5b7b;
+    border-radius: 50%;
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    opacity: 0.8;
+}
+
+#circle2 {
+    width: 300px;
+    height: 300px;
+    background: #f3be70;
+    border-radius: 50%;
+    position: relative;
+    bottom: 50px;
+    left: -150px;
+    opacity: 0.8;
 }
 
 .top-section {
-    overflow: hidden;
-    width: 100vw;
     .image-div {
-        overflow: hidden !important;
+        overflow: hidden;
         height: 45vh;
         padding: 20px;
-        // background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+        background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
     } //closes image-div
     .dashboard-logo {
         height: 60%;
@@ -152,114 +120,14 @@
     }
 } //closes login-form
 .error-page {
-=======
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#circle1 {
-  width: 300px;
-  height: 300px;
-  background: #ff5b7b;
-  border-radius: 50%;
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  opacity: 0.8;
-}
-
-#circle2 {
-  width: 300px;
-  height: 300px;
-  background: #f3be70;
-  border-radius: 50%;
-  position: relative;
-  bottom: 50px;
-  left: -150px;
-  opacity: 0.8;
-}
-
-.top-section {
-  .image-div {
-    overflow: hidden;
-    height: 45vh;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image-div
-  .dashboard-logo {
-    height: 60%;
-    margin: 50px;
-    background-repeat: none;
-  } //login-logo
-}
-
-.login-form {
-  width: 100%;
-  height: 100vh;
-  .image-div {
-    overflow: hidden;
-    height: 45vh;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image-div
-  .login-logo {
-    height: 60%;
-    margin: 50px;
-  } //login-logo
-  .email-input,
-  .password-input {
-    margin: 0 auto;
-    width: 60vw;
-    border-bottom: 2px solid #35373b;
-    margin-bottom: 40px;
-  }
-  .field-input {
-    font-size: 1.2rem;
->>>>>>> c73adc7c2677db1862a6ade26afe9dc32e0cc33f
     width: 80%;
-    height: 50px;
-    display: inline-block;
-    // margin-bottom: 20px;
-    margin-top: 20px;
-    border: hidden;
-  } //closes field-input
-  .login-button {
+    height: 80vh;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
+    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
     color: white;
-    margin-bottom: 30px;
-  } //closes login-button
-  .bottomlogin {
-    display: flex;
-    justify-content: center;
-  }
-  .bottomlogin {
-    display: flex;
-    justify-content: center;
-  }
-} //closes login-form
-.error-page {
-  width: 80%;
-  height: 80vh;
-  margin: 0 auto;
-  background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  color: white;
 } //closes error-page
 .navbar {
-<<<<<<< HEAD
-    width: 100vw;
+    <<<<<<< HEAD width: 100vw;
     background: rgb(252, 252, 252);
     border-top: 3px silver outset;
     margin: 0px auto;
@@ -339,16 +207,14 @@
         text-decoration: none;
     }
 } //closes signupform
-=======
-  // background:lightgrey;
-  border-top: 3px silver outset;
-  margin: 0px 50px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  bottom: 0;
-
-  .logocircle {
+======= // background:lightgrey;
+border-top: 3px silver outset;
+margin: 0px 50px;
+display: flex;
+justify-content: space-between;
+position: relative;
+bottom: 0;
+.logocircle {
     display: flex;
     background: lightgrey;
     border-radius: 40%;
@@ -359,66 +225,65 @@
     height: 3rem;
     margin: auto;
     .image {
-      margin: 5px;
-      align-items: center;
-      justify-content: center;
+        margin: 5px;
+        align-items: center;
+        justify-content: center;
     } //closes image
-  } //closes logocircle
+} //closes logocircle
+
 } //closes navbar
-
 .signupform {
-  width: 100%;
-  height: 100vh;
-  .image-div {
-    overflow: hidden;
-    height: 35vh;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image div
-  .input {
-    margin: 0 auto;
-    width: 60vw;
-    border-bottom: 2px solid #35373b;
-    margin-bottom: 40px;
-
-    .fieldinput {
-      font-size: 1.2rem;
-      width: 80%;
-      height: 50px;
-      display: inline-block;
-      // margin-bottom: 20px;
-      margin-top: 20px;
-      border-top-style: hidden;
-      border-right-style: hidden;
-      border-left-style: hidden;
-    } //closes field input
-  } //closes input
-  button {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 30px;
-  } //closes button
-  .goback {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 100px;
-    height: 25px;
-    font-size: 0.8rem;
-    color: white;
-    margin-bottom: 30px;
-    text-decoration: none;
-  }
+    width: 100%;
+    height: 100vh;
+    .image-div {
+        overflow: hidden;
+        height: 35vh;
+        padding: 20px;
+        background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+    } //closes image div
+    .input {
+        margin: 0 auto;
+        width: 60vw;
+        border-bottom: 2px solid #35373b;
+        margin-bottom: 40px;
+        .fieldinput {
+            font-size: 1.2rem;
+            width: 80%;
+            height: 50px;
+            display: inline-block;
+            // margin-bottom: 20px;
+            margin-top: 20px;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+        } //closes field input
+    } //closes input
+    button {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top right, #f3be70, #ff5b7b);
+        border-radius: 30px;
+        width: 200px;
+        height: 50px;
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 30px;
+    } //closes button
+    .goback {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top right, #f3be70, #ff5b7b);
+        border-radius: 30px;
+        width: 100px;
+        height: 25px;
+        font-size: 0.8rem;
+        color: white;
+        margin-bottom: 30px;
+        text-decoration: none;
+    }
 } //closes signupform
->>>>>>> c73adc7c2677db1862a6ade26afe9dc32e0cc33f
+>>>>>>>c73adc7c2677db1862a6ade26afe9dc32e0cc33f
