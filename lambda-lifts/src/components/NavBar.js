@@ -12,7 +12,7 @@ export default function NavBar() {
             <div>
                 <div className="logocircle">
                     {/* link for home */}
-                    <NavLink className='navlink' to='/ErrorPage2'> <Image className="image" src={HomeLogo} alt="home"/> </NavLink>
+                    <NavLink className='navlink' to='/Dashboard'> <Image className="image" src={HomeLogo} alt="home"/> </NavLink>
                 </div>
                 <h4>Home</h4>
             </div>
