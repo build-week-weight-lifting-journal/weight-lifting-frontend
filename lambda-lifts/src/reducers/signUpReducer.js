@@ -7,7 +7,6 @@ const initialState = {
 };
 
 export const signUpReducer = (state = initialState, action) => {
-  console.log(action.type);
   switch (action.type) {
     case IS_SIGNING_UP:
       return {
