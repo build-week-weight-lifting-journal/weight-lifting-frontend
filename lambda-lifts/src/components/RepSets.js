@@ -7,10 +7,10 @@ import Check from '../images/Check.png';
 
 const RepWeight = props => {
 
-    const [form, setForm] = useState({Reps: "", Weight: "", Sets: ""})
+    const [form, setForm] = useState({Sets: "", Reps: "", Weight: ""})
 
     const changehandler = event => {
-        setForm({...form, [event.target.Reps]: event.target.value})
+        setForm({...form, [event.target.name]: event.target.value})
     }
 
     const submitForm = event =>{
@@ -26,7 +26,7 @@ const RepWeight = props => {
                 <NavLink className="navlink"> Save </NavLink>
             </div>
         <div className="workoutname">
-            <h1>Workout Name</h1>
+            <h1>ADD Workout Name Functionality</h1>
         </div>
 
         <form className="repweight" onSubmit={submitForm}>
@@ -36,7 +36,7 @@ const RepWeight = props => {
             name="Sets"
             type="text"
             value={form.Sets}
-            onchange={changehandler}
+            onChange={changehandler}
             />
 
             <label htmlFor="Reps"> <h2>Reps:</h2> </label>

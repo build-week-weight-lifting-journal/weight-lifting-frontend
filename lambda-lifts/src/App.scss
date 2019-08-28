@@ -300,15 +300,21 @@
     }//closes h2
 
     .input{
+        width:5%;
         margin: 0px 10px;
         text-align: center;
         font-size:1.2rem;
+        border-bottom: 2px solid #35373b;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
     }//closes input
 
    
 }//closes repweight form
 .navlinkcheck{
        background:white;
+       padding:20px 0px;
    }
 //DONE WITH REP SETS WEIGHT PAGE
 
