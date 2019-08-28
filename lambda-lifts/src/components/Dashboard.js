@@ -66,7 +66,6 @@ export default function Dashboard (){
                 </Card.Group>
 
             </div>
-            <NavBar/>
         </div>
     );
 }

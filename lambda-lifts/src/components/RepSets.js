@@ -3,8 +3,6 @@ import {NavLink} from 'react-router-dom';
 import Check from '../images/Check.png';
 
 
-
-
 const RepWeight = props => {
 
     const [form, setForm] = useState({Sets: "", Reps: "", Weight: ""})

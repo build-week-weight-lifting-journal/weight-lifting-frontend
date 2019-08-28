@@ -14,11 +14,11 @@ export const postLoginData = (credentials) => (dispatch) => {
 
         .then(response => {
             // successful 
-            console.log("post login api response object", response);
+            // console.log("post login api response object", response);
             
             localStorage.setItem('token', response.data.token);
              
-            dispatch({ type: LOGIN_SUCCESS });
+            dispatch({ type: LOGIN_SUCCESS, payload: response.data.id });
         }) 
 
         .catch(error => {
