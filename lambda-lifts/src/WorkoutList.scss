@@ -1,49 +1,70 @@
 .workout-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    display: flex;
-    color: white;
-    font-weight: 700;
-    margin: 50px 0;
-    font-size: 45px;
-  }
+    width: 100vw;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    h1 {
+        display: flex;
+        color: white;
+        font-weight: 700;
+        margin: 50px 0px;
+        font-size: 45px;
+    }
 }
 
 .workout-gradient {
-  overflow: hidden;
-  height: 250px;
-  padding: 30px;
-  background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+    width: 100%;
+    overflow: hidden;
+    height: 250px;
+    padding: 30px;
+    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
 }
 
 .search-bar input {
-  outline: none;
-  width: 425px;
-  border-radius: 10px;
-  height: 35px;
-  font-size: 20px;
-  background: url("./images/Search.png") 10px no-repeat;
-  background-color: white;
-  background-size: 20px;
-  border: none;
-  padding-left: 40px;
+    outline: none;
+    width: 60%;
+    border-radius: 10px;
+    height: 35px;
+    font-size: 20px;
+    background: url("./images/Search.png") 10px no-repeat;
+    background-color: white;
+    background-size: 20px;
+    border: none;
+    padding-left: 50px;
 }
 
 .exercise-list {
-  position: absolute;
-  top: 1300px;
+    width: 80%;
+    position: absolute;
+    top: 320px;
+    margin-bottom: 150px;
 }
 
-.dot {
-  height: 250px;
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 950px;
-  left: 650px;
+// .dot {
+//     height: 250px;
+//     width: 250px;
+//     background-color: rgba(255, 255, 255, 0.15);
+//     border-radius: 50%;
+//     display: inline-block;
+//     position: absolute;
+//     top: 950px;
+//     left: 650px;
+// }
+// .navbar {
+//     width: 100%;
+//     background: rgb(252, 252, 252);
+//     border-top: 3px silver outset;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: space-evenly;
+//     padding-top: 20px;
+//     position: fixed;
+//     bottom: 0;
+//     border-radius: 15px;
+// }
+.add-workout-card-button {
+    position: fixed;
+    bottom: 150px;
+    right: 10px;
 }
