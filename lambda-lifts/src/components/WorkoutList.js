@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WorkoutCard from "./WorkoutCard";
-import Search from "../images/Search.png";
 import "../WorkoutList.scss";
 
 //dummy data
@@ -22,6 +21,7 @@ const WorkoutList = () => {
   return (
     <div className="workout-list">
       <div className="workout-gradient">
+        <span class="dot"></span>
         <h1>My Workouts</h1>
         <form className="search-bar">
           <input
