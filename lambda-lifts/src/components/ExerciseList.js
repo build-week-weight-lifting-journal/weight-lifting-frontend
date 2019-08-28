@@ -10,7 +10,7 @@ const ExerciseList = (props) => {
   return (
     <div>
       <div className="bodyNav">
-        <Link to="/Dashboard"><p>Cancel</p></Link>
+        <Link to="/WorkoutList"><p>Cancel</p></Link>
         <p>Add Exercises</p>
         <Link to="/"><p>Save</p></Link>
       </div>
