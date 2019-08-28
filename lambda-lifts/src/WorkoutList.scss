@@ -23,15 +23,16 @@
   outline: none;
   width: 450px;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
   font-size: 20px;
-  background: url("./images/Search.png") left no-repeat;
+  background: url("./images/Search.png") 10px no-repeat;
   background-color: white;
   background-size: 20px;
+  border: none;
 }
 
 .search-bar input::placeholder {
-  padding: 25px;
+  padding: 35px;
 }
 
 .exercise-list {
