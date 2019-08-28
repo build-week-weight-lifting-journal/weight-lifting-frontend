@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Form, Field, withFormik } from "formik";
-import { Button } from 'semantic-ui-react';
+import { Button, Image, Grid, Divider, Segment } from 'semantic-ui-react';
 import * as Yup from "yup";
+import logo from '../images/Logo.png';
+import logoPassword from '../images/password2.png';
+import logoEmail from '../images/Email2.png';
+import { connect } from 'react-redux';
+import { postLoginData } from '../images/Email2.png';
 
 
 const LoginForm = ({ errors, touched, values, status })  =>{
@@ -11,18 +16,18 @@ const [login, setLogin] = useState([]);
 
 console.log(errors);
 
-// useEffect(() => {
-//     if(status) {
-//         setLogin([...login, status]);
-//     }
-// },[status]);
+    useEffect(() => {
+     if(status) {
+         setLogin([...login, status]);
+     }
+ },[status]);
 
 
 
     return(
         <div className="login-form">
             <Form>
-                <Field className="field-input" name="email" type="text" placeholder="Email" />
+                <Field className="field-input" name="email" type="email" placeholder="Email" />
                 {touched.email && <errors className="email"></errors> && (
                     <p className="error">{errors.email}</p>
                 )}
@@ -30,10 +35,10 @@ console.log(errors);
                 {touched.password && errors.password && (
                     <p className="error">{errors.password}</p>
                 )}
-                <Button type="submit" >LOGIN RIGHT HERE</Button>
+                <Button type="submit" Navlink="../utils/PrivateRoute">LOGIN</Button>
                 <div className="other-buttons">
-                <Button >Create Account</Button>
-                <Button >Forgot Password</Button>
+                <Button Navlink="/SignupForm">Create Account</Button>
+                <Button Navlink="">Forgot Password</Button>
                 </div>
             </Form>
             
@@ -48,7 +53,6 @@ console.log(errors);
             
         </div>
     );
-};
 
 const FormikLoginForm = withFormik({
     mapsPropsToValues({ 
