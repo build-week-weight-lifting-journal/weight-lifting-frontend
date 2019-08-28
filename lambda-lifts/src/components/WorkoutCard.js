@@ -3,6 +3,8 @@ import moment from "moment";
 import OpenCarrot from "../images/Carrot-open.png";
 import ClosedCarrot from "../images/Carrot-closed.png";
 
+import "../WorkoutCard.scss";
+
 //dummy data
 const exercises = [
   { name: "Dumbbell Curl" },
@@ -20,19 +22,23 @@ const WorkoutCard = ({ workout }) => {
 
   return (
     <div className="workout-card">
-      <div className="workout-card header">
+      <div className="workout-header">
         <h2>
           {workout.name} - {moment(workout.date).format("l")}
         </h2>
         {open ? (
-          <img src={OpenCarrot} onClick={toggleOpen} />
+          <div className="carrot">
+            <img src={OpenCarrot} onClick={toggleOpen} />
+          </div>
         ) : (
-          <img src={ClosedCarrot} onClick={toggleOpen} />
+          <div className="carrot">
+            <img src={ClosedCarrot} onClick={toggleOpen} className="carrot" />
+          </div>
         )}
       </div>
       {open &&
         exercises.map(exercise => (
-          <div className="workout-card exercise">{exercise.name}</div>
+          <div className="workout-exercise">{exercise.name}</div>
         ))}
     </div>
   );
