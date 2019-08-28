@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { getExerciseData } from "../actions/index";
+import "../ExerciseList.scss";
 
 const ExerciseList = (props) => {
 
@@ -20,15 +21,15 @@ const ExerciseList = (props) => {
   // console.log(exerciseObject)
 
   return (
-    <div>
-      <div className="bodyNav">
+    <div className="exercise-container">
+      <div className="exercise-nav">
         <Link to="/Dashboard"><p>Cancel</p></Link>
         <p>Add Exercises</p>
         <Link to="/"><p>Save</p></Link>
       </div>
 
-      <div>
-        {props.exercises && props.exercises.map((exercise, index) => <button key={index} onClick={() => console.log(exercise)}>{exercise.name}</button>
+      <div className="exercise-list-container">
+        {props.exercises && props.exercises.map((exercise, index) => <button className="exercises" key={index} onClick={() => console.log(exercise)}>{exercise.name}</button>
         )}
       </div>
 
