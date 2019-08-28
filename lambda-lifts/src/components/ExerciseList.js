@@ -14,8 +14,10 @@ const ExerciseList = (props) => {
         <Link to="/"><p>Save</p></Link>
       </div>
 
-      {props.getExerciseData}
-
+      <button onClick={props.getExerciseData}>Click me!</button>
+      
+      {console.log(props.exercises)}
+{/* 
       <div>
         {props.exerciseIsLoading ? (
           <div className="body-loading">
@@ -29,7 +31,7 @@ const ExerciseList = (props) => {
            {props.exercises.map((category, index)=> <button key={index} onClick={props.addSelectedExercises(category)}>{category}</button>)}
           </div>
         )}
-      </div>
+      </div> */}
 
     </div>
   );
