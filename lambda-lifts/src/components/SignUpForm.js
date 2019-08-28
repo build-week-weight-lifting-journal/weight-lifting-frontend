@@ -90,7 +90,15 @@ const FormikForm = withFormik({
   }
 })(SignUpForm);
 
+const mapStateToProps = state => {
+  return {
+    isSignUpLoading: state.signup.isSignUpLoading,
+    isSignedUp: state.signup.isSignedUp,
+    error: state.signup.error
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   { signUp }
 )(FormikForm);

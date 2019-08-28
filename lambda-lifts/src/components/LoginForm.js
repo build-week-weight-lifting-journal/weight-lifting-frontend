@@ -113,6 +113,7 @@ const FormikLoginForm = withFormik({
     props.history.push("/Dashboard");
   }
 })(LoginForm);
+
 const mapStateToProps = state => {
   return {
     loginIsLoading: state.login.loginIsLoading,
