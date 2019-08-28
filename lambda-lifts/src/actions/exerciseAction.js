@@ -6,7 +6,7 @@ export const FETCH_EXERCISE_CATEGORY_START = "FETCH_EXERCISE_DATA_START";
 export const FETCH_EXERCISE_CATEGORY_SUCCESS = "FETCH_EXERCISE_DATA_SUCCESS";
 export const FETCH_EXERCISE_CATEGORY_FAILURE = "FETCH_EXERCISE_DATA_FAILURE";
 export const CLEAR_EXERCISE_CATEGORY = "CLEAR_EXERCISE_CATEGORY";
-export const ADD_EXERCISE_CATEGORY = "ADD_EXERCISE_CATEGORY"
+export const ADD_EXERCISE_CATEGORY = "ADD_EXERCISE_CATEGORY";
 
 export const getExerciseData = () => dispatch => {
   // loading data
@@ -14,7 +14,7 @@ export const getExerciseData = () => dispatch => {
 
   // add authorization to axios promise
   axiosWithAuth()
-    .get("")
+    .get("https://backend-buildweek-wlj-mack.herokuapp.com/api/exercises")
     .then(response => {
       // successful
       console.log("response data", response);
