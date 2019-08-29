@@ -32,7 +32,7 @@ const NameWorkout = props => {
         <div className="name-workout-card">
           <NavLink className="xbutton" to="/WorkoutList">
             {" "}
-            <img src={X} />{" "}
+            <img src={X} alt="An x icon"/>{" "}
           </NavLink>
           <h2>Name your workout</h2>
           <div className="bottompartcard">
@@ -49,7 +49,7 @@ const NameWorkout = props => {
               onClick={() => {
                 if (localStorage.getItem("journalId")) {
                   props.editWorkoutName(workout);
-                  console.log("next props", props)
+                  console.log("next props", props);
                   props.history.push("/WorkoutList");
                 } else {
                   props.makeWorkout(workout);
@@ -57,7 +57,7 @@ const NameWorkout = props => {
                 }
               }}
             >
-              Next
+              NEXT
             </button>
           </div>
         </div>

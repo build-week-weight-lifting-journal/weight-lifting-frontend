@@ -52,28 +52,32 @@ const WorkoutCard = ({ workout, props }) => {
     setDeleted(false);
   }, [deleted]);
 
-  // onDoubleClick={() => {console.log("enter", workout); deleteCard(); setDeleted(true); timedRefresh(2000)}}
-  console.log(workout);
   return (
     <div className="workout-card">
       <div className="workout-header">
-        <h2>
-          {workout.name} - {moment(workout.date).format("l")}
-        </h2>
-        <img
-          src={Edit}
-          width="20px"
-          onClick={() => {
-            localStorage.setItem("journalId", workout.id);
-            props.history.push("/NameWorkout");
-          }}
-        />
-
+        <div className="name-date-edit">
+          <div className="name-edit">
+          <h2>
+            {workout.name} - {moment(workout.date).format("l")}
+          </h2>
+          <img
+            src={Edit}
+            alt="Edit icon"
+            className="icons-name"
+            onClick={() => {
+              localStorage.setItem("journalId", workout.id);
+              props.history.push("/NameWorkout");
+            }}
+          />
+          </div>
+          <div className="spacer"></div>
+        </div>
         {open ? (
           <div className="carrot">
             <img
               src={Plus}
-              width="20px"
+              alt="Plus icon"
+              className="icons"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
@@ -82,7 +86,8 @@ const WorkoutCard = ({ workout, props }) => {
 
             <img
               src={Delete}
-              width="15px"
+              alt="Delete icon"
+              className="icons"
               onClick={() => {
                 console.log("enter", workout);
                 deleteCard();
@@ -90,13 +95,14 @@ const WorkoutCard = ({ workout, props }) => {
                 timedRefresh(1000);
               }}
             />
-            <img src={OpenCarrot} width="20px" onClick={toggleOpen} />
+            <img src={OpenCarrot} alt="Open carrot icon" className="icons-carrot" onClick={toggleOpen} />
           </div>
         ) : (
           <div className="carrot">
             <img
               src={Plus}
-              width="20px"
+              className="icons"
+              alt="Plus icon"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
@@ -104,7 +110,8 @@ const WorkoutCard = ({ workout, props }) => {
             />
             <img
               src={Delete}
-              width="15px"
+              alt="Delete icon"
+              className="icons"
               onClick={() => {
                 console.log("enter", workout);
                 deleteCard();
@@ -114,9 +121,9 @@ const WorkoutCard = ({ workout, props }) => {
             />
             <img
               src={ClosedCarrot}
-              width="20px"
+              alt="Closed icon"
+              className="icons-carrot"
               onClick={toggleOpen}
-              className="carrot"
             />
           </div>
         )}
@@ -125,31 +132,37 @@ const WorkoutCard = ({ workout, props }) => {
         array.map((exercise, index) => {
           return (
             <div className="workout-exercise" key={index}>
-              {" "}
-              {exercise.name}
-              <div>
-                Weight:{exercise.weight} Reps:{exercise.reps} Sets:
-                {exercise.sets}
+              
+              <div className="workout-text-container">
+                <p id="name">{exercise.name}</p>
+                <p>Weight: {exercise.weight}</p> 
+                <p>Reps: {exercise.reps}</p>
+                <p>Sets: {exercise.sets}</p>
               </div>
-              <img
-                src={Edit}
-                width="20px"
-                onClick={() => {
-                  console.log("exercise", exercise);
-                  localStorage.setItem("jouExeId", exercise.id);
-                  localStorage.setItem("journalId", exercise.journalId);
-                  localStorage.setItem("exerciseId", exercise.exerciseId);
-                  props.history.push("/RepSets");
-                }}
-              />
-              <img
-                src={Delete}
-                width="15px"
-                onClick={() => {
-                  props.deleteWorkout(exercise.id);
-                  timedRefresh(1000);
-                }}
-              />
+
+              <div className="workout-icons">
+                <img
+                  src={Edit}
+                  alt="Edit icon"
+                  className="workout-icon"
+                  onClick={() => {
+                    console.log("exercise", exercise);
+                    localStorage.setItem("jouExeId", exercise.id);
+                    localStorage.setItem("journalId", exercise.journalId);
+                    localStorage.setItem("exerciseId", exercise.exerciseId);
+                    props.history.push("/RepSets");
+                  }}
+                />
+                <img
+                  src={Delete}
+                  alt="Delete icon"
+                  className="workout-icon"
+                  onClick={() => {
+                    props.deleteWorkout(exercise.id);
+                    timedRefresh(1000);
+                  }}
+                />
+              </div>
             </div>
           );
         })}
