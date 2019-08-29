@@ -107,7 +107,8 @@ const ExerciseList = props => {
                 style={{
                   background:
                     selectedExercise === exercise.name ? "#fe6b6b" : "white",
-                  color: selectedExercise === exercise.name ? "white" : "black"
+                  color: selectedExercise === exercise.name ? "white" : "black",
+                  fontWeight: selectedExercise === exercise.name && "bold"
                 }}
                 onClick={() => {
                   setExerciseObj({
