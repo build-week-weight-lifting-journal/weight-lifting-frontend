@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { NavLink } from 'react-router-dom';
-=======
 import { NavLink } from "react-router-dom";
->>>>>>> 1b551db36e7e40426093055cf650b5b0b176c7c1
 import { connect } from "react-redux";
 import moment from "moment";
 import { makeWorkout } from "../actions";
