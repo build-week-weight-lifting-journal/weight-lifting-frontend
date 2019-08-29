@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import moment from "moment";
-import { makeWorkout } from "../actions";
+import { makeWorkout, editWorkoutName } from "../actions";
 
 import X from "../images/X.png";
 
@@ -47,8 +47,14 @@ const NameWorkout = props => {
             <button
               className="next-btn"
               onClick={() => {
-                props.makeWorkout(workout);
-                props.history.push("/ExerciseList");
+                if (localStorage.getItem("journalId")) {
+                  props.editWorkoutName(workout);
+                  console.log("next props", props)
+                  props.history.push("/WorkoutList");
+                } else {
+                  props.makeWorkout(workout);
+                  props.history.push("/ExerciseList");
+                }
               }}
             >
               Next
@@ -68,5 +74,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { makeWorkout }
+  { makeWorkout, editWorkoutName }
 )(NameWorkout);

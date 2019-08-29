@@ -59,6 +59,10 @@ const WorkoutCard = ({ workout, props }) => {
         <h2>
           {workout.name} - {moment(workout.date).format("l")}
         </h2>
+        <button onClick={()=> {
+          localStorage.setItem("journalId", workout.id);
+          props.history.push("/NameWorkout")
+        }}>Edit Name</button>
         {open ? (
           <div className="carrot">
             <img
@@ -118,8 +122,7 @@ const WorkoutCard = ({ workout, props }) => {
                   localStorage.setItem("jouExeId", exercise.id)
                   localStorage.setItem("journalId", exercise.journalId)
                   localStorage.setItem("exerciseId", exercise.exerciseId)
-                  props.history.push("/RepSets")
-                 
+                  props.history.push("/RepSets") 
                 }}
               >Edit</button>
               <img

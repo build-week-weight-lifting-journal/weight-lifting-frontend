@@ -48,3 +48,19 @@ export const deleteWorkout = () => {
       console.log("Error", err);
     });
 };
+
+// 
+export const editWorkoutName = (newName) => () => {
+  axiosWithAuth()
+    .put(
+      `https://backend-buildweek-wlj-mack.herokuapp.com/api/journals/${localStorage.getItem(
+        "journalId"
+      )}`, newName
+    )
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => {
+      console.log("Error", err);
+    });
+};
