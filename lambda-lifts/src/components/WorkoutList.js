@@ -5,7 +5,7 @@ import { Image } from 'semantic-ui-react';
 import WorkoutCard from "./WorkoutCard";
 import "../WorkoutList.scss";
 import logoAdd from '../images/Add.png';
-import { getWorkoutsData } from "../actions/index"
+import { getWorkoutsData, getSets, deleteSetsAndWorkout } from "../actions/index"
 
 //dummy data
 const workoutstate = [
@@ -27,7 +27,6 @@ const WorkoutList = (props) => {
     props.getWorkoutsData();
   }, [])
 
-  console.log("array", props.workoutArray)
   return (
     <div className="workout-list">
       <div className="workout-gradient">
@@ -61,11 +60,11 @@ const WorkoutList = (props) => {
         {search
           ? props.workoutArray && props.workoutArray.map(workout => {
               if (props.workoutArray.date.includes(search)) {
-                return <WorkoutCard key={workout.id} workout={workout} />;
+                return <WorkoutCard key={workout.id} workout={workout} props={props}/>;
               }
             })
           : props.workoutArray && props.workoutArray.map(workout => (
-              <WorkoutCard key={workout.id} workout={workout} />
+              <WorkoutCard key={workout.id} workout={workout} props={props}/>
             ))}
       </div>
             <div className="add-workout-card-button"><NavLink className="plus-button"  exact to="/NameWorkout"><Image src={logoAdd}/></NavLink></div>
@@ -78,10 +77,11 @@ const WorkoutList = (props) => {
 const mapStateToProps = state => {
   return {
     workoutArray: state.workouts.workoutArray,
+    setsArray: state.workouts.setsArray
   };
 };
 
 export default connect(
   mapStateToProps,
-  { getWorkoutsData }
+  { getWorkoutsData, getSets, deleteSetsAndWorkout }
 )(WorkoutList);

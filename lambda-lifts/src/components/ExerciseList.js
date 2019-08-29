@@ -5,13 +5,19 @@ import { getExerciseData, deleteWorkout, postExercise } from "../actions/index";
 import "../ExerciseList.scss";
 
 const ExerciseList = props => {
-  const [exerciseObject, setExerciseObj] = useState({});
+  const [exerciseObject, setExerciseObj] = useState(
+    {
+      weight: "100kg",
+      reps: 10,
+      sets: 10,
+    }
+  );
 
   useEffect(() => {
     props.getExerciseData();
 
     setExerciseObj({
-      ...props.exerciseObj,
+      ...exerciseObject,
       ["journalId"]: Number.parseInt(localStorage.getItem("journalId"))
     });
   }, []);
