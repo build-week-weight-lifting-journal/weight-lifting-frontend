@@ -16,18 +16,27 @@ const ExerciseList = props => {
 
   const [search, setSearch] = useState("");
 
+  const [list, setList] = useState([])
+
   const searchHandler = e => {
     setSearch(e.target.value);
   };
 
   useEffect(() => {
-    props.getExerciseData();
 
+    localStorage.getItem("journalId") ?
     setExerciseObj({
       ...exerciseObject,
-      ["journalId"]: Number.parseInt(localStorage.getItem("journalId"))
+      ["journalId"]: localStorage.getItem("journalId")
+    }) : setExerciseObj({
+      ...exerciseObject
     });
-  }, []);
+
+  }, [localStorage.getItem("journalId")]);
+
+  useEffect(() => {
+    props.getExerciseData();
+  }, [])
 
   return (
     <div>
@@ -37,9 +46,9 @@ const ExerciseList = props => {
             <p onClick={props.deleteWorkout}>Cancel</p>
           </Link>
           <p id="add-exercises">Add Exercises</p>
-          <Link to="/RepSets">
-            <p onClick={() => props.postExercise(exerciseObject)}>Save</p>
-          </Link>
+         
+          <p onClick={() => {console.log("exercise object", exerciseObject); props.postExercise(exerciseObject)}}><Link to="/RepSets">Save</Link></p>
+       
         </div>
       </div>
 

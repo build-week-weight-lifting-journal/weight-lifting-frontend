@@ -37,7 +37,7 @@ export const exerciseReducer = (state = initialState, action) => {
     case FETCH_EXERCISE_CATEGORY_SUCCESS: {
       return {
         ...state,
-        exercises: [...state.exercises, ...action.payload],
+        exercises: action.payload,
         exerciseIsLoading: false,
         exerciseError: ""
       };

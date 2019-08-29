@@ -53,11 +53,11 @@ export const deleteSetsAndWorkout = (journalId) => () => {
     .delete(
       `https://backend-buildweek-wlj-mack.herokuapp.com/api/journals/${journalId}`
     )
-    .then(res => {
+    .then(response => {
       localStorage.removeItem("journalId");
-      console.log(res);
+      console.log("deleted journal", response);
     })
-    .catch(err => {
-      console.log("Error", err);
+    .catch(error => {
+      console.log("Error", error);
     });
 };

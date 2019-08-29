@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
-import { connect } from "react-redux";
 import OpenCarrot from "../images/Carrot-open.png";
 import ClosedCarrot from "../images/Carrot-closed.png";
-import { getSets } from "../actions/index";
 import "../WorkoutCard.scss";
 
 // axios with authorization
 import { axiosWithAuth } from "../utils/axiosWithAuth.js";
 
 //dummy data
-const exercises = [
-  { name: "Dumbbell Curl" },
-  { name: "Hammer Curl" },
-  { name: "Tricep Extensions" },
-  { name: "Tricep Pushdown" }
-];
+// const exercises = [
+//   { name: "Dumbbell Curl" },
+//   { name: "Hammer Curl" },
+//   { name: "Tricep Extensions" },
+//   { name: "Tricep Pushdown" }
+// ];
 
 const WorkoutCard = ({ workout, props }) => {
   
@@ -29,6 +27,10 @@ const WorkoutCard = ({ workout, props }) => {
 
   const deleteCard= () => {
     props.deleteSetsAndWorkout(workout.id)
+  }
+
+  const timedRefresh = (timeoutPeriod) => {
+    setTimeout("location.reload(true);",timeoutPeriod);
   }
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const WorkoutCard = ({ workout, props }) => {
   
 
   return (
-    <div className="workout-card" onDoubleClick={() => {console.log("enter", workout); deleteCard(); setDeleted(true)}}>
+    <div className="workout-card" onDoubleClick={() => {console.log("enter", workout); deleteCard(); setDeleted(true); timedRefresh(2000)}}>
       <div className="workout-header" >
         <h2>
           {workout.name} - {moment(workout.date).format("l")}
@@ -73,14 +75,3 @@ const WorkoutCard = ({ workout, props }) => {
 };
 
 export default WorkoutCard
-
-// const mapStateToProps = state => {
-//   return {
-//     setsArray: state.workouts.setsArray
-//   };
-// };
-
-// export default connect(
-//   mapStateToProps,
-//   { getSets }
-// )(WorkoutCard);

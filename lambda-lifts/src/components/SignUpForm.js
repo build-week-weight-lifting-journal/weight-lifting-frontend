@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Field, withFormik } from "formik";
 import { connect } from "react-redux";
 import { signUp } from "../actions";
-import { Button, Image } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 import * as Yup from "yup";
 import logo from "../images/Logo.png";
