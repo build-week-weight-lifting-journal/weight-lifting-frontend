@@ -11,7 +11,7 @@ export default function ErrorPage() {
     const Image = styled.img`
     box-sizing: border-box;
     color: white;
-    border-radius:15%;
+    border-radius:15px;
     padding:30px;
 
     `
@@ -19,7 +19,8 @@ export default function ErrorPage() {
     box-sizing: border-box;
     margin-bottom: 30px;
     padding: 30px;
-    border-radius: 15%;
+    border-radius: 25px;
+    margin-top: 60px;
     `
     
 

@@ -4,9 +4,19 @@ import {Image, Button} from 'semantic-ui-react';
 import HomeLogo from '../images/Home.png';
 import ProfileLogo from '../images/Profile.png';
 import SettingsLogo from '../images/Settings.png'
-import MoreLogo from '../images/More.png';
+import logoutLogo from '../images/logout.png';
 
 export default function NavBar() {
+
+    const logout = () => {
+        
+        localStorage.removeItem("userId");
+        localStorage.removeItem("journalId");
+        localStorage.removeItem("exerciseId");
+        localStorage.removeItem("jouExeId");
+        localStorage.removeItem("token");
+    }
+
     return(
         <div className="navbar">
             <div>
@@ -30,18 +40,18 @@ export default function NavBar() {
             <div>
                 <div className="logocircle">
                     {/* link for settings */}
-                    <NavLink to="/ErrorPage2"> <Image className="image" src={SettingsLogo} alt='settings' /> </NavLink>
+                    <NavLink to="/LoginForm"> <Image className="image" src={SettingsLogo} alt='settings' /> </NavLink>
                 </div>
                 <h4>Settings</h4>
             </div>
             {/* closes settings */}
 
             <div>
-                <div className="logocircle">
+                <div className="logocircle4">
                     {/* link for more */}
-                    <NavLink to='ErrorPage2'> <Image className="image" src={MoreLogo} alt="more"/> </NavLink>
+                    <NavLink to='ErrorPage2' onClick={()=>logout()}> <Image className="image logout" src={logoutLogo} alt="logout"/> </NavLink>
                 </div>
-                <h4>More</h4>
+                <h4>Logout</h4>
             </div>
             {/* closes more */}
         </div>
