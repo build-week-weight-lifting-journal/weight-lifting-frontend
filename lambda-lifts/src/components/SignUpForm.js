@@ -80,7 +80,7 @@ const FormikForm = withFormik({
     firstName: Yup.string().required("First name is required"),
     lastName: Yup.string().required("Last name is required"),
     email: Yup.string().required("Email is required"),
-    password: Yup.string().required("password is required")
+    password: Yup.string().required("Password is required")
   }),
 
   handleSubmit(values, { resetForm, props }) {
