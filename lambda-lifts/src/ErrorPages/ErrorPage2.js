@@ -21,6 +21,15 @@ export default function ErrorPage() {
     margin-bottom: 30px;
     padding: 30px;
     `
+    const Button = styled.div`
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    border-radius:25px;
+    background:white;
+    box-shadow: 2px 2px silver;
+    `
+
     
 
     return(
@@ -29,7 +38,7 @@ export default function ErrorPage() {
         <Image src={logo} alt="Lambda Lifts logo"/>
         <p> is currently working on this at the moment...</p>
        
-        <NavLink exact to={`/Dashboard`}> <button className="error-button"><strong>Back to Dashboard</strong></button></NavLink>      
+        <NavLink className="error-button" exact to={`/Dashboard`}> <Button ><strong className="button2-content">Back to Dashboard</strong></Button></NavLink>      
         
         
         </Error>
