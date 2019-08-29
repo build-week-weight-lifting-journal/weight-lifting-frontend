@@ -196,7 +196,24 @@
             margin: 0 auto;
             background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
             color: white;
+            .error-button {
+                text-decoration: none;
+            }
         } //closes error-page
+        .button-content {
+            font-size: 1.3rem;
+            position: relative;
+            top: 12px;
+            color: #d6a254;
+        }
+        
+        .button2-content {
+            font-size: 1.2rem;
+            position: relative;
+            top: 12px;
+            color: #d6a254;
+        }
+        
         .navbar {
             width: 100%;
             background: rgb(252, 252, 252);

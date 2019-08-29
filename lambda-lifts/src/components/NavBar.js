@@ -40,7 +40,7 @@ export default function NavBar() {
             <div>
                 <div className="logocircle">
                     {/* link for settings */}
-                    <NavLink to="/LoginForm"> <Image className="image" src={SettingsLogo} alt='settings' /> </NavLink>
+                    <NavLink to="/ErrorPage2"> <Image className="image" src={SettingsLogo} alt='settings' /> </NavLink>
                 </div>
                 <h4>Settings</h4>
             </div>
@@ -49,7 +49,7 @@ export default function NavBar() {
             <div>
                 <div className="logocircle4">
                     {/* link for more */}
-                    <NavLink to='ErrorPage2' onClick={()=>logout()}> <Image className="image logout" src={logoutLogo} alt="logout"/> </NavLink>
+                    <NavLink to="/" onClick={()=>logout()}> <Image className="image logout" src={logoutLogo} alt="logout"/> </NavLink>
                 </div>
                 <h4>Logout</h4>
             </div>

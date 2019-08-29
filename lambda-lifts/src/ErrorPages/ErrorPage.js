@@ -19,7 +19,16 @@ export default function ErrorPage() {
         box-sizing: border-box;
         padding: 30px;
         `
-    
+    const Button = styled.div`
+        margin: 0 auto;
+        height: 50px;
+        width: 150px;
+        border-radius:25px;
+        background:white;
+        box-shadow: 2px 2px silver;
+
+
+    `
 
     return(
         <Error className="error-page">
@@ -27,10 +36,10 @@ export default function ErrorPage() {
         <Image src={logo} alt="Lambda Lifts logo"/>
         <p> is currently working on this at the moment...</p>
         <p>I think you mean to... </p>
-            <NavLink  
+            <NavLink  className="error-button"
             exact to={`/SignUpForm`}> 
-            <button className="error-button"><strong>Sign Up</strong>
-                 </button></NavLink>
+            <Button ><strong className="button-content" >Sign Up</strong>
+                 </Button></NavLink>
         </Error>
     );
 }
