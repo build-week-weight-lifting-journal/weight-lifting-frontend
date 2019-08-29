@@ -326,15 +326,22 @@
     height:100vh;
     // position: absolute;    
     .name-workout-card{
-        background:white;
+        background: rgb(245, 238, 238);
         position: absolute;
         left:0;
         top:25%;
-        height:50%;
+        height:40%;
         text-align:center;
         width:50%;
         margin-left:25%;
         border-radius:25px;
+
+        .xbutton{
+            margin-right:90%;
+            @media only screen and (max-width:500px){
+                margin-right:80%;
+            }
+        }
         
         .bottompartcard{
             margin:5px 0px;
@@ -346,7 +353,8 @@
                 margin-left:25%;
                 width:50%;
                 height:20px;
-            }
+                text-align:center;
+            }//closes type workout
             .next-btn{
                 margin-top:25px;
                 margin-left:40%;
@@ -354,8 +362,11 @@
                 border-radius:25px;
                 font-size:1.5rem;
                 height:auto;
-                background: linear-gradient(to bottom, #f3be70, #ff5b7b, )
-            }//closes typeworkout
+                background: linear-gradient(to bottom, #f3be70, #ff5b7b, );
+                @media only screen and (max-width: 500px){
+                    font-size:1rem;
+                }//closes media query for button
+            }//closes next button
         }//closes bottom part of card
     }//closes name workout card
 }//closes container
