@@ -343,6 +343,10 @@
     margin-left: 25%;
     border-radius: 25px;
 
+    h2 {
+      font-weight: 400;
+    }
+
     .bottompartcard {
       margin: 5px 0px;
       display: flex;
@@ -357,10 +361,11 @@
       .next-btn {
         margin-top: 25px;
         margin-left: 40%;
+        color: white;
         width: 25%;
         border-radius: 25px;
         font-size: 1.5rem;
-        height: auto;
+        height: 50px;
         background: linear-gradient(to bottom, #f3be70, #ff5b7b);
       } //closes typeworkout
     } //closes bottom part of card
