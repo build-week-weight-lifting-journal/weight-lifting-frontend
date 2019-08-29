@@ -22,6 +22,7 @@ export const makeWorkout = workout => {
       )
       .then(res => {
         dispatch({ type: WORKOUT_MADE_SUCCESS, payload: res.data.id });
+        localStorage.setItem("journalId", res.data.id);
         console.log(res);
       })
       .catch(err => {
