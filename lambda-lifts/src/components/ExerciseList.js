@@ -1,14 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getExerciseData } from "../actions/index";
+import { getExerciseData, deleteWorkout } from "../actions/index";
 import "../ExerciseList.scss";
 
 const ExerciseList = (props) => {
 
+  const [exerciseObject, setExerciseObj] = useState({}) 
+
+
   useEffect(() => {
     props.getExerciseData()
+
+    setExerciseObj({...props.exerciseObj, ["journalId"]: localStorage.getItem("journalId")})
+    
   }, [])
+
+  // console.log("journal id", props.journalId, "journal", journal)
   
   // const exerciseObject = {
   //   weight: "", 
@@ -18,12 +26,12 @@ const ExerciseList = (props) => {
   //   exerciseId: 0,
   // }
 
-  // console.log(exerciseObject)
+  console.log("exercise object", exerciseObject)
 
   return (
     <div>
       <div className="bodyNav">
-        <Link to="/WorkoutList"><p>Cancel</p></Link>
+        <Link to="/WorkoutList"><p onClick={props.deleteWorkout}>Cancel</p></Link>
         <p>Add Exercises</p>
         <Link to="/"><p>Save</p></Link>
       </div>
@@ -42,12 +50,10 @@ const mapStateToProps = state => {
       exercises: state.exercise.exercises, 
       exerciseIsLoading: state.exercise.exerciseIsLoading,
       exerciseObj: state.exercise.exerciseObj,
-      userId: state.login.userId,
-      // journalId: state.nameWorkout.journalId
     };
 };
   
 export default connect(
   mapStateToProps,
-    { getExerciseData }
+    { getExerciseData, deleteWorkout }
 )(ExerciseList);
