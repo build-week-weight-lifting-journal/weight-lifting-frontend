@@ -1,10 +1,7 @@
 import {
   FETCH_WORKOUTS_DATA_START,
   FETCH_WORKOUTS_DATA_SUCCESS,
-  FETCH_WORKOUTS_DATA_FAILURE,
-  UPDATE_WORKOUT_START,
-  UPDATE_WORKOUT_SUCCESS,
-  UPDATE_WORKOUT_FAILURE
+  FETCH_WORKOUTS_DATA_FAILURE
 } from "../actions/index.js";
 
 const initialState = {
@@ -36,22 +33,6 @@ export const workoutsReducer = (state = initialState, action) => {
         ...state,
         workoutsIsLoading: false,
         workoutsError: action.payload
-      };
-    }
-    case UPDATE_WORKOUT_START: {
-      return {
-        ...state,
-        workoutIsUpdated: false
-      };
-    }
-    case UPDATE_WORKOUT_SUCCESS: {
-      return {
-        ...state
-      };
-    }
-    case UPDATE_WORKOUT_FAILURE: {
-      return {
-        ...state
       };
     }
 

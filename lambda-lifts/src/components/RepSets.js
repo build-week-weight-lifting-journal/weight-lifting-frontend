@@ -1,25 +1,34 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { updateWorkoutData } from "../actions/exerciseAction";
 import Check from "../images/Check.png";
 
 const RepWeight = props => {
   const [form, setForm] = useState({
-    Sets: "",
-    Reps: "",
-    Weight: "",
-    journalId: localStorage.getItem("journalId"),
-    exerciseId: localStorage.getItem("exerciseId")
+    sets: "",
+    reps: "",
+    weight: "",
+    journalId: Number.parseInt(localStorage.getItem("journalId")),
+    exerciseId: Number.parseInt(localStorage.getItem("exerciseId"))
   });
 
   const changehandler = event => {
-    setForm({ ...form, [event.target.name]: event.target.value });
+    if (event.target.name === "weight") {
+      setForm({ ...form, [event.target.name]: event.target.value });
+    } else {
+      setForm({
+        ...form,
+        [event.target.name]: Number.parseInt(event.target.value)
+      });
+    }
   };
 
   console.log(form);
 
   const submitForm = event => {
     event.preventDefault();
-    console.log(form);
+    props.updateWorkoutData(form);
   };
 
   return (
@@ -30,22 +39,25 @@ const RepWeight = props => {
           Cancel{" "}
         </NavLink>
         <h2> Add Exercises </h2>
-        <NavLink className="navlink"> Save </NavLink>
+        <NavLink to="/WorkoutList" className="navlink">
+          {" "}
+          Save{" "}
+        </NavLink>
       </div>
       <div className="workoutname">
         <h1>ADD Workout Name Functionality</h1>
       </div>
 
-      <form className="repweight" onSubmit={submitForm}>
+      <form className="repweight">
         <label htmlFor="Sets">
           {" "}
           <h2>Sets:</h2>{" "}
         </label>
         <input
           className="input"
-          name="Sets"
+          name="sets"
           type="number"
-          value={form.Sets}
+          value={form.sets}
           onChange={changehandler}
         />
 
@@ -55,9 +67,9 @@ const RepWeight = props => {
         </label>
         <input
           className="input"
-          name="Reps"
+          name="reps"
           type="number"
-          value={form.Reps}
+          value={form.reps}
           onChange={changehandler}
         />
         <label htmlFor="Weight">
@@ -66,24 +78,38 @@ const RepWeight = props => {
         </label>
         <input
           className="input"
-          name="Weight"
+          name="weight"
           type="text"
-          value={form.Weight}
+          value={form.weight}
           onChange={changehandler}
         />
+        <div className="navlinkcheck">
+          {" "}
+          <button
+            type="button"
+            onClick={event => {
+              submitForm(event);
+              props.history.push("/WorkoutList");
+            }}
+          >
+            <img src={Check} />
+          </button>{" "}
+        </div>
       </form>
-      <div className="navlinkcheck">
-        {" "}
-        <img
-          src={Check}
-          onClick={() => props.history.push("/WorkoutList")}
-        />{" "}
-      </div>
     </div>
   );
 };
 
-export default RepWeight;
+const mapStateToProps = state => {
+  return {
+    exerciseObj: state.exercise.exerciseObj
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { updateWorkoutData }
+)(RepWeight);
 
 // const RepWeight = () => {
 //     // const [reps, setReps] = useState(0);
