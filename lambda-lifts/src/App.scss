@@ -320,38 +320,42 @@
   background: white;
   padding: 20px 0px;
 }
+.NameWorkoutContainer {
+  background: black;
+  display: flex;
+  height: 100vh;
+  // position: absolute;
+  .name-workout-card {
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 25px;
 
-input {
-  outline: none;
-}
-//DONE WITH REP SETS WEIGHT PAGE
-// .repweight{
-//     width:100%;
-//     height:100vh;
-//     display:flex;
-//     flex-direction:row;
-//     justify-content: center;
-//     .bothinputs{
-//         display:flex;
-//         .input{
-//             margin: 0px 25px;
-//             width: 10vw;
-//             border-bottom: 2px solid #35373b;
-//             margin-bottom: 40px;
-//             h2{
-//                 color:#ff5b7b;
-//             }
-//             .fieldinput{
-//                 text-align:center;
-//                 margin: 0 auto;
-//                 font-size: 1.2rem;
-//                 width: 100%;
-//                 height: 50px;
-//                 // margin-bottom: 20px;
-//                 border-top-style: hidden;
-//                 border-right-style: hidden;
-//                 border-left-style: hidden;
-//             } //closes field input
-//         }//closes input
-//     }//closes bothinputs
-// }//closes repweight
+    .bottompartcard {
+      margin: 5px 0px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+      width: 80%;
+      .typeworkout {
+        margin-left: 25%;
+        width: 50%;
+        height: 20px;
+      }
+      .next-btn {
+        margin-top: 25px;
+        margin-left: 40%;
+        width: 25%;
+        border-radius: 25px;
+        font-size: 1.5rem;
+        height: auto;
+        background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+      } //closes typeworkout
+    } //closes bottom part of card
+  } //closes name workout card
+} //closes container
