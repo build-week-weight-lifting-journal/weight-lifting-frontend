@@ -1,6 +1,6 @@
 .nav-container {
   height: 100px;
-  background: #ff5b7b;
+  background: linear-gradient(to top right, #f3be70, 20%, #ff5b7b);
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
@@ -28,6 +28,16 @@
 
   #add-exercises {
     font-size: 1.6rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 0.9rem;
+    width: 80%;
+
+    #add-exercises {
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 }
 
