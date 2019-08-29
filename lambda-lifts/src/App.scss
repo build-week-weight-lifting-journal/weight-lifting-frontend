@@ -1,401 +1,417 @@
-.App {
-  width: 100vw;
-  text-align: center;
-  margin: 0 auto;
-}
-
-// .App-header {
-//     background-color: #282c34;
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: calc(10px + 2vmin);
-//     color: white;
-// }
-// .App-link {
-//     color: #61dafb;
-// }
-.bottom-section {
-  background: rgb(245, 238, 238);
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
-  width: 100vw;
-  margin: 0 auto;
-}
-
-.the-card-buttons-container {
-  // background: rgb(245, 238, 238);
-  // border-top-right-radius: 40px;
-  // border-top-left-radius: 40px;
-  width: 100vw;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 100px;
-  position: relative;
-  top: -50px;
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    background: white;
-    // display: block;
-    margin: 10px auto;
-    height: 120px;
-    width: 45%;
-    border-radius: 15px;
-    box-shadow: 0px 10px 15px lightgray;
-    .the-navlink {
-      text-decoration: none;
-      color: #35373b;
-      font-size: 1.2rem;
-    }
-  } //closes card
-} //closes the-card-buttons
-// #circle1 {
-//     width: 300px;
-//     height: 300px;
-//     background: #ff5b7b;
-//     border-radius: 50%;
-//     position: absolute;
-//     top: -150px;
-//     right: -150px;
-//     opacity: .8;
-//     // display: inline-block;
-// }
-// #circle2 {
-//     width: 300px;
-//     height: 300px;
-//     background: #f3be70;
-//     border-radius: 50%;
-//     position: relative;
-//     bottom: 50px;
-//     left: -150px;
-//     opacity: .8;
-// }
-.dashboard-container {
-  background-image: url("./images/Background.png");
-  width: 100vw;
-}
-
-.top-section {
-  overflow: hidden;
-  width: 100vw;
-  .image-div {
-    overflow: hidden !important;
-    height: 45vh;
-    padding: 20px;
-    // background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image-div
-  .dashboard-logo {
-    height: 60%;
-    margin: 50px;
-    background-repeat: none;
-  } //login-logo
-}
-
-.login-form {
-  width: 100%;
-  height: 100vh;
-  .image-div {
-    overflow: hidden;
-    height: 45vh;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image-div
-  .login-logo {
-    height: 60%;
-    margin: 50px;
-  } //login-logo
-  .email-input,
-  .password-input {
-    margin: 0 auto;
-    width: 60vw;
-    border-bottom: 2px solid #35373b;
-    margin-bottom: 40px;
-  }
-  .field-input {
-    font-size: 1.2rem;
-    width: 80%;
-    height: 50px;
-    display: inline-block;
-    // margin-bottom: 20px;
-    margin-top: 20px;
-    border: hidden;
-  } //closes error-page
-  .error-button {
-    font-size: 1.2rem;
-    height: 50px;
-    width: 150px;
-    border-radius: 25px;
-    color: #da9e44;
-    // background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    background: white;
-    box-shadow: 1px 2px rgb(216, 214, 214);
-  }
-
-  .login-button {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 30px;
-  } //closes login-button
-  .bottomlogin {
-    display: flex;
-    justify-content: center;
-  }
-  .bottomlogin {
-    display: flex;
-    justify-content: center;
-  }
-} //closes login-form
-.error-page {
-  width: 80%;
-  height: 50px;
-  display: inline-block;
-  // margin-bottom: 20px;
-  margin-top: 20px;
-  border: hidden;
-} //closes field-input
-.login-button {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to top right, #f3be70, #ff5b7b);
-  border-radius: 30px;
-  width: 200px;
-  height: 50px;
-  font-size: 1.2rem;
-  color: white;
-  margin-bottom: 30px;
-} //closes login-button
-.bottomlogin {
-  display: flex;
-  justify-content: center;
-}
-
-.bottomlogin {
-  display: flex;
-  justify-content: center;
-}
-
-.error-page {
-  width: 80%;
-  height: 80vh;
-  margin: 0 auto;
-  background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  color: white;
-} //closes error-page
-.navbar {
-  width: 100%;
-  background: rgb(252, 252, 252);
-  border-top: 3px silver outset;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
-  position: fixed;
-  bottom: 0;
-  border-radius: 15px;
-  .logocircle {
-    display: flex;
-    background: lightgrey;
-    border-radius: 40%;
-    // box-sizing:border-box;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    margin: auto;
-    .image {
-      margin: 5px;
-      align-items: center;
-      justify-content: center;
-    } //closes image
-  } //closes logocircle
-} //closes navbar
-.logocircle4 {
-  background: white;
-  height: 3rem;
-  .logout {
-    position: relative;
-    width: 90%;
-  }
-}
-
-.signupform {
-  width: 100%;
-  height: 100vh;
-  .image-div {
-    overflow: hidden;
-    height: 45vh;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
-  } //closes image div
-  .login-logo {
-    height: 60%;
-    margin: 50px;
-  } //login-logo
-  .input {
-    margin: 0 auto;
-    width: 60vw;
-    border-bottom: 2px solid #35373b;
-    margin-bottom: 40px;
-    .fieldinput {
-      font-size: 1.2rem;
-      width: 80%;
-      height: 50px;
-      display: inline-block;
-      // margin-bottom: 20px;
-      margin-top: 20px;
-      border-top-style: hidden;
-      border-right-style: hidden;
-      border-left-style: hidden;
-    } //closes field input
-  } //closes input
-  button {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 30px;
-  } //closes button
-  .goback {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top right, #f3be70, #ff5b7b);
-    border-radius: 30px;
-    width: 100px;
-    height: 25px;
-    font-size: 0.8rem;
-    color: white;
-    margin-bottom: 30px;
-    text-decoration: none;
-  }
-} //closes signupform
-//RepSetsWeight page
-.container {
-  width: 100%;
-  height: 100vh;
-  background: rgb(245, 238, 238);
-} //closes container
-.nav {
-  background: linear-gradient(to bottom, #f3be70, #ff5b7b);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  .navlink {
-    margin: 0px 10%;
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.workoutname {
-  margin: 20px 0px;
-  width: 100%;
-  padding: 10px;
-  background: white;
-  box-shadow: 2px 2px silver;
-} //closes workoutname
-.repweight {
-  background: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  box-shadow: 2px 2px silver;
-  h2 {
-    color: #ff5b7b;
-  } //closes h2
-  .input {
-    width: 5%;
-    margin: 0px 10px;
-    text-align: center;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #35373b;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-  } //closes input
-} //closes repweight form
-.navlinkcheck {
-  background: white;
-  padding: 20px 0px;
-}
-.NameWorkoutTop {
-  background: linear-gradient(to bottom, #f3be70, #ff5b7b);
-  height: 50vh;
-}
-.NameWorkoutContainer {
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  height: 100vh;
-  // position: absolute;
-  .name-workout-card {
-    background: rgb(245, 238, 238);
-    position: absolute;
-    left: 0;
-    top: 25%;
-    height: 40%;
-    text-align: center;
-    width: 50%;
-    margin-left: 25%;
-    border-radius: 25px;
-    padding-top: 15px;
-
-    .xbutton {
-      margin-right: 90%;
-      @media only screen and (max-width: 500px) {
-        margin-right: 80%;
-      }
-    }
-
-    .bottompartcard {
-      margin: 5px 0px;
-      display: flex;
-      flex-direction: column;
-      margin-left: 10%;
-      width: 80%;
-      .typeworkout {
-        margin-left: 25%;
-        width: 50%;
-        height: 20px;
-        text-align: center;
-      } //closes type workout
-      .next-btn {
-        color: white;
-        margin-top: 25px;
-        margin-left: 40%;
-        width: 25%;
-        border-radius: 25px;
-        font-size: 1.5rem;
-        height: auto;
-        background: linear-gradient(to bottom, #ff5b7b, #f3be70);
-        @media only screen and (max-width: 500px) {
-          font-size: 0.7rem;
-        } //closes media query for button
-      } //closes next button
-    } //closes bottom part of card
-  } //closes name workout card
-} //closes container
+        .App {
+            width: 100vw;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        // .App-header {
+        //     background-color: #282c34;
+        //     min-height: 100vh;
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     justify-content: center;
+        //     font-size: calc(10px + 2vmin);
+        //     color: white;
+        // }
+        // .App-link {
+        //     color: #61dafb;
+        // }
+        .bottom-section {
+            background: rgb(245, 238, 238);
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+            width: 100vw;
+            margin: 0 auto;
+        }
+        
+        .the-card-buttons-container {
+            // background: rgb(245, 238, 238);
+            // border-top-right-radius: 40px;
+            // border-top-left-radius: 40px;
+            width: 100vw;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 100px;
+            position: relative;
+            top: -50px;
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                background: white;
+                // display: block;
+                margin: 10px auto;
+                height: 120px;
+                width: 45%;
+                border-radius: 15px;
+                box-shadow: 0px 10px 15px lightgray;
+                .the-navlink {
+                    text-decoration: none;
+                    color: #35373b;
+                    font-size: 1.2rem;
+                }
+            } //closes card
+        } //closes the-card-buttons
+        // #circle1 {
+        //     width: 300px;
+        //     height: 300px;
+        //     background: #ff5b7b;
+        //     border-radius: 50%;
+        //     position: absolute;
+        //     top: -150px;
+        //     right: -150px;
+        //     opacity: .8;
+        //     // display: inline-block;
+        // }
+        // #circle2 {
+        //     width: 300px;
+        //     height: 300px;
+        //     background: #f3be70;
+        //     border-radius: 50%;
+        //     position: relative;
+        //     bottom: 50px;
+        //     left: -150px;
+        //     opacity: .8;
+        // }
+        .dashboard-container {
+            background-image: url("./images/Background.png");
+            width: 100vw;
+        }
+        
+        .top-section {
+            overflow: hidden;
+            width: 100vw;
+            .image-div {
+                overflow: hidden !important;
+                height: 45vh;
+                padding: 20px;
+                // background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+            } //closes image-div
+            .dashboard-logo {
+                height: 60%;
+                margin: 50px;
+                background-repeat: none;
+            } //login-logo
+        }
+        
+        .login-form {
+            width: 100%;
+            height: 100vh;
+            .image-div {
+                overflow: hidden;
+                height: 45vh;
+                padding: 20px;
+                background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+            } //closes image-div
+            .login-logo {
+                height: 60%;
+                margin: 50px;
+            } //login-logo
+            .email-input,
+            .password-input {
+                margin: 0 auto;
+                width: 60vw;
+                border-bottom: 2px solid #35373b;
+                margin-bottom: 40px;
+            }
+            .field-input {
+                font-size: 1.2rem;
+                width: 80%;
+                height: 50px;
+                display: inline-block;
+                // margin-bottom: 20px;
+                margin-top: 20px;
+                border: hidden;
+            } //closes error-page
+            .error-button {
+                font-size: 1.2rem;
+                height: 50px;
+                width: 150px;
+                border-radius: 25px;
+                color: #da9e44;
+                // background: linear-gradient(to top right, #f3be70, #ff5b7b);
+                background: white;
+                box-shadow: 1px 2px rgb(216, 214, 214);
+            }
+            .login-button {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to top right, #f3be70, #ff5b7b);
+                border-radius: 30px;
+                width: 200px;
+                height: 50px;
+                font-size: 1.2rem;
+                color: white;
+                margin-bottom: 30px;
+            } //closes login-button
+            .bottomlogin {
+                display: flex;
+                justify-content: center;
+            }
+            .bottomlogin {
+                display: flex;
+                justify-content: center;
+            }
+        } //closes login-form
+        .error-page {
+            width: 80%;
+            height: 50px;
+            display: inline-block;
+            // margin-bottom: 20px;
+            margin-top: 20px;
+            border: hidden;
+        } //closes field-input
+        .login-button {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top right, #f3be70, #ff5b7b);
+            border-radius: 30px;
+            width: 200px;
+            height: 50px;
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 30px;
+        } //closes login-button
+        .bottomlogin {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .bottomlogin {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .error-page {
+            width: 80%;
+            height: 80vh;
+            margin: 0 auto;
+            background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+            color: white;
+            .error-button {
+                text-decoration: none;
+            }
+        } //closes error-page
+        .button-content {
+            font-size: 1.3rem;
+            position: relative;
+            top: 12px;
+            color: #d6a254;
+        }
+        
+        .button2-content {
+            font-size: 1.2rem;
+            position: relative;
+            top: 12px;
+            color: #d6a254;
+        }
+        
+        .navbar {
+            width: 100%;
+            background: rgb(252, 252, 252);
+            border-top: 3px silver outset;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 20px;
+            position: fixed;
+            bottom: 0;
+            border-radius: 15px;
+            .logocircle {
+                display: flex;
+                background: lightgrey;
+                border-radius: 40%;
+                // box-sizing:border-box;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                height: 3rem;
+                margin: auto;
+                .image {
+                    margin: 5px;
+                    align-items: center;
+                    justify-content: center;
+                } //closes image
+            } //closes logocircle
+        } //closes navbar
+        .logocircle4 {
+            background: white;
+            height: 3rem;
+            .logout {
+                position: relative;
+                width: 90%;
+            }
+        }
+        
+        .signupform {
+            width: 100%;
+            height: 100vh;
+            .image-div {
+                overflow: hidden;
+                height: 45vh;
+                padding: 20px;
+                background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+            } //closes image div
+            .login-logo {
+                height: 60%;
+                margin: 50px;
+            } //login-logo
+            .input {
+                margin: 0 auto;
+                width: 60vw;
+                border-bottom: 2px solid #35373b;
+                margin-bottom: 40px;
+                .fieldinput {
+                    font-size: 1.2rem;
+                    width: 80%;
+                    height: 50px;
+                    display: inline-block;
+                    // margin-bottom: 20px;
+                    margin-top: 20px;
+                    border-top-style: hidden;
+                    border-right-style: hidden;
+                    border-left-style: hidden;
+                } //closes field input
+            } //closes input
+            button {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to top right, #f3be70, #ff5b7b);
+                border-radius: 30px;
+                width: 200px;
+                height: 50px;
+                font-size: 1.2rem;
+                color: white;
+                margin-bottom: 30px;
+            } //closes button
+            .goback {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to top right, #f3be70, #ff5b7b);
+                border-radius: 30px;
+                width: 100px;
+                height: 25px;
+                font-size: 0.8rem;
+                color: white;
+                margin-bottom: 30px;
+                text-decoration: none;
+            }
+        } //closes signupform
+        //RepSetsWeight page
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: rgb(245, 238, 238);
+        } //closes container
+        .nav {
+            background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            .navlink {
+                margin: 0px 10%;
+                text-decoration: none;
+                color: white;
+            }
+        }
+        
+        .workoutname {
+            margin: 20px 0px;
+            width: 100%;
+            padding: 10px;
+            background: white;
+            box-shadow: 2px 2px silver;
+        } //closes workoutname
+        .repweight {
+            background: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            box-shadow: 2px 2px silver;
+            h2 {
+                color: #ff5b7b;
+            } //closes h2
+            .input {
+                width: 5%;
+                margin: 0px 10px;
+                text-align: center;
+                font-size: 1.2rem;
+                border-bottom: 2px solid #35373b;
+                border-top-style: hidden;
+                border-right-style: hidden;
+                border-left-style: hidden;
+            } //closes input
+        } //closes repweight form
+        .navlinkcheck {
+            background: white;
+            padding: 20px 0px;
+        }
+        
+        .NameWorkoutTop {
+            background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+            height: 50vh;
+        }
+        
+        .NameWorkoutContainer {
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            height: 100vh;
+            // position: absolute;
+            .name-workout-card {
+                background: rgb(245, 238, 238);
+                position: absolute;
+                left: 0;
+                top: 25%;
+                height: 40%;
+                text-align: center;
+                width: 50%;
+                margin-left: 25%;
+                border-radius: 25px;
+                padding-top: 15px;
+                .xbutton {
+                    margin-right: 90%;
+                    @media only screen and (max-width: 500px) {
+                        margin-right: 80%;
+                    }
+                }
+                .bottompartcard {
+                    margin: 5px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 10%;
+                    width: 80%;
+                    .typeworkout {
+                        margin-left: 25%;
+                        width: 50%;
+                        height: 20px;
+                        text-align: center;
+                    } //closes type workout
+                    .next-btn {
+                        color: white;
+                        margin-top: 25px;
+                        margin-left: 40%;
+                        width: 25%;
+                        border-radius: 25px;
+                        font-size: 1.5rem;
+                        height: auto;
+                        background: linear-gradient(to bottom, #ff5b7b, #f3be70);
+                        @media only screen and (max-width: 500px) {
+                            font-size: 0.7rem;
+                        } //closes media query for button
+                    } //closes next button
+                } //closes bottom part of card
+            } //closes name workout card
+        } //closes container
