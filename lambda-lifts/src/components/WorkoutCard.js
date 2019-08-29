@@ -5,6 +5,7 @@ import ClosedCarrot from "../images/Carrot-closed.png";
 import "../WorkoutCard.scss";
 import Delete from "../images/Delete.png";
 import Plus from "../images/Plus.png";
+import Edit from "../images/Edit.png";
 
 // axios with authorization
 import { axiosWithAuth } from "../utils/axiosWithAuth.js";
@@ -59,15 +60,20 @@ const WorkoutCard = ({ workout, props }) => {
         <h2>
           {workout.name} - {moment(workout.date).format("l")}
         </h2>
-        <button onClick={()=> {
-          localStorage.setItem("journalId", workout.id);
-          props.history.push("/NameWorkout")
-        }}>Edit Name</button>
+        <img
+          src={Edit}
+          width="20px"
+          onClick={() => {
+            localStorage.setItem("journalId", workout.id);
+            props.history.push("/NameWorkout");
+          }}
+        />
+
         {open ? (
           <div className="carrot">
             <img
               src={Plus}
-              width="15px"
+              width="20px"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
@@ -76,6 +82,7 @@ const WorkoutCard = ({ workout, props }) => {
 
             <img
               src={Delete}
+              width="15px"
               onClick={() => {
                 console.log("enter", workout);
                 deleteCard();
@@ -83,13 +90,13 @@ const WorkoutCard = ({ workout, props }) => {
                 timedRefresh(1000);
               }}
             />
-            <img src={OpenCarrot} onClick={toggleOpen} />
+            <img src={OpenCarrot} width="20px" onClick={toggleOpen} />
           </div>
         ) : (
           <div className="carrot">
             <img
               src={Plus}
-              width="15px"
+              width="20px"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
@@ -97,6 +104,7 @@ const WorkoutCard = ({ workout, props }) => {
             />
             <img
               src={Delete}
+              width="15px"
               onClick={() => {
                 console.log("enter", workout);
                 deleteCard();
@@ -104,7 +112,12 @@ const WorkoutCard = ({ workout, props }) => {
                 timedRefresh(1000);
               }}
             />
-            <img src={ClosedCarrot} onClick={toggleOpen} className="carrot" />
+            <img
+              src={ClosedCarrot}
+              width="20px"
+              onClick={toggleOpen}
+              className="carrot"
+            />
           </div>
         )}
       </div>
@@ -118,17 +131,20 @@ const WorkoutCard = ({ workout, props }) => {
                 Weight:{exercise.weight} Reps:{exercise.reps} Sets:
                 {exercise.sets}
               </div>
-              <button
+              <img
+                src={Edit}
+                width="20px"
                 onClick={() => {
-                  console.log("exercise", exercise)
-                  localStorage.setItem("jouExeId", exercise.id)
-                  localStorage.setItem("journalId", exercise.journalId)
-                  localStorage.setItem("exerciseId", exercise.exerciseId)
-                  props.history.push("/RepSets") 
+                  console.log("exercise", exercise);
+                  localStorage.setItem("jouExeId", exercise.id);
+                  localStorage.setItem("journalId", exercise.journalId);
+                  localStorage.setItem("exerciseId", exercise.exerciseId);
+                  props.history.push("/RepSets");
                 }}
-              >Edit</button>
+              />
               <img
                 src={Delete}
+                width="15px"
                 onClick={() => {
                   props.deleteWorkout(exercise.id);
                   timedRefresh(1000);
