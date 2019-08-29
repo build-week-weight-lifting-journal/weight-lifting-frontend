@@ -37,8 +37,8 @@ const WorkoutCard = ({ workout }) => {
         )}
       </div>
       {open &&
-        exercises.map(exercise => (
-          <div className="workout-exercise">{exercise.name}</div>
+        exercises.map((exercise, index) => (
+          <div className="workout-exercise" key={index}>{exercise.name}</div>
         ))}
     </div>
   );

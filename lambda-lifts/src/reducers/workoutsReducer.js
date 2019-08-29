@@ -5,13 +5,14 @@ import {
 } from "../actions/index.js";
 
 const initialState = {
-  workouts: [],
+  workoutArray: [],
   workoutsIsLoading: false,
   workoutsError: "",
   workoutIsUpdated: false
 };
 
 export const workoutsReducer = (state = initialState, action) => {
+  console.log("reducer", action.payload)
   switch (action.type) {
     case FETCH_WORKOUTS_DATA_START: {
       return {
@@ -23,7 +24,7 @@ export const workoutsReducer = (state = initialState, action) => {
     case FETCH_WORKOUTS_DATA_SUCCESS: {
       return {
         ...state,
-        workouts: [...state.workouts, action.payload],
+        workoutArray: action.payload,
         workoutsIsLoading: false,
         workoutsError: ""
       };

@@ -12,11 +12,13 @@ export const getWorkoutsData = () => dispatch => {
 
   // add authorization to axios promise
   axiosWithAuth()
-    .get("")
+    .get(`https://backend-buildweek-wlj-mack.herokuapp.com/api/journals/users/${localStorage.getItem(
+      "userId"
+    )}`,)
     .then(response => {
       // successful
-      // console.log("response data", response);
-      // dispatch({ type: FETCH_WORKOUTS_DATA_SUCCESS, payload: response.data });
+      // console.log("response data", response.data);
+      dispatch({ type: FETCH_WORKOUTS_DATA_SUCCESS, payload: response.data });
     })
     .catch(error => {
       // unsuccessful

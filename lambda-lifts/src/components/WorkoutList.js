@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from 'react-router-dom';
+import { connect } from "react-redux";
 import { Image } from 'semantic-ui-react';
 import WorkoutCard from "./WorkoutCard";
 import "../WorkoutList.scss";
 import logoAdd from '../images/Add.png';
+import { getWorkoutsData } from "../actions/index"
 
 //dummy data
 const workoutstate = [
@@ -14,13 +16,18 @@ const workoutstate = [
   { id: 5, name: "Leg Day", date: "06/27/2019" }
 ];
 
-const WorkoutList = () => {
+const WorkoutList = (props) => {
   const [search, setSearch] = useState("");
 
   const searchHandler = e => {
     setSearch(e.target.value);
   };
 
+  useEffect(() => {
+    props.getWorkoutsData();
+  }, [])
+
+  console.log("array", props.workoutArray)
   return (
     <div className="workout-list">
       <div className="workout-gradient">
@@ -39,13 +46,25 @@ const WorkoutList = () => {
       {/* logic for the api - remember need to format dates*/}
       {/*if search state exists, only render cards for workouts with matching date otherwise render all*/}
       <div className="exercise-list">
-        {search
+        {/* {search
           ? workoutstate.map(workout => {
               if (workout.date.includes(search)) {
                 return <WorkoutCard key={workout.id} workout={workout} />;
               }
             })
           : workoutstate.map(workout => (
+              <WorkoutCard key={workout.id} workout={workout} />
+            ))} */}
+
+    
+
+        {search
+          ? props.workoutArray && props.workoutArray.map(workout => {
+              if (props.workoutArray.date.includes(search)) {
+                return <WorkoutCard key={workout.id} workout={workout} />;
+              }
+            })
+          : props.workoutArray && props.workoutArray.map(workout => (
               <WorkoutCard key={workout.id} workout={workout} />
             ))}
       </div>
@@ -54,4 +73,15 @@ const WorkoutList = () => {
   );
 };
 
-export default WorkoutList;
+
+
+const mapStateToProps = state => {
+  return {
+    workoutArray: state.workouts.workoutArray,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { getWorkoutsData }
+)(WorkoutList);
