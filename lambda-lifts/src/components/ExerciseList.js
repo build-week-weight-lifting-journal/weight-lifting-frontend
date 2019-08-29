@@ -81,7 +81,7 @@ const ExerciseList = props => {
                           ? "#fe6b6b"
                           : "white",
                       color:
-                        selectedExercise === exercise.name ? "white" : "#fe6b6b"
+                        selectedExercise === exercise.name ? "white" : "black"
                     }}
                     onClick={() => {
                       setExerciseObj({
@@ -89,6 +89,7 @@ const ExerciseList = props => {
                         ["exerciseId"]: exercise.id
                       });
                       localStorage.setItem("exerciseId", exercise.id);
+                      setSelectedExercise(exercise.name);
                     }}
                   >
                     {exercise.name}
@@ -104,8 +105,7 @@ const ExerciseList = props => {
                 style={{
                   background:
                     selectedExercise === exercise.name ? "#fe6b6b" : "white",
-                  color:
-                    selectedExercise === exercise.name ? "white" : "#fe6b6b"
+                  color: selectedExercise === exercise.name ? "white" : "black"
                 }}
                 onClick={() => {
                   setExerciseObj({
