@@ -14,11 +14,10 @@ export default function ErrorPage() {
     padding:30px;
     `
         const Error = styled.div`
+        width: 100vw;
+        height: 100vh;
         box-sizing: border-box;
-        margin-bottom: 30px;
         padding: 30px;
-        border-radius: 25px;
-         margin-top: 60px;
         `
     
 
