@@ -1,79 +1,89 @@
-import React, {useState} from 'react';
-import {NavLink} from 'react-router-dom';
-import Check from '../images/Check.png';
-
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import Check from "../images/Check.png";
 
 const RepWeight = props => {
+  const [form, setForm] = useState({
+    Sets: "",
+    Reps: "",
+    Weight: "",
+    journalId: localStorage.getItem("journalId"),
+    exerciseId: localStorage.getItem("exerciseId")
+  });
 
-    const [form, setForm] = useState({Sets: "", Reps: "", Weight: ""})
+  const changehandler = event => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
-    const changehandler = event => {
-        setForm({...form, [event.target.name]: event.target.value})
-    }
+  console.log(form);
 
-    const submitForm = event =>{
-        event.preventDefault();
-        console.log(form);
-    }
+  const submitForm = event => {
+    event.preventDefault();
+    console.log(form);
+  };
 
-    return(
-        <div className="container">
-            <div className="nav">
-                <NavLink to="/WorkoutList" className="navlink"> Cancel </NavLink>
-                <h2> Add Exercises </h2>
-                <NavLink className="navlink"> Save </NavLink>
-            </div>
-        <div className="workoutname">
-            <h1>ADD Workout Name Functionality</h1>
-        </div>
+  return (
+    <div className="container">
+      <div className="nav">
+        <NavLink to="/WorkoutList" className="navlink">
+          {" "}
+          Cancel{" "}
+        </NavLink>
+        <h2> Add Exercises </h2>
+        <NavLink className="navlink"> Save </NavLink>
+      </div>
+      <div className="workoutname">
+        <h1>ADD Workout Name Functionality</h1>
+      </div>
 
-        <form className="repweight" onSubmit={submitForm}>
-            <label htmlFor="Sets"> <h2>Sets:</h2> </label>
-            <input
-            className="input"
-            name="Sets"
-            type="text"
-            value={form.Sets}
-            onChange={changehandler}
-            />
+      <form className="repweight" onSubmit={submitForm}>
+        <label htmlFor="Sets">
+          {" "}
+          <h2>Sets:</h2>{" "}
+        </label>
+        <input
+          className="input"
+          name="Sets"
+          type="number"
+          value={form.Sets}
+          onChange={changehandler}
+        />
 
-            <label htmlFor="Reps"> <h2>Reps:</h2> </label>
-            <input
-            className="input"
-            name="Reps"
-            type="text"
-            value={form.Reps}
-            onChange={changehandler}
-            />
-            <label htmlFor="Weight"> <h2>Weight:</h2> </label>
-            <input
-            className="input"
-            name="Weight"
-            type="text"
-            value={form.Weight}
-            onChange={changehandler}
-            />
-            
-        </form>
-        <div className="navlinkcheck">
-        <NavLink> <img src={Check}/> </NavLink>
-        </div>
-        </div>
-    )
-}
+        <label htmlFor="Reps">
+          {" "}
+          <h2>Reps:</h2>{" "}
+        </label>
+        <input
+          className="input"
+          name="Reps"
+          type="number"
+          value={form.Reps}
+          onChange={changehandler}
+        />
+        <label htmlFor="Weight">
+          {" "}
+          <h2>Weight:</h2>{" "}
+        </label>
+        <input
+          className="input"
+          name="Weight"
+          type="text"
+          value={form.Weight}
+          onChange={changehandler}
+        />
+      </form>
+      <div className="navlinkcheck">
+        {" "}
+        <img
+          src={Check}
+          onClick={() => props.history.push("/WorkoutList")}
+        />{" "}
+      </div>
+    </div>
+  );
+};
 
 export default RepWeight;
-
-
-
-
-
-
-
-
-
-
-
 
 // const RepWeight = () => {
 //     // const [reps, setReps] = useState(0);
@@ -87,7 +97,7 @@ export default RepWeight;
 //                         <h2>Reps</h2>
 //                         <Field className="fieldinput" type="text" name="repinput" />
 //                     </div>
-                    
+
 //                     <div className="input">
 //                         <h2>Weight</h2>
 //                         <Field className="fieldinput" type="text" name="weightinput"/>
