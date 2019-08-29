@@ -12,7 +12,6 @@ const RepWeight = props => {
     journalId: Number.parseInt(localStorage.getItem("journalId")),
     exerciseId: Number.parseInt(localStorage.getItem("exerciseId"))
   });
-  console.log("rep props", props);
 
   const changehandler = event => {
     if (event.target.name === "weight") {
@@ -93,7 +92,7 @@ const RepWeight = props => {
               props.history.push("/WorkoutList");
             }}
           >
-            <img src={Check} />
+            <img src={Check} alt="Check icon" />
           </button>{" "}
         </div>
       </form>

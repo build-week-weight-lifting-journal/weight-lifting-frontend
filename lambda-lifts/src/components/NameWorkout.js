@@ -32,7 +32,7 @@ const NameWorkout = props => {
         <div className="name-workout-card">
           <NavLink className="xbutton" to="/WorkoutList">
             {" "}
-            <img src={X} />{" "}
+            <img src={X} alt="An x icon"/>{" "}
           </NavLink>
           <h2>Name your workout</h2>
           <div className="bottompartcard">

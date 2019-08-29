@@ -14,8 +14,6 @@ const ExerciseList = props => {
   const [search, setSearch] = useState("");
   const [selectedExercise, setSelectedExercise] = useState(null);
 
-  const [list, setList] = useState([]);
-
   const searchHandler = e => {
     setSearch(e.target.value);
   };

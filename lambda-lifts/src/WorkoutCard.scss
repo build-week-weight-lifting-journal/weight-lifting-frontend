@@ -9,7 +9,6 @@
     box-shadow: 0px 10px 15px lightgray;
     margin: 15px 0;
     padding: 0 15px;
-    // margin-left: 15%;
     background-color: white;
     h2 {
         font-weight: 500;
@@ -23,21 +22,108 @@
     align-items: center;
     justify-content: space-between;
     margin: 25px 0;
-    img {
-        padding-left: 10%;
-        padding-right: 1%;
+
+    .name-date-edit {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        width: 80%; 
+
+        .name-edit {
+            display: flex; 
+            flex-direction: row; 
+            width: 70%;
+        }
+
+    }
+
+    .icons-name {
+        width: 25px; 
+        margin: auto 20px; 
     }
 }
 
 .workout-exercise {
-    font-size: 20px;
-    padding: 20px 10px;
+    font-size: 1.2rem;
+    padding: 20px 0;
     border-top: 1px solid rgba(255, 91, 123, 0.3);
-    align-items: flex-start;
     display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    
+    .workout-text-container {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        width: 70%; 
+
+        @media (max-width: 500px) {
+            flex-direction: column; 
+            align-items: flex-start;
+            height: 200px
+        }
+    }
+
+    .workout-icons {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        width: 15%;
+
+        @media (max-width: 500px) {
+            flex-direction: column; 
+            width: 20%;
+            height: 160px;
+            margin: 60px 0 0 0; 
+        }
+        
+        .workout-icon {
+            width: 25px; 
+            height: 25px; 
+            margin: auto 0; 
+
+            @media (max-width: 500px) {
+                width: 30px; 
+                height: 30px;
+                margin: 0 0 20px 0; 
+            }
+        }
+    }
+
+    #name {
+        width: 30%;
+        text-align: left; 
+        margin-right: 5px;
+
+        @media (max-width: 500px) {
+            text-align: center;
+            margin: 0 auto 0 20px;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+    }
+
 }
 
 .workout-exercise:last-child {
     border-bottom: 1px solid rgba(255, 91, 123, 0.3);
     margin-bottom: 30px;
+}
+
+.carrot {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    width: 35%;
+    margin: 10px 0; 
+
+    .icons {
+        width: 20px; 
+        height: 20px; 
+    }
+
+    .icons-carrot {
+        width: 28px; 
+        height: auto; 
+    }
 }
