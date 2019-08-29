@@ -320,13 +320,20 @@
   background: white;
   padding: 20px 0px;
 }
+
+.NameWorkoutTop {
+  background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+  height: 50vh;
+}
 .NameWorkoutContainer {
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   height: 100vh;
   // position: absolute;
   .name-workout-card {
     background: white;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     left: 0;
     top: 25%;
@@ -335,6 +342,10 @@
     width: 50%;
     margin-left: 25%;
     border-radius: 25px;
+
+    h2 {
+      font-weight: 400;
+    }
 
     .bottompartcard {
       margin: 5px 0px;
@@ -350,10 +361,11 @@
       .next-btn {
         margin-top: 25px;
         margin-left: 40%;
+        color: white;
         width: 25%;
         border-radius: 25px;
         font-size: 1.5rem;
-        height: auto;
+        height: 50px;
         background: linear-gradient(to bottom, #f3be70, #ff5b7b);
       } //closes typeworkout
     } //closes bottom part of card
