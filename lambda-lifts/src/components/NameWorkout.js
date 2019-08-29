@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import moment from "moment";
 import { makeWorkout } from "../actions";
@@ -28,29 +28,34 @@ const NameWorkout = props => {
   console.log("workout", workout);
 
   return (
-    <div className="NameWorkoutContainer">
-    <div className="name-workout-card">
-      <NavLink className="xbutton"to="/WorkoutList"> <img src={X} /> </NavLink>
-      <h2>Name your workout</h2>
-      <div className="bottompartcard">
-      <input
-        className="typeworkout"
-        type="text"
-        name="name"
-        value={workout.name}
-        placeholder="Type Something"
-        onChange={inputHandler}
-      />
-      <button
-        className="next-btn"
-        onClick={() => {
-          props.makeWorkout(workout);
-          props.history.push("/ExerciseList");
-        }}
-      >
-        Next
-      </button>
-      </div>
+    <div className="NameWorkoutTop">
+      <div className="NameWorkoutContainer">
+        <div className="name-workout-card">
+          <NavLink className="xbutton" to="/WorkoutList">
+            {" "}
+            <img src={X} />{" "}
+          </NavLink>
+          <h2>Name your workout</h2>
+          <div className="bottompartcard">
+            <input
+              className="typeworkout"
+              type="text"
+              name="name"
+              value={workout.name}
+              placeholder="Type Something"
+              onChange={inputHandler}
+            />
+            <button
+              className="next-btn"
+              onClick={() => {
+                props.makeWorkout(workout);
+                props.history.push("/ExerciseList");
+              }}
+            >
+              Next
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

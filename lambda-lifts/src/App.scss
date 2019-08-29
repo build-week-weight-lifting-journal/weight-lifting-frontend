@@ -320,13 +320,20 @@
   background: white;
   padding: 20px 0px;
 }
+
+.NameWorkoutTop {
+  background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+  height: 50vh;
+}
 .NameWorkoutContainer {
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   height: 100vh;
   // position: absolute;
   .name-workout-card {
     background: white;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     left: 0;
     top: 25%;
