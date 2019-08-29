@@ -84,8 +84,7 @@ const FormikForm = withFormik({
   }),
 
   handleSubmit(values, { resetForm, props }) {
-    props.signUp(values);
-    props.history.push("/");
+    props.signUp(values, props.history);
     resetForm();
   }
 })(SignUpForm);
