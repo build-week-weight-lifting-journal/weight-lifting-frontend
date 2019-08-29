@@ -112,6 +112,16 @@ const WorkoutCard = ({ workout, props }) => {
                 Weight:{exercise.weight} Reps:{exercise.reps} Sets:
                 {exercise.sets}
               </div>
+              <button
+                onClick={() => {
+                  console.log("exercise", exercise)
+                  localStorage.setItem("jouExeId", exercise.id)
+                  localStorage.setItem("journalId", exercise.journalId)
+                  localStorage.setItem("exerciseId", exercise.exerciseId)
+                  props.history.push("/RepSets")
+                 
+                }}
+              >Edit</button>
               <img
                 src={Delete}
                 onClick={() => {
