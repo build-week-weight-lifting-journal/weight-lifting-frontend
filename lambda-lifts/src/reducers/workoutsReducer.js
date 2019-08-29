@@ -7,7 +7,8 @@ import {
 const initialState = {
   workouts: [],
   workoutsIsLoading: false,
-  workoutsError: ""
+  workoutsError: "",
+  workoutIsUpdated: false
 };
 
 export const workoutsReducer = (state = initialState, action) => {

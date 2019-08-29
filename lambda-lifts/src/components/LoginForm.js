@@ -11,7 +11,7 @@ import logoEmail from "../images/Email2.png";
 import { connect } from "react-redux";
 // axios post action
 import { postLoginData } from "../actions/index.js";
-import Dashboard from "./Dashboard";
+
 const LoginForm = ({ errors, touched, status }) => {
   const [login, setLogin] = useState({});
   useEffect(() => {
@@ -97,7 +97,7 @@ const FormikLoginForm = withFormik({
     )
   }),
 
-  handleSubmit(values, { props, setStatus, resetForm }) {
+  handleSubmit(values, { props }) {
     // axios.post("https://reqres.in/api/users/", values)
     // .then(res => {
     //   console.log(res);
@@ -113,6 +113,7 @@ const FormikLoginForm = withFormik({
     props.history.push("/Dashboard");
   }
 })(LoginForm);
+
 const mapStateToProps = state => {
   return {
     loginIsLoading: state.login.loginIsLoading,
