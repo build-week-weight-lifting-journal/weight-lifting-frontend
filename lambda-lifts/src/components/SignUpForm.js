@@ -11,7 +11,7 @@ const SignUpForm = ({ errors, touched }) => {
   return (
     <div className="signupform">
       <div className="image-div">
-        <Image src={logo} />
+        <Image className="login-logo" src={logo} alt="Lambda Lift logo" />
       </div>
       <Form>
         <div className="input">
@@ -80,7 +80,7 @@ const FormikForm = withFormik({
     firstName: Yup.string().required("First name is required"),
     lastName: Yup.string().required("Last name is required"),
     email: Yup.string().required("Email is required"),
-    password: Yup.string().required("password is required")
+    password: Yup.string().required("Password is required")
   }),
 
   handleSubmit(values, { resetForm, props }) {
