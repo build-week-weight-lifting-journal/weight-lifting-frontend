@@ -4,7 +4,7 @@ import moment from "moment";
 import { makeWorkout } from "../actions";
 
 import X from "../images/X.png";
-import { nameWorkoutReducer } from '../reducers/nameWorkoutReducer';
+import { nameWorkoutReducer } from "../reducers/nameWorkoutReducer";
 
 // Journal shape
 // {
@@ -15,7 +15,7 @@ import { nameWorkoutReducer } from '../reducers/nameWorkoutReducer';
 
 const NameWorkout = props => {
   const [workout, setWorkout] = useState({
-    userId: props.userId,
+    userId: localStorage.getItem("userId"),
     name: "",
     date: moment(Date.now()).format("l")
   });

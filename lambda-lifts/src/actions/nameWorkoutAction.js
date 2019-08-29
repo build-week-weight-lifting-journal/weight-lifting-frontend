@@ -30,3 +30,7 @@ export const makeWorkout = workout => {
       });
   };
 };
+
+export const deleteWorkout = () => {
+  localStorage.removeItem("journalId");
+};
