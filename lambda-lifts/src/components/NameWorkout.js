@@ -3,7 +3,9 @@ import {NavLink} from 'react-router-dom';
 import { connect } from "react-redux";
 import moment from "moment";
 import { makeWorkout } from "../actions";
+
 import X from "../images/X.png";
+import { nameWorkoutReducer } from '../reducers/nameWorkoutReducer';
 
 // Journal shape
 // {

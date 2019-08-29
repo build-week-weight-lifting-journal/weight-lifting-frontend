@@ -7,11 +7,11 @@ import {
 const initialState = {
   isLoading: false,
   isMade: false,
-  error: ""
+  error: "",
+  journalId: ""
 };
 
 export const nameWorkoutReducer = (state = initialState, action) => {
-  console.log("nameWorkoutReducer", action.type);
   switch (action.type) {
     case IS_MAKING_WORKOUT:
       return {
@@ -22,7 +22,8 @@ export const nameWorkoutReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        isMade: true
+        isMade: true,
+        journalId: action.payload
       };
     case WORKOUT_MADE_FAILURE:
       return {

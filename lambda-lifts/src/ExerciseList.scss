@@ -1,0 +1,26 @@
+.exercise-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.exercise-list-container {
+    // border: 1px red solid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    min-height: 40vh;
+    margin: 0 auto;
+}
+
+.exercises {
+    width: 20%; 
+    height: 50px;
+    font-size: 1.3rem; 
+    border-radius: 15px;
+    margin: 10px; 
+}
+

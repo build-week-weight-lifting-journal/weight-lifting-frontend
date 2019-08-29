@@ -26,7 +26,8 @@ function App() {
       <PrivateRoute path="/WorkoutList" component={WorkoutList} />
       <PrivateRoute path="/RepSets" component={RepSets} />
       <PrivateRoute path="/NameWorkout" component={NameWorkout} />
-      <PrivateRoute path="/" component={NavBar} />
+      <PrivateRoute path="/Dashboard" component={NavBar} />
+      <PrivateRoute path="/WorkoutList" component={NavBar} />
     </div>
   );
 }

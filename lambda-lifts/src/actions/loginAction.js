@@ -17,6 +17,7 @@ export const postLoginData = (credentials) => (dispatch) => {
             // console.log("post login api response object", response);
             
             localStorage.setItem('token', response.data.token);
+            localStorage.setItem("userId", response.data.id);
              
             dispatch({ type: LOGIN_SUCCESS, payload: response.data.id });
         }) 
