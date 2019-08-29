@@ -67,7 +67,7 @@ const WorkoutList = (props) => {
               <WorkoutCard key={workout.id} workout={workout} props={props}/>
             ))}
       </div>
-            <div className="add-workout-card-button"><NavLink className="plus-button"  exact to="/NameWorkout"><Image src={logoAdd}/></NavLink></div>
+            <div className="add-workout-card-button"><NavLink className="plus-button"  exact to="/NameWorkout"><Image src={logoAdd} onClick={() => localStorage.removeItem("journalId")}/></NavLink></div>
     </div>
   );
 };
