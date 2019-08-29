@@ -7,8 +7,10 @@ import * as Yup from "yup";
 import logo from "../images/Logo.png";
 import logoPassword from "../images/password2.png";
 import logoEmail from "../images/Email2.png";
+
 // use redux
 import { connect } from "react-redux";
+
 // axios post action
 import { postLoginData } from "../actions/index.js";
 

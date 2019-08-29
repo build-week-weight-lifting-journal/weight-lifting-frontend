@@ -1,14 +1,20 @@
 import {
   FETCH_WORKOUTS_DATA_START,
   FETCH_WORKOUTS_DATA_SUCCESS,
-  FETCH_WORKOUTS_DATA_FAILURE
+  FETCH_WORKOUTS_DATA_FAILURE,
+  FETCH_SETS_START,  
+  FETCH_SETS_SUCCESS,
+  FETCH_SETS_FAILURE,
 } from "../actions/index.js";
 
 const initialState = {
-  workouts: [],
+  workoutArray: [],
   workoutsIsLoading: false,
   workoutsError: "",
-  workoutIsUpdated: false
+  workoutIsUpdated: false,
+  setsArray: [],
+  setsIsLoading: false, 
+  setsError: ""
 };
 
 export const workoutsReducer = (state = initialState, action) => {
@@ -23,7 +29,7 @@ export const workoutsReducer = (state = initialState, action) => {
     case FETCH_WORKOUTS_DATA_SUCCESS: {
       return {
         ...state,
-        workouts: [...state.workouts, action.payload],
+        workoutArray: action.payload,
         workoutsIsLoading: false,
         workoutsError: ""
       };
@@ -35,7 +41,28 @@ export const workoutsReducer = (state = initialState, action) => {
         workoutsError: action.payload
       };
     }
-
+    case FETCH_SETS_START: {
+      return {
+        ...state,
+        setsIsLoading: true,
+        setsError: ""
+      };
+    }
+    case FETCH_SETS_SUCCESS: {
+      return {
+        ...state,
+        setsArray: action.payload,
+        setsIsLoading: false,
+        setsError: ""
+      };
+    }
+    case FETCH_SETS_FAILURE: {
+      return {
+        ...state,
+        setsIsLoading: false,
+        setsError: action.payload
+      };
+    }
     default:
       return state;
   }
