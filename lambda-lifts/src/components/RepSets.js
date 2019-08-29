@@ -12,6 +12,7 @@ const RepWeight = props => {
     journalId: Number.parseInt(localStorage.getItem("journalId")),
     exerciseId: Number.parseInt(localStorage.getItem("exerciseId"))
   });
+  console.log("rep props", props);
 
   const changehandler = event => {
     if (event.target.name === "weight") {
@@ -45,7 +46,7 @@ const RepWeight = props => {
         </NavLink>
       </div>
       <div className="workoutname">
-        <h1>ADD Workout Name Functionality</h1>
+        <h1>{props.exerciseObj.name && props.exerciseObj.name}</h1>
       </div>
 
       <form className="repweight">
