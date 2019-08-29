@@ -5,7 +5,6 @@ import moment from "moment";
 import { makeWorkout } from "../actions";
 
 import X from "../images/X.png";
-import { nameWorkoutReducer } from "../reducers/nameWorkoutReducer";
 
 // Journal shape
 // {
@@ -25,7 +24,7 @@ const NameWorkout = props => {
   const inputHandler = e => {
     setWorkout({ ...workout, [e.target.name]: e.target.value });
   };
-  console.log("workout", workout);
+  // console.log("workout", workout);
 
   return (
     <div className="NameWorkoutTop">

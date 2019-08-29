@@ -24,7 +24,7 @@ const RepWeight = props => {
     }
   };
 
-  console.log(form);
+  // console.log(form);
 
   const submitForm = event => {
     event.preventDefault();

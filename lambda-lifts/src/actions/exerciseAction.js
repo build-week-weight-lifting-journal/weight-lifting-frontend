@@ -24,7 +24,7 @@ export const getExerciseData = () => dispatch => {
     .get("https://backend-buildweek-wlj-mack.herokuapp.com/api/exercises")
     .then(response => {
       // successful
-      // console.log("response data", response);
+      console.log("getExercise data", response);
 
       dispatch({
         type: FETCH_EXERCISE_CATEGORY_SUCCESS,
@@ -81,6 +81,7 @@ export const updateWorkoutData = workout => dispatch => {
       dispatch({ type: UPDATE_WORKOUT_SUCCESS, payload: workout });
       localStorage.removeItem("exerciseId");
       localStorage.removeItem("journalId");
+      localStorage.removeItem("jouExeId");
       console.log("workout updated", response);
     })
     .catch(error => {
