@@ -12,9 +12,9 @@ const initialState = {
   exerciseIsLoading: false,
   exerciseError: "",
   exerciseObj: {
-    weight: "", 
-    reps: 0, 
-    sets: 0,
+    weight: "100kg", 
+    reps: 10, 
+    sets: 10,
     journalId: 0,
     exerciseId: 0,
   },

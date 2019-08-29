@@ -33,8 +33,6 @@ export const getExerciseData = () => dispatch => {
 
 export const postExercise = (exercise) => dispatch => {
 
-  // card after add exercises 
-  // post request to api/jouexe/
   // put id of exercise and id of journal to state (pass in to object that we're posting using the check button)
 
   // for may 
@@ -50,7 +48,7 @@ export const postExercise = (exercise) => dispatch => {
     .then(response => {
       console.log("post exercise response", response)
       
-      // dispatch({ type: POST_EXERCISE_SUCCESS, payload: response.data})
+      dispatch({ type: POST_EXERCISE_SUCCESS, payload: response.data})
 
     })
     .catch(error => {
