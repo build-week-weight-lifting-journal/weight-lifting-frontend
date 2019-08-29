@@ -5,7 +5,7 @@ import { Image } from 'semantic-ui-react';
 import WorkoutCard from "./WorkoutCard";
 import "../WorkoutList.scss";
 import logoAdd from '../images/Add.png';
-import { getWorkoutsData, getSets, deleteSetsAndWorkout } from "../actions/index"
+import { getWorkoutsData, getSets, deleteSetsAndWorkout, deleteWorkout } from "../actions/index"
 
 //dummy data
 // const workoutstate = [
@@ -83,5 +83,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getWorkoutsData, getSets, deleteSetsAndWorkout }
+  { getWorkoutsData, getSets, deleteSetsAndWorkout, deleteWorkout }
 )(WorkoutList);

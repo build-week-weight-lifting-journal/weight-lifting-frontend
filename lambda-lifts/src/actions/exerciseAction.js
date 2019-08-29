@@ -88,3 +88,20 @@ export const updateWorkoutData = workout => dispatch => {
       dispatch({ type: UPDATE_WORKOUT_FAILURE, payload: error.response });
     });
 };
+
+export const deleteWorkout = workoutId => () => {
+  // dispatch({ type: UPDATE_WORKOUT_START });
+  axiosWithAuth()
+    .delete(
+      `https://backend-buildweek-wlj-mack.herokuapp.com/api/jouexe/${workoutId}`
+    )
+    .then(response => {
+      // dispatch({ type: UPDATE_WORKOUT_SUCCESS, payload: workout });
+      localStorage.removeItem("exerciseId");
+      console.log("workout deleted", response);
+    })
+    .catch(error => {
+      // dispatch({ type: UPDATE_WORKOUT_FAILURE, payload: error.response });
+      console.log(error)
+    });
+};
