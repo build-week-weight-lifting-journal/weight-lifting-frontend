@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {NavLink} from 'react-router-dom';
 import { connect } from "react-redux";
 import moment from "moment";
 import { makeWorkout } from "../actions";
@@ -25,10 +26,13 @@ const NameWorkout = props => {
   console.log("workout", workout);
 
   return (
+    <div className="NameWorkoutContainer">
     <div className="name-workout-card">
-      <img src={X} />
-      <h1>Name your workout</h1>
+      <NavLink className="xbutton"to="/WorkoutList"> <img src={X} /> </NavLink>
+      <h2>Name your workout</h2>
+      <div className="bottompartcard">
       <input
+        className="typeworkout"
         type="text"
         name="name"
         value={workout.name}
@@ -44,6 +48,8 @@ const NameWorkout = props => {
       >
         Next
       </button>
+      </div>
+      </div>
     </div>
   );
 };
