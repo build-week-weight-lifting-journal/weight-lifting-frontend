@@ -4,7 +4,7 @@ export const LOGIN_START = "LOGIN_START";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
 
-export const postLoginData = credentials => dispatch => {
+export const postLoginData = (credentials, history) => dispatch => {
   // loading data
   dispatch({ type: LOGIN_START });
 
@@ -22,6 +22,8 @@ export const postLoginData = credentials => dispatch => {
       localStorage.setItem("userId", response.data.id);
 
       dispatch({ type: LOGIN_SUCCESS, payload: response.data.id });
+
+      history.push("/dashboard");
     })
 
     .catch(error => {

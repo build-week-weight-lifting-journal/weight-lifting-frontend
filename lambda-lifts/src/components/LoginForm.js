@@ -109,8 +109,7 @@ const FormikLoginForm = withFormik({
     console.log("props", props);
     console.log("values", values);
     // using login action to make the above axios call
-    props.postLoginData(values);
-    props.history.push("/Dashboard");
+    props.postLoginData(values, props.history);
   }
 })(LoginForm);
 
