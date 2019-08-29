@@ -21,11 +21,30 @@ export const makeWorkout = workout => {
         workout
       )
       .then(res => {
+        localStorage.setItem("journalId", res.data.id);
+
         dispatch({ type: WORKOUT_MADE_SUCCESS, payload: res.data.id });
+        localStorage.setItem("journalId", res.data.id);
         console.log(res);
       })
       .catch(err => {
         dispatch({ type: WORKOUT_MADE_FAILURE, payload: err.response });
       });
   };
+};
+
+export const deleteWorkout = () => {
+  axiosWithAuth()
+    .delete(
+      `https://backend-buildweek-wlj-mack.herokuapp.com/api/journals/${localStorage.getItem(
+        "journalId"
+      )}`
+    )
+    .then(res => {
+      localStorage.removeItem("journalId");
+      console.log(res);
+    })
+    .catch(err => {
+      console.log("Error", err);
+    });
 };

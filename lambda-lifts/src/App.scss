@@ -340,3 +340,60 @@
     background: white;
     padding: 20px 0px;
 }
+.NameWorkoutTop {
+    background: linear-gradient(to bottom, #f3be70, #ff5b7b);
+    height: 50vh;
+  }
+.NameWorkoutContainer{
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    height:100vh;
+    // position: absolute;    
+    .name-workout-card{
+        background: rgb(245, 238, 238);
+        position: absolute;
+        left:0;
+        top:25%;
+        height:40%;
+        text-align:center;
+        width:50%;
+        margin-left:25%;
+        border-radius:25px;
+
+        .xbutton{
+            margin-right:90%;
+            @media only screen and (max-width:500px){
+                margin-right:80%;
+            }
+        }
+        
+        .bottompartcard{
+            margin:5px 0px;
+            display:flex;
+            flex-direction:column;
+            margin-left:10%;
+            width:80%;
+            .typeworkout{
+                margin-left:25%;
+                width:50%;
+                height:20px;
+                text-align:center;
+            }//closes type workout
+            .next-btn{
+                color:white;
+                margin-top:25px;
+                margin-left:40%;
+                width:25%;
+                border-radius:25px;
+                font-size:1.5rem;
+                height:auto;
+                background: linear-gradient(to bottom, #ff5b7b,#f3be70, );
+                @media only screen and (max-width: 500px){
+                    font-size:.7rem;
+                }//closes media query for button
+            }//closes next button
+        }//closes bottom part of card
+    }//closes name workout card
+}//closes container
+
+

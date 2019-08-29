@@ -1,5 +1,4 @@
 import React from 'react';
-import { Image } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 import logo from '../images/Logo.png';
 import styled from 'styled-components';
