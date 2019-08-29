@@ -89,7 +89,9 @@ const ExerciseList = props => {
                         ["exerciseId"]: exercise.id
                       });
                       localStorage.setItem("exerciseId", exercise.id);
-                      setSelectedExercise(exercise.name);
+                      selectedExercise !== exercise.name
+                        ? setSelectedExercise(exercise.name)
+                        : setSelectedExercise(null);
                     }}
                   >
                     {exercise.name}
@@ -113,7 +115,9 @@ const ExerciseList = props => {
                     ["exerciseId"]: exercise.id
                   });
                   localStorage.setItem("exerciseId", exercise.id);
-                  setSelectedExercise(exercise.name);
+                  selectedExercise !== exercise.name
+                    ? setSelectedExercise(exercise.name)
+                    : setSelectedExercise(null);
                 }}
               >
                 {exercise.name}
