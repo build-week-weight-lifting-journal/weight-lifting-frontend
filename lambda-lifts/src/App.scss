@@ -240,10 +240,14 @@
   height: 100vh;
   .image-div {
     overflow: hidden;
-    height: 35vh;
+    height: 45vh;
     padding: 20px;
     background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
   } //closes image div
+  .login-logo {
+    height: 60%;
+    margin: 50px;
+  } //login-logo
   .input {
     margin: 0 auto;
     width: 60vw;

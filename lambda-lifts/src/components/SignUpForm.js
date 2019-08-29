@@ -11,7 +11,7 @@ const SignUpForm = ({ errors, touched }) => {
   return (
     <div className="signupform">
       <div className="image-div">
-        <Image src={logo} />
+        <Image className="login-logo" src={logo} alt="Lambda Lift logo" />
       </div>
       <Form>
         <div className="input">
