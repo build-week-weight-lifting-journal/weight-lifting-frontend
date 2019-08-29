@@ -1,75 +1,78 @@
 .nav-container {
-    height: 100px;
-    background: #FF5B7B;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+  height: 100px;
+  background: #ff5b7b;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
 .exercise-nav {
-    // border: 1px red solid;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-    font-size: 1.4rem;
+  // border: 1px red solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  font-size: 1.4rem;
+  color: white;
+  // background: linear-gradient(to bottom right,#FF5B7B,#F3BE70);
+
+  a {
+    text-decoration: none;
     color: white;
-    // background: linear-gradient(to bottom right,#FF5B7B,#F3BE70);
+  }
 
-    a {
-        text-decoration: none;
-        color: white;
-    }
+  a:hover {
+    color: darken(white, 20%);
+  }
 
-    a:hover {
-        color: darken(white, 20%)
-    }
-
-    #add-exercises {
-        font-size: 1.6rem;
-    }
+  #add-exercises {
+    font-size: 1.6rem;
+  }
 }
 
 .exercise-list-container {
-    // border: 1px red solid;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    width: 97%;
-    min-height: 40vh;
-    margin: 0 auto;
+  // border: 1px red solid;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 97%;
+  min-height: 40vh;
+  margin: 0 auto;
 }
 
-
 .exercises {
-    width: 30%; 
-    height: auto;
-    font-size: 2.0vh; 
-    border-radius: 12px;
-    box-shadow: 0 3px 5px 2px rgba(160, 168, 170, 0.3);
-    border: none;
-    margin: 10px; 
-    padding: 12px 0;
+  width: 30%;
+  height: auto;
+  font-size: 2vh;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px 2px rgba(160, 168, 170, 0.3);
+  border: none;
+  margin: 10px;
+  padding: 12px 0;
 }
 
 button:hover {
-    color: #FE6B8B; 
-    border: 1px solid  #FE6B8B
+  color: #fe6b8b;
+  border: 1px solid #fe6b8b;
 }
 
 .exercise-form {
+  margin-bottom: 23px;
 
-    margin-bottom: 23px;
+  .exercise-search {
+    font-size: 1.4rem;
+    width: 70vw;
+    padding: 6px 0;
+    padding-left: 15px;
+    border: 2.1px solid grey;
+    border-radius: 10px;
+    background: url("./images/Search.png") 10px no-repeat;
+    background-size: 30px;
+    padding-left: 50px;
+  }
+}
 
-    .exercise-search {
-        font-size: 1.4rem; 
-        width: 90vw;
-        padding: 6px 0;
-        padding-left: 15px; 
-        border: 2.1px solid grey;
-        border-radius: 10px;
-
-    }
-    
+button {
+  outline: none;
 }
