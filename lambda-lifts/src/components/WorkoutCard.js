@@ -4,7 +4,7 @@ import OpenCarrot from "../images/Carrot-open.png";
 import ClosedCarrot from "../images/Carrot-closed.png";
 import "../WorkoutCard.scss";
 import Delete from "../images/Delete.png";
-import Add from "../images/Add.png";
+import Plus from "../images/Plus.png";
 
 // axios with authorization
 import { axiosWithAuth } from "../utils/axiosWithAuth.js";
@@ -62,7 +62,8 @@ const WorkoutCard = ({ workout, props }) => {
         {open ? (
           <div className="carrot">
             <img
-              src={Add}
+              src={Plus}
+              width="15px"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
@@ -83,7 +84,8 @@ const WorkoutCard = ({ workout, props }) => {
         ) : (
           <div className="carrot">
             <img
-              src={Add}
+              src={Plus}
+              width="15px"
               onClick={() => {
                 localStorage.setItem("journalId", workout.id);
                 props.history.push("/ExerciseList");
