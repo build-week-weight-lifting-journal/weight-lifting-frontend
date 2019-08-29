@@ -79,6 +79,7 @@
         // }
         .dashboard-container {
             background-image: url("./images/Background.png");
+            background-size: 100%;
             width: 100vw;
         }
         
@@ -89,7 +90,6 @@
                 overflow: hidden !important;
                 height: 45vh;
                 padding: 20px;
-                // background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
             } //closes image-div
             .dashboard-logo {
                 height: 60%;

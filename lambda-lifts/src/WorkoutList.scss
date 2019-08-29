@@ -47,7 +47,7 @@
     width: 80%;
     position: absolute;
     top: 320px;
-    margin-bottom: 200px;
+    margin-bottom: 220px;
 }
 
 // .dot {
@@ -75,11 +75,16 @@
 .add-workout-card-button {
     height: 80px;
     background: white;
-    width: 100%;
+    width: 50px;
+    height: 50px;
     position: fixed;
-    bottom: 120px;
+    bottom: 150px;
+    right: 20px;
+    border-radius: 25px;
+    opacity: .9;
     .plus-button {
-        position: relative;
-        left: 40%;
+        // position: relative;
+        border-radius: 25px;
+        // left: 40%;
     }
 }
