@@ -49,7 +49,7 @@ const NameWorkout = props => {
               onClick={() => {
                 if (localStorage.getItem("journalId")) {
                   props.editWorkoutName(workout);
-                  console.log("next props", props)
+                  console.log("next props", props);
                   props.history.push("/WorkoutList");
                 } else {
                   props.makeWorkout(workout);
@@ -57,7 +57,7 @@ const NameWorkout = props => {
                 }
               }}
             >
-              Next
+              NEXT
             </button>
           </div>
         </div>

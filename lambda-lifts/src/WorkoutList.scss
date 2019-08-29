@@ -1,53 +1,53 @@
 .workout-list {
-    background: white;
-    width: 100vw;
-    margin: 0 auto;
+  background: white;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-        display: flex;
-        justify-content: center;
-        color: white;
-        font-weight: 700;
-        margin: 50px 0px;
-        font-size: 45px;
-    }
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    margin: 50px 0px;
+    font-size: 45px;
+  }
 }
 
 .workout-gradient {
-    width: 100%;
-    overflow: hidden;
-    height: 250px;
-    padding: 20px;
-    background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+  padding: 20px;
+  background-image: linear-gradient(to top right, #f3be70, #ff5b7b);
 }
 
 .search-bar {
-    width: 90%;
-    position: relative;
-    left: 30px;
+  width: 90%;
+  position: relative;
+  left: 30px;
 }
 
 .search-bar input {
-    outline: none;
-    width: 60%;
-    border-radius: 10px;
-    height: 35px;
-    font-size: 20px;
-    background: url("./images/Search.png") 10px no-repeat;
-    background-color: white;
-    background-size: 20px;
-    border: none;
-    padding-left: 30px;
+  outline: none;
+  width: 60%;
+  border-radius: 10px;
+  height: 35px;
+  font-size: 20px;
+  background: url("./images/Search.png") 10px no-repeat;
+  background-color: white;
+  background-size: 20px;
+  border: none;
+  padding-left: 30px;
 }
 
 .exercise-list {
-    background: white;
-    width: 80%;
-    position: absolute;
-    top: 320px;
-    margin-bottom: 200px;
+  background: white;
+  width: 80%;
+  position: absolute;
+  top: 320px;
+  margin-bottom: 200px;
 }
 
 // .dot {
@@ -73,13 +73,13 @@
 //     border-radius: 15px;
 // }
 .add-workout-card-button {
-    height: 80px;
-    background: white;
-    width: 100%;
-    position: fixed;
-    bottom: 120px;
-    .plus-button {
-        position: relative;
-        left: 40%;
-    }
+  height: 80px;
+  background: white;
+  width: 100%;
+  position: fixed;
+  bottom: 120px;
+  .plus-button {
+    position: relative;
+    left: 40%;
+  }
 }
