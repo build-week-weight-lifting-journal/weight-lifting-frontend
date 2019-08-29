@@ -50,7 +50,7 @@ export const postExercise = (exercise) => dispatch => {
     .then(response => {
       console.log("post exercise response", response)
       
-      // dispatch({ type: POST_EXERCISE_SUCCESS, payload: response.data})
+      dispatch({ type: POST_EXERCISE_SUCCESS, payload: response.data})
 
     })
     .catch(error => {
