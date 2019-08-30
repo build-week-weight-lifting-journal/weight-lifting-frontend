@@ -16,9 +16,7 @@ export default function Dashboard (){
         <div className="dashboard-container">
             <div className="top-section">
                 <div className="image-div">
-                <div id="circle1"></div>
                 <Image className="dashboard-logo" src={logoMain} alt="Lambda Lift logo" wraped/>
-                <div id="circle2"></div>
                 </div>
             </div>
             <div className="bottom-section">
