@@ -312,8 +312,11 @@
 //RepSetsWeight page
 .container {
   width: 100%;
-  height: 100vh;
   background: rgb(245, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 } //closes container
 .nav {
   background: linear-gradient(to bottom, #f3be70, #ff5b7b);
@@ -321,43 +324,101 @@
   justify-content: space-between;
   align-items: center;
   color: white;
+  width: 100%;
+
   .navlink {
     margin: 0px 10%;
     text-decoration: none;
     color: white;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 0.9rem;
+    height: 80px;
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 }
 
 .workoutname {
   margin: 20px 0px;
   width: 100%;
-  padding: 10px;
+  height: 100px;
   background: white;
-  box-shadow: 2px 2px silver;
+  box-shadow: 0px 5px 10px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 300;
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 99%;
+  }
 } //closes workoutname
+
+.setrepweight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  width: 50%;
+  @media only screen and (max-width: 450px) {
+    width: 80%;
+  }
+}
+
 .repweight {
   background: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  box-shadow: 2px 2px silver;
+  align-items: center;
+  box-shadow: 0px 5px 10px lightgray;
+  width: 100%;
+
+  .sets,
+  .reps,
+  .weight {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   h2 {
     color: #ff5b7b;
+    font-weight: 600;
   } //closes h2
   .input {
     width: 5%;
     margin: 0px 10px;
     text-align: center;
     font-size: 1.2rem;
-    border-bottom: 2px solid #35373b;
+    border-bottom: 2px solid #a5a5a5;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
+    width: 50px;
+    font-size: 2rem;
   } //closes input
+
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+  }
 } //closes repweight form
 .navlinkcheck {
   background: white;
   padding: 20px 0px;
+  button {
+    padding: 0;
+    border: none;
+    background: none;
+  }
 }
 
 .NameWorkoutTop {
@@ -383,9 +444,10 @@
     margin-left: 25%;
     border-radius: 25px;
     padding-top: 15px;
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 450px) {
       width: 90%;
       margin-left: 5%;
+      height: 45%;
     }
 
     h2 {
@@ -416,7 +478,7 @@
         border: none;
         box-shadow: 0px 5px 10px lightgray;
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 450px) {
           font-size: 0.9rem;
           width: 80%;
         }

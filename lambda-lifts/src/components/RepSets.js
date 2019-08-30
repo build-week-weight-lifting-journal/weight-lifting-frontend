@@ -49,40 +49,50 @@ const RepWeight = props => {
       </div>
 
       <form className="repweight">
-        <label htmlFor="Sets">
-          {" "}
-          <h2>Sets:</h2>{" "}
-        </label>
-        <input
-          className="input"
-          name="sets"
-          type="number"
-          value={form.sets}
-          onChange={changehandler}
-        />
-
-        <label htmlFor="Reps">
-          {" "}
-          <h2>Reps:</h2>{" "}
-        </label>
-        <input
-          className="input"
-          name="reps"
-          type="number"
-          value={form.reps}
-          onChange={changehandler}
-        />
-        <label htmlFor="Weight">
-          {" "}
-          <h2>Weight:</h2>{" "}
-        </label>
-        <input
-          className="input"
-          name="weight"
-          type="text"
-          value={form.weight}
-          onChange={changehandler}
-        />
+        <div className="setrepweight">
+          <div className="sets">
+            <label htmlFor="Sets">
+              {" "}
+              <h2>Sets</h2>{" "}
+            </label>
+            <input
+              className="input"
+              name="sets"
+              type="number"
+              value={form.sets}
+              onChange={changehandler}
+              placeholder="0"
+            />
+          </div>
+          <div className="reps">
+            <label htmlFor="Reps">
+              {" "}
+              <h2>Reps</h2>{" "}
+            </label>
+            <input
+              className="input"
+              name="reps"
+              type="number"
+              value={form.reps}
+              onChange={changehandler}
+              placeholder="0"
+            />
+          </div>
+          <div className="weight">
+            <label htmlFor="Weight">
+              {" "}
+              <h2>Weight</h2>{" "}
+            </label>
+            <input
+              className="input"
+              name="weight"
+              type="text"
+              value={form.weight}
+              onChange={changehandler}
+              placeholder="0"
+            />
+          </div>
+        </div>
         <div className="navlinkcheck">
           {" "}
           <button
