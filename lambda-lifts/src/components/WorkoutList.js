@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { Image } from 'semantic-ui-react';
+import { Image } from "semantic-ui-react";
 import WorkoutCard from "./WorkoutCard";
 import "../WorkoutList.scss";
-import logoAdd from '../images/Add.png';
-import { getWorkoutsData, getSets, deleteSetsAndWorkout, deleteWorkout } from "../actions/index"
+import logoAdd from "../images/Add.png";
+import {
+  getWorkoutsData,
+  getSets,
+  deleteSetsAndWorkout,
+  deleteWorkout
+} from "../actions/index";
 
 //dummy data
 // const workoutstate = [
@@ -16,7 +21,7 @@ import { getWorkoutsData, getSets, deleteSetsAndWorkout, deleteWorkout } from ".
 //   { id: 5, name: "Leg Day", date: "06/27/2019" }
 // ];
 
-const WorkoutList = (props) => {
+const WorkoutList = props => {
   const [search, setSearch] = useState("");
 
   const searchHandler = e => {
@@ -25,7 +30,9 @@ const WorkoutList = (props) => {
 
   useEffect(() => {
     props.getWorkoutsData();
-  }, [])
+  }, []);
+
+  console.log("workoutArray", props.workoutArray);
 
   return (
     <div className="workout-list">
@@ -39,7 +46,6 @@ const WorkoutList = (props) => {
             onChange={searchHandler}
             placeholder="Search Date"
           />
-
         </form>
       </div>
       {/* logic for the api - remember need to format dates*/}
@@ -55,24 +61,35 @@ const WorkoutList = (props) => {
               <WorkoutCard key={workout.id} workout={workout} />
             ))} */}
 
-    
-
         {search
-          ? props.workoutArray && props.workoutArray.map(workout => {
-              if (props.workoutArray.date.includes(search)) {
-                return <WorkoutCard key={workout.id} workout={workout} props={props}/>;
+          ? props.workoutArray &&
+            props.workoutArray.map(workout => {
+              if (workout.date.includes(search)) {
+                return (
+                  <WorkoutCard
+                    key={workout.id}
+                    workout={workout}
+                    props={props}
+                  />
+                );
               }
             })
-          : props.workoutArray && props.workoutArray.map(workout => (
-              <WorkoutCard key={workout.id} workout={workout} props={props}/>
+          : props.workoutArray &&
+            props.workoutArray.map(workout => (
+              <WorkoutCard key={workout.id} workout={workout} props={props} />
             ))}
       </div>
-            <div className="add-workout-card-button"><NavLink className="plus-button"  exact to="/NameWorkout"><Image src={logoAdd} onClick={() => localStorage.removeItem("journalId")}/></NavLink></div>
+      <div className="add-workout-card-button">
+        <NavLink className="plus-button" exact to="/NameWorkout">
+          <Image
+            src={logoAdd}
+            onClick={() => localStorage.removeItem("journalId")}
+          />
+        </NavLink>
+      </div>
     </div>
   );
 };
-
-
 
 const mapStateToProps = state => {
   return {
