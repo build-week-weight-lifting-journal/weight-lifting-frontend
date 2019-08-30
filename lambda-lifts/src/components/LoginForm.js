@@ -63,9 +63,9 @@ const LoginForm = ({ errors, touched, status }) => {
           LOGIN
         </Button>
         <Segment>
-          <Grid className="bottomlogin" columns={2} realxed="very">
+          <Grid className="bottomlogin" columns={2} relaxed="very">
             <Grid.Column>
-              <NavLink exact to={`/SignUpForm`}>
+              <NavLink className="login-bottom-links-1" exact to={`/SignUpForm`}>
                 Create Account
               </NavLink>
             </Grid.Column>
@@ -73,7 +73,7 @@ const LoginForm = ({ errors, touched, status }) => {
               |
             </Divider>
             <Grid.Column>
-              <NavLink exact to={`/ErrorPage`}>
+              <NavLink className="login-bottom-links-2" exact to={`/ErrorPage`}>
                 Forgot Password
               </NavLink>
             </Grid.Column>
