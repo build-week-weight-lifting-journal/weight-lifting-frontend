@@ -846,3 +846,21 @@
     } //closes bottom part of card
   } //closes name workout card
 } //closes container
+
+.login-bottom-links-2 {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-bottom-links-1 {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
