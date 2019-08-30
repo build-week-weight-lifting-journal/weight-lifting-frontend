@@ -32,8 +32,6 @@ const WorkoutList = props => {
     props.getWorkoutsData();
   }, []);
 
-  console.log("workoutArray", props.workoutArray);
-
   return (
     <div className="workout-list">
       <div className="workout-gradient">
